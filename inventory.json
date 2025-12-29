@@ -1,5 +1,159 @@
 {
-  "note": "This is the downloadable inventory file. If you need changes, ask and it will be regenerated.",
-  "shops_count": 23,
-  "shops": []
+  "shops": [
+    {
+      "id": "general-store",
+      "name": "🏪 General Store",
+      "tagline": "Everyday goods",
+      "items": []
+    },
+    {
+      "id": "adventuring-supplies",
+      "name": "🎒 Adventuring Supplies",
+      "tagline": "Gear for the road",
+      "items": []
+    },
+    {
+      "id": "blacksmith-armory",
+      "name": "⚔️ Blacksmith & Armory",
+      "tagline": "Weapons and armour",
+      "items": []
+    },
+    {
+      "id": "fletcher-bowyer",
+      "name": "🏹 Fletcher & Bowyer",
+      "tagline": "Bows, arrows, ranged gear",
+      "items": []
+    },
+    {
+      "id": "leatherworker",
+      "name": "🧵 Leatherworker",
+      "tagline": "Leather goods and armour",
+      "items": []
+    },
+    {
+      "id": "tailor",
+      "name": "👗 Tailor",
+      "tagline": "Clothing and fine wear",
+      "items": []
+    },
+    {
+      "id": "dock-store",
+      "name": "⚓ Dock Store",
+      "tagline": "Maritime supplies",
+      "items": []
+    },
+    {
+      "id": "market-produce",
+      "name": "🥕 Market Produce",
+      "tagline": "Foodstuffs and perishables",
+      "items": []
+    },
+    {
+      "id": "art-games",
+      "name": "🎭 Art & Games",
+      "tagline": "Leisure and culture",
+      "items": []
+    },
+    {
+      "id": "tavern-drinks",
+      "name": "🍺 Tavern Drinks",
+      "tagline": "Ale, wine, spirits",
+      "items": []
+    },
+    {
+      "id": "meal-inn",
+      "name": "🍽️ Meals & Inns",
+      "tagline": "Food and lodging",
+      "items": []
+    },
+    {
+      "id": "transportation",
+      "name": "🐎 Transportation",
+      "tagline": "Mounts and vehicles",
+      "items": [
+        {
+          "id": "horse-riding",
+          "name": "Horse, Riding",
+          "price_gp": 75,
+          "stock": 999,
+          "rarity": "Common",
+          "desc": "Standard riding horse"
+        },
+        {
+          "id": "donkey",
+          "name": "Donkey",
+          "price_gp": 8,
+          "stock": 1,
+          "rarity": "Common",
+          "desc": "Pack animal"
+        }
+      ]
+    },
+    {
+      "id": "arcane-shop",
+      "name": "🔮 Arcane Shop",
+      "tagline": "Arcane components and scrolls",
+      "items": []
+    },
+    {
+      "id": "magical-store",
+      "name": "✨ Magical Store",
+      "tagline": "Enchanted curios",
+      "items": []
+    },
+    {
+      "id": "potion-shop",
+      "name": "🧪 Potion Shop",
+      "tagline": "Potions and elixirs",
+      "items": []
+    },
+    {
+      "id": "potion-availability",
+      "name": "🧾 Potion Availability",
+      "tagline": "Stock reference",
+      "items": []
+    },
+    {
+      "id": "spell-availability",
+      "name": "📜 Spell Availability",
+      "tagline": "Spell access by tier",
+      "items": []
+    },
+    {
+      "id": "priests-spells",
+      "name": "⛪ Priest Spell Slots",
+      "tagline": "Divine casting services",
+      "items": []
+    },
+    {
+      "id": "cleric-availability",
+      "name": "🙏 Cleric Availability",
+      "tagline": "Divine services",
+      "items": []
+    },
+    {
+      "id": "temple-supplies",
+      "name": "🕊️ Temple Faith Supplies",
+      "tagline": "Holy items and rites",
+      "items": []
+    },
+    {
+      "id": "jeweller-stonecutter",
+      "name": "💎 Jeweller & Stonecutter",
+      "tagline": "Gems and fine craft",
+      "items": []
+    },
+    {
+      "id": "gemstone-availability",
+      "name": "💠 Gemstone Availability",
+      "tagline": "Gem stock tables",
+      "items": []
+    },
+    {
+      "id": "black-market",
+      "name": "🕯️ Black Market",
+      "tagline": "Illicit goods",
+      "items": []
+    }
+  ]
 }
