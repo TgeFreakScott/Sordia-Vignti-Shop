@@ -1,159 +1,1716 @@
 {
   "shops": [
+{
+  "id": "general-store",
+  "name": "General Store",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    { "id": "abacus", "name": "Abacus", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: No | Urban: Yes" },
+    { "id": "barrel", "name": "Barrel", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "blanket", "name": "Blanket", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 1, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "bottle-glass", "name": "Bottle, glass", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "bucket", "name": "Bucket", "category": "Adventuring Gear", "price_gp": 0.05, "stock": 999, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: Yes | Urban: Yes" },
+    { "id": "candle", "name": "Candle", "category": "Adventuring Gear", "price_gp": 0.01, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: Yes" },
+    { "id": "chest", "name": "Chest", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
+    { "id": "clothes-common", "name": "Clothes, Common", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 999, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "clothes-fine", "name": "Clothes, Fine", "category": "Adventuring Gear", "price_gp": 15, "stock": 999, "rarity": "", "desc": "Cheap: 11 gp | High: 23 gp | Rural: No | Urban: No" },
+    { "id": "flask-tankard", "name": "Flask or Tankard", "category": "Adventuring Gear", "price_gp": 0.02, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: Yes | Urban: Yes" },
+    { "id": "hammer", "name": "Hammer", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "ink-bottle", "name": "Ink (1 ounce bottle)", "category": "Adventuring Gear", "price_gp": 10, "stock": 1, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes" },
+    { "id": "ink-pen", "name": "Ink Pen", "category": "Adventuring Gear", "price_gp": 0.02, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: Yes | Urban: Yes" },
+    { "id": "jug-pitcher", "name": "Jug or Pitcher", "category": "Adventuring Gear", "price_gp": 0.02, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: Yes | Urban: Yes" },
+    { "id": "ladder-10ft", "name": "Ladder (10-foot)", "category": "Adventuring Gear", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "lantern-hooded", "name": "Lantern, Hooded", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
+    { "id": "lock", "name": "Lock", "category": "Adventuring Gear", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: Yes" },
+    { "id": "mess-kit", "name": "Mess Kit", "category": "Adventuring Gear", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "mirror-steel", "name": "Mirror, Steel", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "paper-sheet", "name": "Paper (one sheet)", "category": "Adventuring Gear", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: No | Urban: Yes" },
+    { "id": "parchment-sheet", "name": "Parchment (one sheet)", "category": "Adventuring Gear", "price_gp": 0.1, "stock": 1, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "miners-pick", "name": "Pick, Miner's", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "iron-pot", "name": "Pot, Iron", "category": "Adventuring Gear", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "pouch", "name": "Pouch", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 999, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "rope-hempen-50ft", "name": "Rope, Hempen (50 feet)", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "rope-silk-50ft", "name": "Rope, Silk (50 feet)", "category": "Adventuring Gear", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: No" },
+    { "id": "sack", "name": "Sack", "category": "Adventuring Gear", "price_gp": 0.01, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: Yes" },
+    { "id": "merchants-scale", "name": "Scale, Merchant's", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
+    { "id": "shovel", "name": "Shovel", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "signet-ring", "name": "Signet Ring", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
+    { "id": "soap", "name": "Soap", "category": "Adventuring Gear", "price_gp": 0.02, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: No | Urban: Yes" },
+    { "id": "vial", "name": "Vial", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes" },
+
+    { "id": "carpenters-tools", "name": "Carpenter's Tools", "category": "Tools", "price_gp": 15, "stock": 1, "rarity": "", "desc": "Cheap: 11 gp | High: 23 gp | Rural: Yes | Urban: Yes" },
+    { "id": "cobblers-tools", "name": "Cobbler's Tools", "category": "Tools", "price_gp": 25, "stock": 999, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: Yes | Urban: Yes" },
+    { "id": "cooks-utensils", "name": "Cook's Utensils", "category": "Tools", "price_gp": 50, "stock": 1, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes" },
+    { "id": "glassblowers-tools", "name": "Glassblower's Tools", "category": "Tools", "price_gp": 30, "stock": 999, "rarity": "", "desc": "Cheap: 22 gp | High: 45 gp | Rural: No | Urban: No" },
+    { "id": "leatherworkers-tools", "name": "Leatherworker's Tools", "category": "Tools", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
+    { "id": "masons-tools", "name": "Mason's Tools", "category": "Tools", "price_gp": 10, "stock": 1, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potters-tools", "name": "Potter's Tools", "category": "Tools", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes" },
+    { "id": "smiths-tools", "name": "Smith's Tools", "category": "Tools", "price_gp": 20, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: No" },
+    { "id": "weavers-tools", "name": "Weaver's Tools", "category": "Tools", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "woodcarvers-tools", "name": "Woodcarver's Tools", "category": "Tools", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" }
+  ]
+}
+,
+{
+  "id": "adventuring-supplies",
+  "name": "Adventuring Supplies",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    { "id": "arrows-20", "name": "Arrows (20)", "category": "Ammunition", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "backpack", "name": "Backpack", "category": "Adventuring Gear", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "bedroll", "name": "Bedroll", "category": "Adventuring Gear", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "blanket", "name": "Blanket", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 1, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "block-and-tackle", "name": "Block and Tackle", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes" },
+    { "id": "blowgun", "name": "Blowgun", "category": "Martial Ranged Weapon", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: No" },
+    { "id": "blowgun-needles-50", "name": "Blowgun Needles (50)", "category": "Ammunition", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: No" },
+    { "id": "bottle-glass", "name": "Bottle, glass", "category": "Adventuring Gear", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "candle", "name": "Candle", "category": "Adventuring Gear", "price_gp": 0.01, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: No | Urban: Yes" },
+    { "id": "cartographers-tools", "name": "Cartographer's Tools", "category": "Tools", "price_gp": 15, "stock": 999, "rarity": "", "desc": "Cheap: 11 gp | High: 23 gp | Rural: No | Urban: Yes" },
+    { "id": "case-crossbow-bolt", "name": "Case, Crossbow Bolt", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes" },
+    { "id": "case-map-scroll", "name": "Case, Map or Scroll", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "chain-10ft", "name": "Chain (10 feet)", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
+    { "id": "chest", "name": "Chest", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "climbers-kit", "name": "Climber's Kit", "category": "Tools", "price_gp": 25, "stock": 999, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: No | Urban: Yes" },
+    { "id": "clothes-travelers", "name": "Clothes, Traveler's", "category": "Adventuring Gear", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "club", "name": "Club", "category": "Simple Melee Weapon", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: Yes | Urban: No" },
+    { "id": "crossbow-bolts-20", "name": "Crossbow Bolts (20)", "category": "Ammunition", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes" },
+    { "id": "crossbow-hand", "name": "Crossbow, Hand", "category": "Martial Ranged Weapon", "price_gp": 75, "stock": 999, "rarity": "", "desc": "Cheap: 56 gp | High: 113 gp | Rural: No | Urban: Yes" },
+    { "id": "crossbow-heavy", "name": "Crossbow, Heavy", "category": "Martial Ranged Weapon", "price_gp": 50, "stock": 999, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: No | Urban: No" },
+    { "id": "crossbow-light", "name": "Crossbow, Light", "category": "Simple Ranged Weapon", "price_gp": 25, "stock": 999, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: No | Urban: Yes" },
+    { "id": "crowbar", "name": "Crowbar", "category": "Adventuring Gear", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "dagger", "name": "Dagger", "category": "Simple Melee Weapon", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "dart", "name": "Dart", "category": "Simple Ranged Weapon", "price_gp": 0.05, "stock": 999, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: Yes | Urban: Yes" },
+    { "id": "flask-tankard", "name": "Flask or Tankard", "category": "Adventuring Gear", "price_gp": 0.02, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: Yes | Urban: Yes" },
+    { "id": "grappling-hook", "name": "Grappling Hook", "category": "Adventuring Gear", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: No | Urban: Yes" },
+    { "id": "greatclub", "name": "Greatclub", "category": "Simple Melee Weapon", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "hammer", "name": "Hammer", "category": "Adventuring Gear", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "handaxe", "name": "Handaxe", "category": "Simple Melee Weapon", "price_gp": 5, "stock": 1, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "healers-kit", "name": "Healer's Kit", "category": "Tools", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: No" },
+    { "id": "herbalism-kit", "name": "Herbalism Kit", "category": "Tools", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
+    { "id": "hide-armor", "name": "Hide", "category": "Medium Armor", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes" },
+    { "id": "hourglass", "name": "Hourglass", "category": "Adventuring Gear", "price_gp": 25, "stock": 999, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: No | Urban: No" },
+    { "id": "hunting-trap", "name": "Hunting Trap", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "ink-bottle", "name": "Ink (1 ounce bottle)", "category": "Adventuring Gear", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: No" },
+    { "id": "ink-pen", "name": "Ink Pen", "category": "Adventuring Gear", "price_gp": 0.02, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: No | Urban: Yes" },
+    { "id": "jewelers-tools", "name": "Jeweler's Tools", "category": "Tools", "price_gp": 25, "stock": 999, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: No | Urban: No" },
+    { "id": "jug-pitcher", "name": "Jug or Pitcher", "category": "Adventuring Gear", "price_gp": 0.02, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: Yes | Urban: Yes" },
+    { "id": "ladder-10ft", "name": "Ladder (10-foot)", "category": "Adventuring Gear", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: No | Urban: Yes" },
+    { "id": "lantern-bullseye", "name": "Lantern, Bullseye", "category": "Adventuring Gear", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: Yes" },
+    { "id": "lantern-hooded", "name": "Lantern, Hooded", "category": "Adventuring Gear", "price_gp": 5, "stock": 1, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "leather-armor", "name": "Leather", "category": "Light Armor", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: Yes" },
+    { "id": "light-hammer", "name": "Light Hammer", "category": "Simple Melee Weapon", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "lock", "name": "Lock", "category": "Adventuring Gear", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: No" },
+    { "id": "longbow", "name": "Longbow", "category": "Martial Ranged Weapon", "price_gp": 50, "stock": 1, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes" },
+    { "id": "mess-kit", "name": "Mess Kit", "category": "Tools", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: No | Urban: Yes" },
+    { "id": "mirror-steel", "name": "Mirror, Steel", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
+    { "id": "navigators-tools", "name": "Navigator's Tools", "category": "Tools", "price_gp": 25, "stock": 1, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: Yes | Urban: Yes" },
+    { "id": "padded-armor", "name": "Padded", "category": "Light Armor", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
+    { "id": "paper-sheet", "name": "Paper (one sheet)", "category": "Adventuring Gear", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: No | Urban: No" },
+    { "id": "parchment-sheet", "name": "Parchment (one sheet)", "category": "Adventuring Gear", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "miners-pick", "name": "Pick, Miner's", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "piton", "name": "Piton", "category": "Adventuring Gear", "price_gp": 0.05, "stock": 999, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: Yes | Urban: Yes" },
+    { "id": "pole-10ft", "name": "Pole (10-foot)", "category": "Adventuring Gear", "price_gp": 0.05, "stock": 999, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: Yes | Urban: Yes" },
+    { "id": "iron-pot", "name": "Pot, Iron", "category": "Adventuring Gear", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "pouch", "name": "Pouch", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 1, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "quarterstaff", "name": "Quarterstaff", "category": "Simple Melee Weapon", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "quiver", "name": "Quiver", "category": "Adventuring Gear", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "rations-1-day", "name": "Rations (1 day)", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 999, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: No | Urban: Yes" },
+    { "id": "rope-hempen-50ft", "name": "Rope, Hempen (50 feet)", "category": "Adventuring Gear", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "rope-silk-50ft", "name": "Rope, Silk (50 feet)", "category": "Adventuring Gear", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: No" },
+    { "id": "sack", "name": "Sack", "category": "Adventuring Gear", "price_gp": 0.01, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: Yes" },
+    { "id": "shortbow", "name": "Shortbow", "category": "Simple Ranged Weapon", "price_gp": 25, "stock": 1, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: Yes | Urban: Yes" },
+    { "id": "shovel", "name": "Shovel", "category": "Adventuring Gear", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "signal-whistle", "name": "Signal Whistle", "category": "Adventuring Gear", "price_gp": 0.05, "stock": 999, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: No | Urban: Yes" },
+    { "id": "signet-ring", "name": "Signet Ring", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: No" },
+    { "id": "sling", "name": "Sling", "category": "Simple Ranged Weapon", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "sling-bullets-20", "name": "Sling Bullets (20)", "category": "Ammunition", "price_gp": 0.04, "stock": 999, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.06 gp | Rural: Yes | Urban: Yes" },
+    { "id": "spyglass", "name": "Spyglass", "category": "Adventuring Gear", "price_gp": 1000, "stock": 999, "rarity": "", "desc": "Cheap: 750 gp | High: 1500 gp | Rural: No | Urban: Yes" },
+    { "id": "studded-leather", "name": "Studded Leather", "category": "Light Armor", "price_gp": 45, "stock": 999, "rarity": "", "desc": "Cheap: 33 gp | High: 68 gp | Rural: No | Urban: No" },
+    { "id": "tent-two-person", "name": "Tent, Two-person", "category": "Adventuring Gear", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "tinderbox", "name": "Tinderbox", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 1, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "tinkers-tools", "name": "Tinker's Tools", "category": "Tools", "price_gp": 50, "stock": 999, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: No | Urban: Yes" },
+    { "id": "torch", "name": "Torch", "category": "Adventuring Gear", "price_gp": 0.01, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: Yes" },
+    { "id": "vial", "name": "Vial", "category": "Adventuring Gear", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "waterskin", "name": "Waterskin", "category": "Adventuring Gear", "price_gp": 0.2, "stock": 1, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "whip", "name": "Whip", "category": "Martial Melee Weapon", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" }
+  ]
+},
+
+{
+  "id": "blacksmith-armory",
+  "name": "Blacksmith & Armory",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    { "id": "breastplate", "name": "Breastplate", "category": "Medium Armor", "price_gp": 400, "stock": 1, "rarity": "", "desc": "Cheap: 300 gp | High: 600 gp | Rural: Yes | Urban: Yes" },
+    { "id": "plate", "name": "Plate", "category": "Heavy Armor", "price_gp": 1500, "stock": 999, "rarity": "", "desc": "Cheap: 1000 gp | High: 2000 gp | Rural: No | Urban: Yes" },
+    { "id": "chain-shirt", "name": "Chain Shirt", "category": "Medium Armor", "price_gp": 50, "stock": 1, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes" },
+    { "id": "scale-mail", "name": "Scale Mail", "category": "Medium Armor", "price_gp": 50, "stock": 999, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: No | Urban: Yes" },
+    { "id": "chain-mail", "name": "Chain Mail", "category": "Heavy Armor", "price_gp": 75, "stock": 1, "rarity": "", "desc": "Cheap: 56 gp | High: 113 gp | Rural: Yes | Urban: Yes" },
+    { "id": "ring-mail", "name": "Ring Mail", "category": "Heavy Armor", "price_gp": 30, "stock": 1, "rarity": "", "desc": "Cheap: 22 gp | High: 45 gp | Rural: Yes | Urban: Yes" },
+    { "id": "splint", "name": "Splint", "category": "Heavy Armor", "price_gp": 200, "stock": 999, "rarity": "", "desc": "Cheap: 150 gp | High: 300 gp | Rural: No | Urban: Yes" },
+    { "id": "shield", "name": "Shield", "category": "Shield", "price_gp": 10, "stock": 1, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "dagger", "name": "Dagger", "category": "Simple Melee Weapon", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "handaxe", "name": "Handaxe", "category": "Simple Melee Weapon", "price_gp": 5, "stock": 1, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "javelin", "name": "Javelin", "category": "Simple Melee Weapon", "price_gp": 0.5, "stock": 999, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: No | Urban: Yes" },
+    { "id": "light-hammer", "name": "Light Hammer", "category": "Simple Melee Weapon", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: No | Urban: Yes" },
+    { "id": "mace", "name": "Mace", "category": "Simple Melee Weapon", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "sickle", "name": "Sickle", "category": "Simple Melee Weapon", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes" },
+    { "id": "spear", "name": "Spear", "category": "Simple Melee Weapon", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "battleaxe", "name": "Battleaxe", "category": "Martial Melee Weapon", "price_gp": 10, "stock": 1, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes" },
+    { "id": "flail", "name": "Flail", "category": "Martial Melee Weapon", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: Yes" },
+    { "id": "glaive", "name": "Glaive", "category": "Martial Melee Weapon", "price_gp": 20, "stock": 999, "rarity": "", "desc": "Cheap: 15 gp | High: 30 gp | Rural: No | Urban: Yes" },
+    { "id": "greataxe", "name": "Greataxe", "category": "Martial Melee Weapon", "price_gp": 30, "stock": 999, "rarity": "", "desc": "Cheap: 22 gp | High: 45 gp | Rural: Yes | Urban: Yes" },
+    { "id": "greatsword", "name": "Greatsword", "category": "Martial Melee Weapon", "price_gp": 50, "stock": 1, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes" },
+    { "id": "halberd", "name": "Halberd", "category": "Martial Melee Weapon", "price_gp": 20, "stock": 999, "rarity": "", "desc": "Cheap: 15 gp | High: 30 gp | Rural: No | Urban: Yes" },
+    { "id": "longsword", "name": "Longsword", "category": "Martial Melee Weapon", "price_gp": 15, "stock": 1, "rarity": "", "desc": "Cheap: 11 gp | High: 22 gp | Rural: Yes | Urban: Yes" },
+    { "id": "maul", "name": "Maul", "category": "Martial Melee Weapon", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: Yes" },
+    { "id": "morningstar", "name": "Morningstar", "category": "Martial Melee Weapon", "price_gp": 15, "stock": 999, "rarity": "", "desc": "Cheap: 11 gp | High: 22 gp | Rural: No | Urban: Yes" },
+    { "id": "pike", "name": "Pike", "category": "Martial Melee Weapon", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "scimitar", "name": "Scimitar", "category": "Martial Melee Weapon", "price_gp": 25, "stock": 999, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: No | Urban: Yes" },
+    { "id": "shortsword", "name": "Shortsword", "category": "Martial Melee Weapon", "price_gp": 10, "stock": 1, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes" },
+    { "id": "war-pick", "name": "War Pick", "category": "Martial Melee Weapon", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
+    { "id": "warhammer", "name": "Warhammer", "category": "Martial Melee Weapon", "price_gp": 15, "stock": 999, "rarity": "", "desc": "Cheap: 11 gp | High: 22 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "ball-bearings-1000", "name": "Ball Bearings (1,000)", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "bell", "name": "Bell", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "block-and-tackle", "name": "Block and Tackle", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes" },
+    { "id": "chain-10ft", "name": "Chain (10 feet)", "category": "Adventuring Gear", "price_gp": 5, "stock": 1, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "crowbar", "name": "Crowbar", "category": "Adventuring Gear", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "grappling-hook", "name": "Grappling Hook", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: No | Urban: Yes" },
+    { "id": "hammer", "name": "Hammer", "category": "Adventuring Gear", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "sledgehammer", "name": "Hammer, Sledge", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "hunting-trap", "name": "Hunting Trap", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "lantern-hooded", "name": "Lantern, Hooded", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
+    { "id": "lock", "name": "Lock", "category": "Adventuring Gear", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes" },
+    { "id": "manacles", "name": "Manacles", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: No | Urban: Yes" },
+    { "id": "mirror-steel", "name": "Mirror, Steel", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
+    { "id": "miners-pick", "name": "Pick, Miner's", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "piton", "name": "Piton", "category": "Adventuring Gear", "price_gp": 0.05, "stock": 999, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: Yes | Urban: Yes" },
+    { "id": "iron-pot", "name": "Pot, Iron", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "iron-spikes", "name": "Spikes, Iron", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes" },
+    { "id": "whetstone", "name": "Whetstone", "category": "Adventuring Gear", "price_gp": 0.01, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "carpenters-tools", "name": "Carpenter's Tools", "category": "Tools", "price_gp": 8, "stock": 999, "rarity": "", "desc": "Cheap: 6 gp | High: 12 gp | Rural: Yes | Urban: Yes" },
+    { "id": "masons-tools", "name": "Mason's Tools", "category": "Tools", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: Yes" },
+    { "id": "smiths-tools", "name": "Smith's Tools", "category": "Tools", "price_gp": 20, "stock": 1, "rarity": "", "desc": "Cheap: 15 gp | High: 30 gp | Rural: Yes | Urban: Yes" }
+  ]
+}
+,
+{
+  "id": "fletcher-bowyer",
+  "name": "Fletcher & Bowyer",
+  "tagline": "",
+  "icon": "",
+  "items": [
     {
-      "id": "general-store",
-      "name": "🏪 General Store",
-      "tagline": "Everyday goods",
-      "items": []
+      "id": "crossbow-light",
+      "name": "Crossbow, Light",
+      "category": "Simple Ranged Weapon",
+      "price_gp": 25,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 18 gp | High: 38 gp | Rural: Yes | Urban: Yes"
     },
     {
-      "id": "adventuring-supplies",
-      "name": "🎒 Adventuring Supplies",
-      "tagline": "Gear for the road",
-      "items": []
+      "id": "shortbow",
+      "name": "Shortbow",
+      "category": "Simple Ranged Weapon",
+      "price_gp": 25,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 18 gp | High: 38 gp | Limited Stock | Rural: Yes | Urban: Yes"
     },
     {
-      "id": "blacksmith-armory",
-      "name": "⚔️ Blacksmith & Armory",
-      "tagline": "Weapons and armour",
-      "items": []
+      "id": "crossbow-hand",
+      "name": "Crossbow, Hand",
+      "category": "Martial Ranged Weapon",
+      "price_gp": 75,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 56 gp | High: 113 gp | Rural: No | Urban: Yes"
     },
     {
-      "id": "fletcher-bowyer",
-      "name": "🏹 Fletcher & Bowyer",
-      "tagline": "Bows, arrows, ranged gear",
-      "items": []
+      "id": "crossbow-heavy",
+      "name": "Crossbow, Heavy",
+      "category": "Martial Ranged Weapon",
+      "price_gp": 50,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes"
     },
     {
-      "id": "leatherworker",
-      "name": "🧵 Leatherworker",
-      "tagline": "Leather goods and armour",
-      "items": []
+      "id": "longbow",
+      "name": "Longbow",
+      "category": "Martial Ranged Weapon",
+      "price_gp": 50,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 38 gp | High: 75 gp | Limited Stock | Rural: Yes | Urban: Yes"
     },
     {
-      "id": "tailor",
-      "name": "👗 Tailor",
-      "tagline": "Clothing and fine wear",
-      "items": []
+      "id": "arrows-20",
+      "name": "Arrows (20)",
+      "category": "Ammunition",
+      "price_gp": 1,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 0.7 gp | High: 2 gp | Limited Stock | Rural: Yes | Urban: Yes"
     },
     {
-      "id": "dock-store",
-      "name": "⚓ Dock Store",
-      "tagline": "Maritime supplies",
-      "items": []
+      "id": "crossbow-bolts-20",
+      "name": "Crossbow Bolts (20)",
+      "category": "Ammunition",
+      "price_gp": 1,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes"
     },
     {
-      "id": "market-produce",
-      "name": "🥕 Market Produce",
-      "tagline": "Foodstuffs and perishables",
-      "items": []
+      "id": "case-crossbow-bolt",
+      "name": "Case, Crossbow Bolt",
+      "category": "Equipment",
+      "price_gp": 1,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes"
     },
     {
-      "id": "art-games",
-      "name": "🎭 Art & Games",
-      "tagline": "Leisure and culture",
-      "items": []
-    },
-    {
-      "id": "tavern-drinks",
-      "name": "🍺 Tavern Drinks",
-      "tagline": "Ale, wine, spirits",
-      "items": []
-    },
-    {
-      "id": "meal-inn",
-      "name": "🍽️ Meals & Inns",
-      "tagline": "Food and lodging",
-      "items": []
-    },
-    {
-      "id": "transportation",
-      "name": "🐎 Transportation",
-      "tagline": "Mounts and vehicles",
-      "items": [
-        {
-          "id": "horse-riding",
-          "name": "Horse, Riding",
-          "price_gp": 75,
-          "stock": 999,
-          "rarity": "Common",
-          "desc": "Standard riding horse"
-        },
-        {
-          "id": "donkey",
-          "name": "Donkey",
-          "price_gp": 8,
-          "stock": 1,
-          "rarity": "Common",
-          "desc": "Pack animal"
-        }
-      ]
-    },
-    {
-      "id": "arcane-shop",
-      "name": "🔮 Arcane Shop",
-      "tagline": "Arcane components and scrolls",
-      "items": []
-    },
-    {
-      "id": "magical-store",
-      "name": "✨ Magical Store",
-      "tagline": "Enchanted curios",
-      "items": []
-    },
-    {
-      "id": "potion-shop",
-      "name": "🧪 Potion Shop",
-      "tagline": "Potions and elixirs",
-      "items": []
-    },
-    {
-      "id": "potion-availability",
-      "name": "🧾 Potion Availability",
-      "tagline": "Stock reference",
-      "items": []
-    },
-    {
-      "id": "spell-availability",
-      "name": "📜 Spell Availability",
-      "tagline": "Spell access by tier",
-      "items": []
-    },
-    {
-      "id": "priests-spells",
-      "name": "⛪ Priest Spell Slots",
-      "tagline": "Divine casting services",
-      "items": []
-    },
-    {
-      "id": "cleric-availability",
-      "name": "🙏 Cleric Availability",
-      "tagline": "Divine services",
-      "items": []
-    },
-    {
-      "id": "temple-supplies",
-      "name": "🕊️ Temple Faith Supplies",
-      "tagline": "Holy items and rites",
-      "items": []
-    },
-    {
-      "id": "jeweller-stonecutter",
-      "name": "💎 Jeweller & Stonecutter",
-      "tagline": "Gems and fine craft",
-      "items": []
-    },
-    {
-      "id": "gemstone-availability",
-      "name": "💠 Gemstone Availability",
-      "tagline": "Gem stock tables",
-      "items": []
-    },
-    {
-      "id": "black-market",
-      "name": "🕯️ Black Market",
-      "tagline": "Illicit goods",
-      "items": []
+      "id": "quiver",
+      "name": "Quiver",
+      "category": "Equipment",
+      "price_gp": 1,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 0.07 gp | High: 2 gp | Limited Stock | Rural: Yes | Urban: Yes"
     }
+  ]
+}
+,
+{
+  "id": "leatherworker",
+  "name": "Leatherworker",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    {
+      "id": "leather-armor",
+      "name": "Leather",
+      "category": "Light Armor",
+      "price_gp": 10,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "studded-leather",
+      "name": "Studded Leather",
+      "category": "Light Armor",
+      "price_gp": 45,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 33 gp | High: 68 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "hide-armor",
+      "name": "Hide",
+      "category": "Medium Armor",
+      "price_gp": 10,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "shield",
+      "name": "Shield",
+      "category": "Shield",
+      "price_gp": 10,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: Yes"
+    },
+    {
+      "id": "sling",
+      "name": "Sling",
+      "category": "Simple Ranged Weapon",
+      "price_gp": 0.1,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "waterskin",
+      "name": "Waterskin",
+      "category": "Adventuring Gear",
+      "price_gp": 0.2,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "cobblers-tools",
+      "name": "Cobbler's Tools",
+      "category": "Tools",
+      "price_gp": 5,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "leatherworkers-tools",
+      "name": "Leatherworker's Tools",
+      "category": "Tools",
+      "price_gp": 5,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "bagpipes",
+      "name": "Bagpipes",
+      "category": "Musical Instrument",
+      "price_gp": 30,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 22 gp | High: 45 gp | Rural: No | Urban: No"
+    },
+    {
+      "id": "drum",
+      "name": "Drum",
+      "category": "Musical Instrument",
+      "price_gp": 6,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 4 gp | High: 9 gp | Rural: No | Urban: Yes"
+    }
+  ]
+}
+,
+{
+  "id": "tailor",
+  "name": "Tailor Store",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    { "id": "backpack", "name": "Backpack", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "basket", "name": "Basket", "category": "Adventuring Gear", "price_gp": 0.4, "stock": 1, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.6 gp | Rural: Yes | Urban: Yes" },
+    { "id": "bedroll", "name": "Bedroll", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "blanket", "name": "Blanket", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 1, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "clothes-common", "name": "Clothes, Common", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 1, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "clothes-costume", "name": "Clothes, Costume", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: No" },
+    { "id": "clothes-fine", "name": "Clothes, Fine", "category": "Adventuring Gear", "price_gp": 15, "stock": 999, "rarity": "", "desc": "Cheap: 11 gp | High: 23 gp | Rural: No | Urban: Yes" },
+    { "id": "clothes-travelers", "name": "Clothes, Traveler's", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "component-pouch", "name": "Component Pouch", "category": "Adventuring Gear", "price_gp": 25, "stock": 999, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: No | Urban: No" },
+    { "id": "pouch", "name": "Pouch", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 1, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "robes", "name": "Robes", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "sack", "name": "Sack", "category": "Adventuring Gear", "price_gp": 0.01, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: Yes" },
+    { "id": "tent-two-person", "name": "Tent, Two-person", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: No | Urban: Yes" },
+
+    { "id": "weavers-tools", "name": "Weaver's Tools", "category": "Tools", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "tailors-tools", "name": "Tailor's Tools", "category": "Tools", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "bone-needle", "name": "Bone Needle (5 ct)", "category": "Misc", "price_gp": 0.03, "stock": 999, "rarity": "", "desc": "Cheap: 0.02 gp | High: 0.05 gp | Rural: Yes | Urban: Yes" },
+    { "id": "steel-needle", "name": "Steel Needle (1 ct)", "category": "Misc", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.2 gp | Rural: No | Urban: Yes" },
+    { "id": "cotton-thread", "name": "Cotton Thread (30 ft)", "category": "Misc", "price_gp": 0.5, "stock": 1, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: No | Urban: Yes" },
+    { "id": "leather-cord", "name": "Leather Cord (15 ft)", "category": "Misc", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" }
+  ]
+}
+,
+{
+  "id": "dock-store",
+  "name": "Dock Store",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    {
+      "id": "spear",
+      "name": "Spear",
+      "category": "Simple Melee Weapon",
+      "price_gp": 1,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "net",
+      "name": "Net",
+      "category": "Martial Ranged Weapon",
+      "price_gp": 1,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 0.7 gp | High: 2 gp | Limited Stock | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "fishing-tackle",
+      "name": "Fishing Tackle",
+      "category": "Adventuring Gear",
+      "price_gp": 1,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 0.7 gp | High: 2 gp | Limited Stock | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "rowboat",
+      "name": "Rowboat",
+      "category": "Vehicle",
+      "price_gp": 50,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "fishing-bait-1lb",
+      "name": "Fishing Bait (1 lb.)",
+      "category": "Trade Goods",
+      "price_gp": 0.05,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 0.03 gp | High: 0.08 gp | Limited Stock | Rural: Yes | Urban: Yes"
+    }
+  ]
+}
+,
+{
+  "id": "market-produce",
+  "name": "Market Produce",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    { "id": "coffee-cup", "name": "Coffee", "category": "Drink (Cup)", "price_gp": 0.05, "stock": 999, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: Yes | Urban: Yes" },
+    { "id": "fruit-juice-cup", "name": "Fruit Juice", "category": "Drink (Cup)", "price_gp": 0.05, "stock": 1, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.02 gp | Rural: No | Urban: Yes" },
+    { "id": "milk-cup", "name": "Milk", "category": "Drink (Cup)", "price_gp": 0.03, "stock": 1, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "fruit-in-season", "name": "In Season Fruit", "category": "Fruit (Single)", "price_gp": 0.01, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.05 gp | Rural: Yes | Urban: Yes" },
+    { "id": "fruit-out-season", "name": "Out of Season Fruit", "category": "Fruit (Single)", "price_gp": 0.05, "stock": 1, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.02 gp | Rural: No | Urban: No" },
+
+    { "id": "amaranth-greens", "name": "Amaranth Leaf / Greens", "category": "Vegetables (Bushel)", "price_gp": 0.05, "stock": 999, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: Yes | Urban: Yes" },
+    { "id": "broccoli-cauliflower", "name": "Broccoli / Cauliflower", "category": "Vegetables (Bushel)", "price_gp": 0.03, "stock": 999, "rarity": "", "desc": "Cheap: 0.02 gp | High: 0.05 gp | Rural: Yes | Urban: Yes" },
+    { "id": "cabbage-lettuce", "name": "Cabbage / Lettuce", "category": "Vegetables (Bushel)", "price_gp": 0.02, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: Yes | Urban: Yes" },
+    { "id": "fruit-vegetable", "name": "Fruit “Vegetable”", "category": "Vegetables (Bushel)", "price_gp": 0.05, "stock": 999, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: Yes | Urban: Yes" },
+    { "id": "legumes", "name": "Legumes", "category": "Vegetables (Bushel)", "price_gp": 0.04, "stock": 999, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.06 gp | Rural: Yes | Urban: Yes" },
+    { "id": "root-tuber", "name": "Root / Tuber", "category": "Vegetables (Bushel)", "price_gp": 0.01, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "amaranth-grain", "name": "Amaranth", "category": "Grains (Pound)", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: No | Urban: Yes" },
+    { "id": "barley-rye", "name": "Barley / Rye", "category": "Grains (Pound)", "price_gp": 0.02, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: Yes | Urban: Yes" },
+    { "id": "oats", "name": "Oats", "category": "Grains (Pound)", "price_gp": 0.5, "stock": 999, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: No | Urban: Yes" },
+    { "id": "quinoa", "name": "Quinoa", "category": "Grains (Pound)", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes" },
+    { "id": "rice", "name": "Rice", "category": "Grains (Pound)", "price_gp": 0.05, "stock": 999, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: No | Urban: No" },
+    { "id": "wheat", "name": "Wheat", "category": "Grains (Pound)", "price_gp": 0.1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 0.2 gp | Rural: No | Urban: Yes" },
+
+    { "id": "almond-roll", "name": "Almond / Sweet Roll", "category": "Baked Goods (Single)", "price_gp": 0.1, "stock": 1, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: No | Urban: Yes" },
+    { "id": "seedcake", "name": "Seedcake", "category": "Baked Goods (Single)", "price_gp": 0.05, "stock": 1, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: Yes | Urban: Yes" },
+    { "id": "cheat-loaf", "name": "Cheat / Wheaten Loaf", "category": "Baked Goods (Single)", "price_gp": 0.2, "stock": 1, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: No | Urban: Yes" },
+    { "id": "cheese-danish", "name": "Cheese Danish", "category": "Baked Goods (Single)", "price_gp": 0.1, "stock": 1, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: No | Urban: Yes" },
+    { "id": "fruit-tart", "name": "Fruit Tart", "category": "Baked Goods (Single)", "price_gp": 0.2, "stock": 1, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "manchet-loaf", "name": "Manchet Loaf", "category": "Baked Goods (Single)", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: No" },
+    { "id": "quince-bread", "name": "Quince Bread Slice", "category": "Baked Goods (Single)", "price_gp": 0.2, "stock": 1, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: No | Urban: No" },
+    { "id": "rye-loaf", "name": "Rye Loaf", "category": "Baked Goods (Single)", "price_gp": 0.02, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "beef-meat", "name": "Beef / Buffalo / Deer", "category": "Protein (Pound)", "price_gp": 0.3, "stock": 999, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.5 gp | Rural: Yes | Urban: Yes" },
+    { "id": "boar-meat", "name": "Boar / Chicken / Pork", "category": "Protein (Pound)", "price_gp": 0.08, "stock": 999, "rarity": "", "desc": "Cheap: 0.06 gp | High: 0.12 gp | Rural: Yes | Urban: Yes" },
+    { "id": "dried-meat", "name": "Dried / Salted Meat", "category": "Protein (Pound)", "price_gp": 0.5, "stock": 999, "rarity": "", "desc": "Cheap: 0.6 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "eggs-half-dozen", "name": "Half-Dozen Eggs", "category": "Protein (Pound)", "price_gp": 0.03, "stock": 999, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.05 gp | Rural: Yes | Urban: Yes" },
+    { "id": "fish", "name": "Fish", "category": "Protein (Pound)", "price_gp": 0.6, "stock": 1, "rarity": "", "desc": "Cheap: 0.2 gp | High: 0.9 gp | Rural: No | Urban: Yes" },
+    { "id": "insects-game", "name": "Insects / Small Game", "category": "Protein (Pound)", "price_gp": 0.04, "stock": 999, "rarity": "", "desc": "Cheap: 0.04 gp | High: 0.06 gp | Rural: Yes | Urban: Yes" },
+    { "id": "goat-meat", "name": "Goat", "category": "Protein (Pound)", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "lamb-meat", "name": "Lamb", "category": "Protein (Pound)", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "shellfish", "name": "Shellfish (Oceanic)", "category": "Protein (Pound)", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: No | Urban: No" },
+
+    { "id": "brie", "name": "Brie", "category": "Cheese (Half Pound)", "price_gp": 0.2, "stock": 1, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "cheddar", "name": "Cheddar", "category": "Cheese (Half Pound)", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 2 gp | Rural: No | Urban: No" },
+    { "id": "cottage-cheese", "name": "Cottage", "category": "Cheese (Half Pound)", "price_gp": 0.04, "stock": 999, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.06 gp | Rural: Yes | Urban: Yes" },
+    { "id": "parmesan", "name": "Parmesan", "category": "Cheese (Half Pound)", "price_gp": 0.5, "stock": 999, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: No | Urban: Yes" },
+    { "id": "specialty-cheese", "name": "Specialty Cheese", "category": "Cheese (Half Pound)", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "cinnamon", "name": "Cinnamon", "category": "Spices (Half Ounce)", "price_gp": 0.1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 0.2 gp | Rural: No | Urban: Yes" },
+    { "id": "coriander", "name": "Coriander", "category": "Spices (Half Ounce)", "price_gp": 0.03, "stock": 1, "rarity": "", "desc": "Cheap: 0.02 gp | High: 0.05 gp | Rural: No | Urban: Yes" },
+    { "id": "cumin", "name": "Cumin", "category": "Spices (Half Ounce)", "price_gp": 0.07, "stock": 1, "rarity": "", "desc": "Cheap: 0.04 gp | High: 0.13 gp | Rural: No | Urban: Yes" },
+    { "id": "garlic", "name": "Garlic", "category": "Spices (Half Ounce)", "price_gp": 0.02, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: No | Urban: Yes" },
+    { "id": "mustard", "name": "Mustard", "category": "Spices (Half Ounce)", "price_gp": 0.1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 0.2 gp | Rural: No | Urban: Yes" },
+    { "id": "nutmeg", "name": "Nutmeg", "category": "Spices (Half Ounce)", "price_gp": 0.08, "stock": 1, "rarity": "", "desc": "Cheap: 0.06 gp | High: 0.12 gp | Rural: No | Urban: Yes" },
+    { "id": "pepper", "name": "Pepper", "category": "Spices (Half Ounce)", "price_gp": 0.05, "stock": 1, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: Yes | Urban: Yes" },
+    { "id": "salt", "name": "Salt", "category": "Spices (Half Ounce)", "price_gp": 0.06, "stock": 1, "rarity": "", "desc": "Cheap: 0.04 gp | High: 0.09 gp | Rural: Yes | Urban: Yes" },
+    { "id": "specialty-spice", "name": "Specialty Spice", "category": "Spices (Half Ounce)", "price_gp": 0.2, "stock": 1, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: No | Urban: No" }
+  ]
+}
+,
+{
+  "id": "art-games",
+  "name": "Art & Games",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    { "id": "calligraphers-supplies", "name": "Calligrapher's Supplies", "category": "Tools", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 8 gp | High: 15 gp | Rural: No | Urban: Yes" },
+    { "id": "glassblowers-tools", "name": "Glassblower's Tools", "category": "Tools", "price_gp": 30, "stock": 999, "rarity": "", "desc": "Cheap: 22 gp | High: 45 gp | Rural: No | Urban: No" },
+    { "id": "painters-supplies", "name": "Painter's Supplies", "category": "Tools", "price_gp": 10, "stock": 1, "rarity": "", "desc": "Cheap: 8 gp | High: 15 gp | Limited Stock | Rural: Yes | Urban: Yes" },
+    { "id": "potters-tools", "name": "Potter's Tools", "category": "Tools", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 8 gp | High: 15 gp | Rural: No | Urban: Yes" },
+    { "id": "weavers-tools", "name": "Weaver's Tools", "category": "Tools", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "woodcarvers-tools", "name": "Woodcarver's Tools", "category": "Tools", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "disguise-kit", "name": "Disguise Kit", "category": "Tools", "price_gp": 25, "stock": 999, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: No | Urban: No" },
+    { "id": "dice-set", "name": "Dice Set", "category": "Games", "price_gp": 0.1, "stock": 1, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.2 gp | Limited Stock | Rural: Yes | Urban: Yes" },
+    { "id": "dragonchess-set", "name": "Dragonchess Set", "category": "Games", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: No" },
+    { "id": "playing-card-set", "name": "Playing Card Set", "category": "Games", "price_gp": 0.5, "stock": 999, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "three-dragon-ante-set", "name": "Three-Dragon Ante Set", "category": "Games", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes" },
+    { "id": "bagpipes", "name": "Bagpipes", "category": "Musical Instrument", "price_gp": 30, "stock": 999, "rarity": "", "desc": "Cheap: 22 gp | High: 45 gp | Rural: No | Urban: No" },
+    { "id": "drum", "name": "Drum", "category": "Musical Instrument", "price_gp": 6, "stock": 999, "rarity": "", "desc": "Cheap: 4 gp | High: 9 gp | Rural: Yes | Urban: Yes" },
+    { "id": "dulcimer", "name": "Dulcimer", "category": "Musical Instrument", "price_gp": 25, "stock": 999, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: No | Urban: Yes" },
+    { "id": "flute", "name": "Flute", "category": "Musical Instrument", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Limited Stock | Rural: Yes | Urban: Yes" },
+    { "id": "lute", "name": "Lute", "category": "Musical Instrument", "price_gp": 35, "stock": 999, "rarity": "", "desc": "Cheap: 26 gp | High: 53 gp | Rural: Yes | Urban: Yes" },
+    { "id": "lyre", "name": "Lyre", "category": "Musical Instrument", "price_gp": 30, "stock": 1, "rarity": "", "desc": "Cheap: 22 gp | High: 45 gp | Limited Stock | Rural: Yes | Urban: Yes" },
+    { "id": "horn", "name": "Horn", "category": "Musical Instrument", "price_gp": 3, "stock": 999, "rarity": "", "desc": "Cheap: 2 gp | High: 5 gp | Rural: No | Urban: Yes" },
+    { "id": "pan-flute", "name": "Pan Flute", "category": "Musical Instrument", "price_gp": 12, "stock": 999, "rarity": "", "desc": "Cheap: 9 gp | High: 18 gp | Rural: Yes | Urban: Yes" },
+    { "id": "shawm", "name": "Shawm", "category": "Musical Instrument", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: No | Urban: Yes" },
+    { "id": "viol", "name": "Viol", "category": "Musical Instrument", "price_gp": 30, "stock": 999, "rarity": "", "desc": "Cheap: 22 gp | High: 45 gp | Rural: No | Urban: No" }
+  ]
+}
+,
+{
+  "id": "tavern-drinks",
+  "name": "Tavern Drinks & Prices",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    { "id": "abbey-red-wine", "name": "Abbey Red Wine", "category": "Wine", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.16 gp | High: 0.4 gp | Rural: Yes | Urban: Yes" },
+    { "id": "bloodwine", "name": "Bloodwine", "category": "Wine", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.16 gp | High: 0.4 gp | Rural: Yes | Urban: Yes" },
+    { "id": "clarry-wine", "name": "Clarry Wine", "category": "Wine", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.08 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "evermead", "name": "Evermead", "category": "Wine", "price_gp": 11, "stock": 1, "rarity": "", "desc": "Cheap: 9 gp | High: 22 gp | Rural: No | Urban: Yes" },
+    { "id": "far-ridge-red", "name": "Far Ridge Red", "category": "Wine", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.08 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "fire-wine", "name": "Fire Wine", "category": "Wine", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.08 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "glowfire", "name": "Glowfire", "category": "Wine", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.16 gp | High: 0.4 gp | Rural: Yes | Urban: Yes" },
+    { "id": "highdusk-dark", "name": "Highdusk Dark", "category": "Wine", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.8 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "mead-wine", "name": "Mead Wine", "category": "Wine", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.08 gp | High: 0.1 gp | Rural: No | Urban: Yes" },
+    { "id": "redwood-dry", "name": "Redwood Dry", "category": "Wine", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.08 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "special-vat", "name": "Special Vat", "category": "Wine", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.16 gp | High: 0.4 gp | Rural: Yes | Urban: Yes" },
+    { "id": "table-wine", "name": "Table Wine", "category": "Wine", "price_gp": 0.06, "stock": 999, "rarity": "", "desc": "Cheap: 0.05 gp | High: 0.12 gp | Rural: Yes | Urban: Yes" },
+    { "id": "temple-under-rock", "name": "Temple Under Rock", "category": "Wine", "price_gp": 0.4, "stock": 1, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: No | Urban: Yes" },
+    { "id": "topaz-wine", "name": "Topaz", "category": "Wine", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.16 gp | High: 0.4 gp | Rural: Yes | Urban: Yes" },
+    { "id": "spiced-wine", "name": "Spiced Wine", "category": "Wine", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.08 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "westgate-ruby", "name": "Westgate Ruby", "category": "Wine", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.08 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "winter-wine", "name": "Winter Wine", "category": "Wine", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.16 gp | High: 0.4 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "absinthe", "name": "Absinthe", "category": "Liquor", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1.6 gp | High: 4 gp | Rural: No | Urban: Yes" },
+    { "id": "cherry-fire", "name": "Cherry Fire", "category": "Liquor", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.16 gp | High: 0.4 gp | Rural: Yes | Urban: Yes" },
+    { "id": "death-wish", "name": "Death Wish", "category": "Liquor", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.8 gp | High: 4 gp | Rural: Yes | Urban: Yes" },
+    { "id": "elquestria", "name": "Elquestria", "category": "Liquor", "price_gp": 3, "stock": 999, "rarity": "", "desc": "Cheap: 2 gp | High: 6 gp | Rural: Yes | Urban: Yes" },
+    { "id": "elverquis", "name": "Elverquis", "category": "Liquor", "price_gp": 56, "stock": 1, "rarity": "", "desc": "Cheap: 45 gp | High: 112 gp | Rural: No | Urban: No" },
+    { "id": "fireball-liquor", "name": "Fireball", "category": "Liquor", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.8 gp | High: 2 gp | Rural: No | Urban: Yes" },
+    { "id": "flindmaker", "name": "Flindmaker", "category": "Liquor", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.8 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "hog-piss", "name": "Hog Piss", "category": "Liquor", "price_gp": 0.02, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.04 gp | Rural: Yes | Urban: Yes" },
+    { "id": "kumis", "name": "Kumis", "category": "Liquor", "price_gp": 0.4, "stock": 999, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "seawine", "name": "Seawine", "category": "Liquor", "price_gp": 0.2, "stock": 1, "rarity": "", "desc": "Cheap: 0.16 gp | High: 0.4 gp | Rural: Yes | Urban: No" },
+    { "id": "shasta", "name": "Shasta", "category": "Liquor", "price_gp": 0.2, "stock": 1, "rarity": "", "desc": "Cheap: 0.16 gp | High: 0.4 gp | Rural: No | Urban: Yes" },
+    { "id": "vodka", "name": "Vodka", "category": "Liquor", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.8 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "white-eye-whiskey", "name": "White Eye Whiskey", "category": "Liquor", "price_gp": 3, "stock": 1, "rarity": "", "desc": "Cheap: 2 gp | High: 6 gp | Rural: No | Urban: Yes" },
+    { "id": "zzar", "name": "Zzar", "category": "Liquor", "price_gp": 1.5, "stock": 999, "rarity": "", "desc": "Cheap: 1.2 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "bitter-black", "name": "Bitter Black", "category": "Beer", "price_gp": 0.09, "stock": 999, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.18 gp | Rural: Yes | Urban: Yes" },
+    { "id": "bleak-stout", "name": "Bleak Stout", "category": "Beer", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.08 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "dragons-breath", "name": "Dragon's Breath", "category": "Beer", "price_gp": 0.02, "stock": 999, "rarity": "", "desc": "Cheap: 0.02 gp | High: 0.04 gp | Rural: Yes | Urban: Yes" },
+    { "id": "goblin-piss", "name": "Goblin Piss", "category": "Beer", "price_gp": 0.01, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: No" },
+    { "id": "golden-sands-ale", "name": "Golden Sand's Ale", "category": "Beer", "price_gp": 0.03, "stock": 999, "rarity": "", "desc": "Cheap: 0.02 gp | High: 0.06 gp | Rural: Yes | Urban: Yes" },
+    { "id": "halflings-best", "name": "Halflin's Best", "category": "Beer", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.08 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "north-brew", "name": "North Brew", "category": "Beer", "price_gp": 0.01, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: Yes" },
+    { "id": "old-one-eye", "name": "Old One Eye", "category": "Beer", "price_gp": 0.03, "stock": 999, "rarity": "", "desc": "Cheap: 0.02 gp | High: 0.06 gp | Rural: Yes | Urban: Yes" },
+    { "id": "purple-noble", "name": "Purple Noble", "category": "Beer", "price_gp": 0.2, "stock": 1, "rarity": "", "desc": "Cheap: 0.16 gp | High: 0.4 gp | Rural: No | Urban: Yes" },
+    { "id": "shadowdark", "name": "Shadowdark", "category": "Beer", "price_gp": 0.04, "stock": 999, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: Yes | Urban: Yes" },
+    { "id": "wizards-choice", "name": "Wizard's Choice", "category": "Beer", "price_gp": 0.04, "stock": 1, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: No | Urban: Yes" },
+
+    { "id": "hill-cider", "name": "Hill Cider", "category": "Cider", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.08 gp | High: 0.2 gp | Rural: No | Urban: Yes" },
+    { "id": "knee-cracker-cider", "name": "Knee Cracker Cider", "category": "Cider", "price_gp": 0.01, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: Yes" },
+    { "id": "troll-pear-cider", "name": "Troll Pear Cider", "category": "Cider", "price_gp": 0.2, "stock": 1, "rarity": "", "desc": "Cheap: 0.16 gp | High: 0.4 gp | Rural: No | Urban: Yes" },
+    { "id": "vilhoun-cider", "name": "Vilhoun Cider", "category": "Cider", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.08 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" }
+  ]
+}
+,
+{
+  "id": "meal-inn",
+  "name": "Meals & Inns",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    { "id": "meat-stick", "name": "“Meat” Stick", "category": "Commoner Meal", "price_gp": 0.03, "stock": 999, "rarity": "", "desc": "Breakfast | Cheap: 0.02 gp | High: 0.05 gp | Rural: Yes | Urban: Yes" },
+    { "id": "roasted-locust", "name": "Roasted Locust", "category": "Commoner Meal", "price_gp": 0.03, "stock": 999, "rarity": "", "desc": "Breakfast | Cheap: 0.02 gp | High: 0.05 gp | Rural: Yes | Urban: No" },
+    { "id": "cheese-omelet", "name": "Cheese Omelet", "category": "Commoner Meal", "price_gp": 0.04, "stock": 999, "rarity": "", "desc": "Breakfast | Cheap: 0.03 gp | High: 0.06 gp | Rural: Yes | Urban: Yes" },
+    { "id": "ham-cheese-rye", "name": "Ham & Cheese on Rye", "category": "Commoner Meal", "price_gp": 0.05, "stock": 999, "rarity": "", "desc": "Breakfast | Cheap: 0.03 gp | High: 0.08 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "bacon-egg-sandwich", "name": "Bacon & Egg Sandwich", "category": "Merchant Meal", "price_gp": 0.3, "stock": 999, "rarity": "", "desc": "Breakfast | Cheap: 0.2 gp | High: 0.5 gp | Rural: Yes | Urban: Yes" },
+    { "id": "omelet-your-way", "name": "Omelet “Your Way”", "category": "Merchant Meal", "price_gp": 0.3, "stock": 999, "rarity": "", "desc": "Breakfast | Cheap: 0.2 gp | High: 0.5 gp | Rural: Yes | Urban: Yes" },
+    { "id": "bloodhawk-eggs", "name": "Bloodhawk Eggs", "category": "Merchant Meal", "price_gp": 0.4, "stock": 999, "rarity": "", "desc": "Breakfast | Cheap: 0.3 gp | High: 0.6 gp | Rural: Yes | Urban: Yes" },
+    { "id": "bacon-stuffed-bread", "name": "Bacon Stuffed Bread", "category": "Merchant Meal", "price_gp": 0.5, "stock": 999, "rarity": "", "desc": "Breakfast | Cheap: 0.3 gp | High: 0.8 gp | Rural: No | Urban: Yes" },
+
+    { "id": "frittata-herbs", "name": "Frittata & Herbs", "category": "Noble Meal", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Breakfast | Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes" },
+    { "id": "bacon-owlbear-eggs", "name": "Bacon & Owlbear Eggs", "category": "Noble Meal", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Breakfast | Cheap: 1 gp | High: 3 gp | Rural: No | Urban: Yes" },
+    { "id": "boar-ham-eggs", "name": "Boar Ham Steak & Eggs", "category": "Noble Meal", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Breakfast | Cheap: 1 gp | High: 3 gp | Rural: No | Urban: Yes" },
+    { "id": "truffle-omelet", "name": "Truffle Omelet", "category": "Noble Meal", "price_gp": 3, "stock": 999, "rarity": "", "desc": "Breakfast | Cheap: 2 gp | High: 5 gp | Rural: No | Urban: No" },
+
+    { "id": "stockpot-lunch", "name": "Stockpot Stew / Soup", "category": "Commoner Meal", "price_gp": 0.04, "stock": 999, "rarity": "", "desc": "Lunch | Cheap: 0.03 gp | High: 0.06 gp | Rural: Yes | Urban: Yes" },
+    { "id": "adventurers-steak", "name": "“Adventurer’s” Steak", "category": "Commoner Meal", "price_gp": 0.04, "stock": 999, "rarity": "", "desc": "Lunch | Cheap: 0.03 gp | High: 0.06 gp | Rural: Yes | Urban: Yes" },
+    { "id": "minced-pork", "name": "Minced Pork", "category": "Commoner Meal", "price_gp": 0.05, "stock": 999, "rarity": "", "desc": "Lunch | Cheap: 0.03 gp | High: 0.08 gp | Rural: Yes | Urban: Yes" },
+    { "id": "roast-goat-cheese", "name": "Roast Goat & Cheese", "category": "Commoner Meal", "price_gp": 0.06, "stock": 999, "rarity": "", "desc": "Lunch | Cheap: 0.04 gp | High: 0.09 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "poor-room", "name": "Poor Room", "category": "Inn Room", "price_gp": 0.05, "stock": 1, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: Yes | Urban: Yes" },
+    { "id": "modest-room", "name": "Modest Room", "category": "Inn Room", "price_gp": 0.1, "stock": 1, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "merchant-room", "name": "Merchant Room", "category": "Inn Room", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "wealthy-room", "name": "Wealthy Room", "category": "Inn Room", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: No | Urban: Yes" },
+    { "id": "aristocratic-room", "name": "Aristocratic Room", "category": "Inn Room", "price_gp": 4, "stock": 1, "rarity": "", "desc": "Cheap: 3 gp | High: 6 gp | Rural: No | Urban: Yes" }
+  ]
+}
+,
+{
+  "id": "transportation",
+  "name": "Transportation",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    { "id": "camel", "name": "Camel", "category": "Mount", "price_gp": 50, "stock": 999, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: No | Urban: No" },
+    { "id": "donkey", "name": "Donkey", "category": "Mount", "price_gp": 8, "stock": 1, "rarity": "", "desc": "Cheap: 6 gp | High: 12 gp | Rural: Yes | Urban: Yes" },
+    { "id": "elephant", "name": "Elephant", "category": "Mount", "price_gp": 200, "stock": 999, "rarity": "", "desc": "Cheap: 150 gp | High: 300 gp | Rural: No | Urban: No" },
+    { "id": "horse-draft", "name": "Horse, Draft", "category": "Mount", "price_gp": 50, "stock": 1, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes" },
+    { "id": "horse-riding", "name": "Horse, Riding", "category": "Mount", "price_gp": 75, "stock": 999, "rarity": "", "desc": "Cheap: 56 gp | High: 113 gp | Rural: Yes | Urban: Yes" },
+    { "id": "mastiff", "name": "Mastiff", "category": "Mount", "price_gp": 25, "stock": 999, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: No | Urban: Yes" },
+    { "id": "pony", "name": "Pony", "category": "Mount", "price_gp": 30, "stock": 999, "rarity": "", "desc": "Cheap: 22 gp | High: 45 gp | Rural: Yes | Urban: Yes" },
+    { "id": "warhorse", "name": "Warhorse", "category": "Mount", "price_gp": 400, "stock": 999, "rarity": "", "desc": "Cheap: 300 gp | High: 600 gp | Rural: No | Urban: No" },
+
+    { "id": "bit-bridle", "name": "Bit & Bridle", "category": "Mount Accessory", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "carriage", "name": "Carriage", "category": "Vehicle", "price_gp": 100, "stock": 999, "rarity": "", "desc": "Cheap: 75 gp | High: 150 gp | Rural: No | Urban: Yes" },
+    { "id": "cart", "name": "Cart", "category": "Vehicle", "price_gp": 15, "stock": 999, "rarity": "", "desc": "Cheap: 12 gp | High: 23 gp | Rural: Yes | Urban: Yes" },
+    { "id": "chariot", "name": "Chariot", "category": "Vehicle", "price_gp": 250, "stock": 999, "rarity": "", "desc": "Cheap: 187 gp | High: 375 gp | Rural: No | Urban: No" },
+
+    { "id": "animal-feed", "name": "Animal Feed (per day)", "category": "Mount Care", "price_gp": 0.05, "stock": 1, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.07 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "saddle-exotic", "name": "Saddle, Exotic", "category": "Saddle", "price_gp": 60, "stock": 999, "rarity": "", "desc": "Cheap: 45 gp | High: 90 gp | Rural: No | Urban: No" },
+    { "id": "saddle-military", "name": "Saddle, Military", "category": "Saddle", "price_gp": 20, "stock": 999, "rarity": "", "desc": "Cheap: 15 gp | High: 30 gp | Rural: No | Urban: Yes" },
+    { "id": "saddle-pack", "name": "Saddle, Pack", "category": "Saddle", "price_gp": 5, "stock": 1, "rarity": "", "desc": "Cheap: 3 gp | High: 7 gp | Rural: Yes | Urban: Yes" },
+    { "id": "saddle-riding", "name": "Saddle, Riding", "category": "Saddle", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "saddlebags", "name": "Saddlebags", "category": "Mount Accessory", "price_gp": 4, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 6 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "sled", "name": "Sled", "category": "Vehicle", "price_gp": 20, "stock": 999, "rarity": "", "desc": "Cheap: 15 gp | High: 30 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "stabling", "name": "Stabling (per day)", "category": "Mount Care", "price_gp": 0.5, "stock": 1, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.7 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "wagon", "name": "Wagon", "category": "Vehicle", "price_gp": 35, "stock": 999, "rarity": "", "desc": "Cheap: 27 gp | High: 53 gp | Rural: Yes | Urban: Yes" }
+  ]
+}
+,
+{
+  "id": "arcane-shop",
+  "name": "Arcane Shop",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    { "id": "alchemists-supplies", "name": "Alchemist's Supplies", "category": "Tools", "price_gp": 50, "stock": 999, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes" },
+    { "id": "bottle-glass", "name": "Bottle, glass", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "calligraphers-supplies", "name": "Calligrapher's Supplies", "category": "Tools", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: Yes" },
+    { "id": "candle", "name": "Candle", "category": "Adventuring Gear", "price_gp": 0.01, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: Yes" },
+    { "id": "case-map-scroll", "name": "Case, Map or Scroll", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "scroll-cantrip", "name": "Common Spell Scroll (Cantrip)", "category": "Scroll", "price_gp": 50, "stock": 1, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Limited Stock | Rural: Yes | Urban: Yes" },
+    { "id": "scroll-level-1", "name": "Common Spell Scroll (Level 1)", "category": "Scroll", "price_gp": 100, "stock": 1, "rarity": "", "desc": "Cheap: 75 gp | High: 150 gp | Limited Stock | Rural: Yes | Urban: Yes" },
+    { "id": "component-pouch", "name": "Component Pouch", "category": "Adventuring Gear", "price_gp": 25, "stock": 999, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: No | Urban: No" },
+    { "id": "crystal-focus", "name": "Crystal", "category": "Arcane Focus", "price_gp": 10, "stock": 1, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Limited Stock | Rural: Yes | Urban: Yes" },
+    { "id": "hourglass", "name": "Hourglass", "category": "Adventuring Gear", "price_gp": 25, "stock": 999, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: No | Urban: No" },
+    { "id": "ink-bottle", "name": "Ink (1 ounce bottle)", "category": "Adventuring Gear", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes" },
+    { "id": "ink-pen", "name": "Ink Pen", "category": "Adventuring Gear", "price_gp": 0.02, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: Yes | Urban: Yes" },
+    { "id": "lute", "name": "Lute", "category": "Musical Instrument", "price_gp": 35, "stock": 999, "rarity": "", "desc": "Cheap: 26 gp | High: 53 gp | Rural: No | Urban: Yes" },
+    { "id": "lyre", "name": "Lyre", "category": "Musical Instrument", "price_gp": 30, "stock": 999, "rarity": "", "desc": "Cheap: 22 gp | High: 45 gp | Rural: No | Urban: No" },
+    { "id": "magic-appraisal", "name": "Magic Appraisal (Identify)", "category": "Services", "price_gp": 100, "stock": 1, "rarity": "", "desc": "Cheap: 75 gp | High: 150 gp | Limited Stock | Rural: Yes | Urban: Yes" },
+    { "id": "orb", "name": "Orb", "category": "Arcane Focus", "price_gp": 20, "stock": 999, "rarity": "", "desc": "Cheap: 15 gp | High: 30 gp | Rural: No | Urban: Yes" },
+    { "id": "paper-sheet", "name": "Paper (one sheet)", "category": "Adventuring Gear", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: No | Urban: Yes" },
+    { "id": "parchment-sheet", "name": "Parchment (one sheet)", "category": "Adventuring Gear", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "pouch", "name": "Pouch", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 999, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "quarterstaff", "name": "Quarterstaff", "category": "Simple Melee Weapon", "price_gp": 0.2, "stock": 1, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Limited Stock | Rural: Yes | Urban: Yes" },
+    { "id": "scroll-level-2", "name": "Uncommon Spell Scroll (Level 2)", "category": "Scroll", "price_gp": 250, "stock": 999, "rarity": "", "desc": "Cheap: 187 gp | High: 375 gp | Rural: No | Urban: Yes" },
+    { "id": "scroll-level-3", "name": "Uncommon Spell Scroll (Level 3)", "category": "Scroll", "price_gp": 500, "stock": 999, "rarity": "", "desc": "Cheap: 375 gp | High: 750 gp | Rural: No | Urban: Yes" },
+    { "id": "scroll-level-4", "name": "Rare Spell Scroll (Level 4)", "category": "Scroll", "price_gp": 2500, "stock": 999, "rarity": "", "desc": "Cheap: 1875 gp | High: 3750 gp | Rural: No | Urban: No" },
+    { "id": "scroll-level-5", "name": "Rare Spell Scroll (Level 5)", "category": "Scroll", "price_gp": 5000, "stock": 999, "rarity": "", "desc": "Cheap: 3750 gp | High: 7500 gp | Rural: No | Urban: No" },
+    { "id": "robes", "name": "Robes", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes" },
+    { "id": "rod", "name": "Rod", "category": "Arcane Focus", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes" },
+    { "id": "spell-components", "name": "Spell Components", "category": "Adventuring Gear", "price_gp": 0, "stock": 999, "rarity": "", "desc": "Cost varies by spell (x0.75 cheap / x1.5 high) | Rural: Yes | Urban: Yes" },
+    { "id": "spellbook", "name": "Spellbook", "category": "Adventuring Gear", "price_gp": 50, "stock": 999, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes" },
+    { "id": "sprig-mistletoe", "name": "Sprig of Mistletoe", "category": "Druidic Focus", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Limited Stock | Rural: Yes | Urban: Yes" },
+    { "id": "staff", "name": "Staff", "category": "Arcane Focus", "price_gp": 5, "stock": 1, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Limited Stock | Rural: Yes | Urban: Yes" },
+    { "id": "totem", "name": "Totem", "category": "Druidic Focus", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes" },
+    { "id": "vial", "name": "Vial", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "wand", "name": "Wand", "category": "Arcane Focus", "price_gp": 10, "stock": 1, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Limited Stock | Rural: Yes | Urban: Yes" },
+    { "id": "wooden-staff", "name": "Wooden Staff", "category": "Druidic Focus", "price_gp": 5, "stock": 1, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Limited Stock | Rural: Yes | Urban: Yes" },
+    { "id": "yew-wand", "name": "Yew Wand", "category": "Druidic Focus", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes" },
+    { "id": "abacus", "name": "Abacus", "category": "Adventuring Gear", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Limited Stock | Rural: Yes | Urban: Yes" }
+  ]
+}
+,
+{
+  "id": "magical-store",
+  "name": "Magical Store",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    {
+      "id": "crystal",
+      "name": "Crystal",
+      "category": "Arcane Focus",
+      "price_gp": 10,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: Yes"
+    },
+    {
+      "id": "orb",
+      "name": "Orb",
+      "category": "Arcane Focus",
+      "price_gp": 20,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 15 gp | High: 30 gp | Rural: No | Urban: No"
+    },
+    {
+      "id": "rod",
+      "name": "Rod",
+      "category": "Arcane Focus",
+      "price_gp": 10,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "staff",
+      "name": "Staff",
+      "category": "Arcane Focus",
+      "price_gp": 5,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 3 gp | High: 8 gp | Limited Stock | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "wand",
+      "name": "Wand",
+      "category": "Arcane Focus",
+      "price_gp": 10,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 7 gp | High: 15 gp | Limited Stock | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "component-pouch",
+      "name": "Component Pouch",
+      "category": "Adventuring Gear",
+      "price_gp": 25,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 18 gp | High: 38 gp | Limited Stock | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "potion-healing",
+      "name": "Potion of Healing",
+      "category": "Potion",
+      "price_gp": 50,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 38 gp | High: 75 gp | Rural: No | Urban: Yes"
+    },
+    {
+      "id": "spellbook",
+      "name": "Spellbook",
+      "category": "Adventuring Gear",
+      "price_gp": 50,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes"
+    }
+  ]
+}
+,
+{
+  "id": "potion-shop",
+  "name": "Potion Shop",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    { "id": "component-pouch", "name": "Component Pouch", "category": "Adventuring Gear", "price_gp": 25, "stock": 999, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: Yes | Urban: Yes" },
+    { "id": "perfume-vial", "name": "Perfume (vial)", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: No" },
+    { "id": "ink-bottle", "name": "Ink (1 ounce bottle)", "category": "Adventuring Gear", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: No" },
+    { "id": "acid-vial", "name": "Acid (vial)", "category": "Adventuring Gear", "price_gp": 25, "stock": 999, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: Yes | Urban: Yes" },
+    { "id": "poison-basic-vial", "name": "Poison, Basic (vial)", "category": "Adventuring Gear", "price_gp": 100, "stock": 1, "rarity": "", "desc": "Cheap: 75 gp | High: 150 gp | Rural: Yes | Urban: Yes" },
+    { "id": "alchemists-fire", "name": "Alchemist's Fire (flask)", "category": "Adventuring Gear", "price_gp": 50, "stock": 999, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: No | Urban: Yes" },
+    { "id": "antitoxin-vial", "name": "Antitoxin (vial)", "category": "Adventuring Gear", "price_gp": 50, "stock": 1, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes" },
+    { "id": "bottle-glass", "name": "Bottle, glass", "category": "Adventuring Gear", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
+    { "id": "flask", "name": "Flask", "category": "Adventuring Gear", "price_gp": 0.02, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: Yes | Urban: Yes" },
+    { "id": "vial", "name": "Vial", "category": "Adventuring Gear", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "oil-flask", "name": "Oil (flask)", "category": "Adventuring Gear", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "jug", "name": "Jug", "category": "Adventuring Gear", "price_gp": 0.02, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "healers-kit", "name": "Healer's Kit", "category": "Tools", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
+    { "id": "poisoners-kit", "name": "Poisoner's Kit", "category": "Tools", "price_gp": 50, "stock": 999, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes" },
+    { "id": "alchemists-supplies", "name": "Alchemist's Supplies", "category": "Tools", "price_gp": 50, "stock": 999, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: No | Urban: Yes" },
+    { "id": "cooks-utensils", "name": "Cook's Utensils", "category": "Tools", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes" },
+    { "id": "brewers-supplies", "name": "Brewer's Supplies", "category": "Tools", "price_gp": 20, "stock": 1, "rarity": "", "desc": "Cheap: 15 gp | High: 30 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "potion-climbing", "name": "Potion of Climbing", "category": "Common Potion", "price_gp": 50, "stock": 1, "rarity": "Common", "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-healing", "name": "Potion of Healing", "category": "Common Potion", "price_gp": 50, "stock": 1, "rarity": "Common", "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "spell-components", "name": "Spell Components", "category": "Component", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Cost varies by spell: Cheap ×0.75 / High ×1.5 | Rural: Yes | Urban: Yes" },
+
+    { "id": "oil-slipperiness", "name": "Oil of Slipperiness", "category": "Uncommon Potion", "price_gp": 250, "stock": 1, "rarity": "Uncommon", "desc": "Cheap: 175 gp | High: 375 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-animal-friendship", "name": "Potion of Animal Friendship", "category": "Uncommon Potion", "price_gp": 250, "stock": 1, "rarity": "Uncommon", "desc": "Cheap: 175 gp | High: 375 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-growth", "name": "Potion of Growth", "category": "Uncommon Potion", "price_gp": 250, "stock": 1, "rarity": "Uncommon", "desc": "Cheap: 175 gp | High: 375 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-water-breathing", "name": "Potion of Water Breathing", "category": "Uncommon Potion", "price_gp": 250, "stock": 1, "rarity": "Uncommon", "desc": "Cheap: 175 gp | High: 375 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-greater-healing", "name": "Potion of Greater Healing", "category": "Uncommon Potion", "price_gp": 250, "stock": 1, "rarity": "Uncommon", "desc": "Cheap: 175 gp | High: 375 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-poison-disguised", "name": "Potion of Poison (Disguised)", "category": "Uncommon Potion", "price_gp": 250, "stock": 1, "rarity": "Uncommon", "desc": "Cheap: 175 gp | High: 375 gp | Rural: Yes | Urban: Yes" },
+    { "id": "philter-love", "name": "Philter of Love", "category": "Uncommon Potion", "price_gp": 250, "stock": 1, "rarity": "Uncommon", "desc": "Cheap: 175 gp | High: 375 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-resistance", "name": "Potion of Resistance", "category": "Uncommon Potion", "price_gp": 250, "stock": 1, "rarity": "Uncommon", "desc": "Cheap: 175 gp | High: 375 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-fire-breath", "name": "Potion of Fire Breath", "category": "Uncommon Potion", "price_gp": 250, "stock": 1, "rarity": "Uncommon", "desc": "Cheap: 175 gp | High: 375 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "potion-heroism", "name": "Potion of Heroism", "category": "Rare Potion", "price_gp": 2500, "stock": 1, "rarity": "Rare", "desc": "Cheap: 1750 gp | High: 3750 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-clairvoyance", "name": "Potion of Clairvoyance", "category": "Rare Potion", "price_gp": 2500, "stock": 1, "rarity": "Rare", "desc": "Cheap: 1750 gp | High: 3750 gp | Rural: Yes | Urban: Yes" },
+    { "id": "oil-etherealness", "name": "Oil of Etherealness", "category": "Rare Potion", "price_gp": 2500, "stock": 1, "rarity": "Rare", "desc": "Cheap: 1750 gp | High: 3750 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-fire-giant-strength", "name": "Potion of Fire Giant Strength", "category": "Rare Potion", "price_gp": 2500, "stock": 1, "rarity": "Rare", "desc": "Cheap: 1750 gp | High: 3750 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-stone-giant-strength", "name": "Potion of Stone Giant Strength", "category": "Rare Potion", "price_gp": 2500, "stock": 1, "rarity": "Rare", "desc": "Cheap: 1750 gp | High: 3750 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-frost-giant-strength", "name": "Potion of Frost Giant Strength", "category": "Rare Potion", "price_gp": 2500, "stock": 1, "rarity": "Rare", "desc": "Cheap: 1750 gp | High: 3750 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-gaseous-form", "name": "Potion of Gaseous Form", "category": "Rare Potion", "price_gp": 2500, "stock": 1, "rarity": "Rare", "desc": "Cheap: 1750 gp | High: 3750 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-mind-reading", "name": "Potion of Mind Reading", "category": "Rare Potion", "price_gp": 2500, "stock": 1, "rarity": "Rare", "desc": "Cheap: 1750 gp | High: 3750 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-superior-healing", "name": "Potion of Superior Healing", "category": "Rare Potion", "price_gp": 2500, "stock": 1, "rarity": "Rare", "desc": "Cheap: 1750 gp | High: 3750 gp | Rural: Yes | Urban: Yes" },
+    { "id": "elixir-health", "name": "Elixir of Health", "category": "Rare Potion", "price_gp": 2500, "stock": 1, "rarity": "Rare", "desc": "Cheap: 1750 gp | High: 3750 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-invulnerability", "name": "Potion of Invulnerability", "category": "Rare Potion", "price_gp": 2500, "stock": 1, "rarity": "Rare", "desc": "Cheap: 1750 gp | High: 3750 gp | Rural: Yes | Urban: Yes" },
+    { "id": "potion-diminution", "name": "Potion of Diminution", "category": "Rare Potion", "price_gp": 2500, "stock": 1, "rarity": "Rare", "desc": "Cheap: 1750 gp | High: 3750 gp | Rural: Yes | Urban: Yes" }
+  ]
+}
+,
+{
+  "id": "potion-availability",
+  "name": "Potion Availability",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    {
+      "id": "healing",
+      "name": "Potion of Healing",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Common",
+      "desc": "Available in: Fair, Moderate, Poor, Wide"
+    },
+    {
+      "id": "climbing",
+      "name": "Potion of Climbing",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Common",
+      "desc": "Available in: Fair, Moderate, Poor, Wide"
+    },
+    {
+      "id": "water-breathing",
+      "name": "Potion of Water Breathing",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Uncommon",
+      "desc": "Available in: Fair, Moderate, Poor, Wide"
+    },
+    {
+      "id": "gaseous-form",
+      "name": "Potion of Gaseous Form",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Rare",
+      "desc": "Available in: Fair, Moderate, Poor, Wide"
+    },
+    {
+      "id": "greater-healing",
+      "name": "Potion of Greater Healing",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Uncommon",
+      "desc": "Available in: Fair, Moderate, Wide"
+    },
+    {
+      "id": "resistance",
+      "name": "Potion of Resistance",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Uncommon",
+      "desc": "Available in: Fair, Moderate, Wide"
+    },
+    {
+      "id": "elixir-health",
+      "name": "Elixir of Health",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Rare",
+      "desc": "Available in: Fair, Moderate, Wide"
+    },
+    {
+      "id": "diminution",
+      "name": "Potion of Diminution",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Rare",
+      "desc": "Available in: Fair, Moderate, Wide"
+    },
+    {
+      "id": "animal-friendship",
+      "name": "Potion of Animal Friendship",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Uncommon",
+      "desc": "Available in: Moderate, Wide"
+    },
+    {
+      "id": "growth",
+      "name": "Potion of Growth",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Uncommon",
+      "desc": "Available in: Moderate, Wide"
+    },
+    {
+      "id": "poison-disguised",
+      "name": "Potion of Poison (Disguised)",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Uncommon",
+      "desc": "Available in: Moderate, Wide"
+    },
+    {
+      "id": "heroism",
+      "name": "Potion of Heroism",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Rare",
+      "desc": "Available in: Moderate, Wide"
+    },
+    {
+      "id": "superior-healing",
+      "name": "Potion of Superior Healing",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Rare",
+      "desc": "Available in: Moderate, Wide"
+    },
+    {
+      "id": "stone-giant-strength",
+      "name": "Potion of Stone Giant Strength",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Rare",
+      "desc": "Available in: Moderate, Wide"
+    },
+    {
+      "id": "frost-giant-strength",
+      "name": "Potion of Frost Giant Strength",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Rare",
+      "desc": "Available in: Moderate, Wide"
+    },
+    {
+      "id": "clairvoyance",
+      "name": "Potion of Clairvoyance",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Rare",
+      "desc": "Available in: Moderate, Wide"
+    },
+    {
+      "id": "oil-slipperiness",
+      "name": "Oil of Slipperiness",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Uncommon",
+      "desc": "Available in: Wide"
+    },
+    {
+      "id": "philter-love",
+      "name": "Philter of Love",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Uncommon",
+      "desc": "Available in: Wide"
+    },
+    {
+      "id": "fire-breath",
+      "name": "Potion of Fire Breath",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Uncommon",
+      "desc": "Available in: Wide"
+    },
+    {
+      "id": "oil-etherealness",
+      "name": "Oil of Etherealness",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Rare",
+      "desc": "Available in: Wide"
+    },
+    {
+      "id": "fire-giant-strength",
+      "name": "Potion of Fire Giant Strength",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Rare",
+      "desc": "Available in: Wide"
+    },
+    {
+      "id": "invulnerability",
+      "name": "Potion of Invulnerability",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Rare",
+      "desc": "Available in: Wide"
+    },
+    {
+      "id": "mind-reading",
+      "name": "Potion of Mind Reading",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "Rare",
+      "desc": "Available in: Wide"
+    }
+  ]
+}
+,
+{
+  "id": "spell-availability",
+  "name": "Spell Availability",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    { "id": "shocking-grasp", "name": "Shocking Grasp", "category": "Offensive | Cantrip", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Poor, Wide" },
+    { "id": "burning-hands", "name": "Burning Hands", "category": "Offensive | Level 1", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Poor, Wide" },
+    { "id": "melfs-acid-arrow", "name": "Melf's Acid Arrow", "category": "Offensive | Level 2", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Poor, Wide" },
+    { "id": "lightning-bolt", "name": "Lightning Bolt", "category": "Offensive | Level 3", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Poor, Wide" },
+    { "id": "ice-storm", "name": "Ice Storm", "category": "Offensive | Level 4", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Poor, Wide" },
+    { "id": "hold-monster", "name": "Hold Monster", "category": "Offensive | Level 5", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Poor, Wide" },
+
+    { "id": "mending", "name": "Mending", "category": "Supportive | Cantrip", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Poor, Wide" },
+    { "id": "alarm", "name": "Alarm", "category": "Supportive | Level 1", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Poor, Wide" },
+    { "id": "magic-weapon", "name": "Magic Weapon", "category": "Supportive | Level 2", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Poor, Wide" },
+    { "id": "haste", "name": "Haste", "category": "Supportive | Level 3", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Poor, Wide" },
+    { "id": "faithful-hound", "name": "Mordenkainen's Faithful Hound", "category": "Supportive | Level 4", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Poor, Wide" },
+    { "id": "bigbys-hand", "name": "Bigby's Hand", "category": "Supportive | Level 5", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Poor, Wide" },
+
+    { "id": "fire-bolt", "name": "Fire Bolt", "category": "Offensive | Cantrip", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Wide" },
+    { "id": "magic-missile", "name": "Magic Missile", "category": "Offensive | Level 1", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Wide" },
+    { "id": "flaming-sphere", "name": "Flaming Sphere", "category": "Offensive | Level 2", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Wide" },
+    { "id": "fireball", "name": "Fireball", "category": "Offensive | Level 3", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Wide" },
+    { "id": "wall-of-fire", "name": "Wall of Fire", "category": "Offensive | Level 4", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Wide" },
+    { "id": "cone-of-cold", "name": "Cone of Cold", "category": "Offensive | Level 5", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Wide" },
+
+    { "id": "mage-hand", "name": "Mage Hand", "category": "Supportive | Cantrip", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Wide" },
+    { "id": "floating-disc", "name": "Tensor's Floating Disc", "category": "Supportive | Level 1", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Wide" },
+    { "id": "invisibility", "name": "Invisibility", "category": "Supportive | Level 2", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Wide" },
+    { "id": "fly", "name": "Fly", "category": "Supportive | Level 3", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Wide" },
+    { "id": "stoneskin", "name": "Stoneskin", "category": "Supportive | Level 4", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Wide" },
+    { "id": "teleportation-circle", "name": "Teleportation Circle", "category": "Supportive | Level 5", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Fair, Full, Moderate, Wide" },
+
+    { "id": "acid-splash", "name": "Acid Splash", "category": "Offensive | Cantrip", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Moderate, Wide" },
+    { "id": "chill-touch", "name": "Chill Touch", "category": "Offensive | Cantrip", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Moderate, Wide" },
+    { "id": "chromatic-orb", "name": "Chromatic Orb", "category": "Offensive | Level 1", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Moderate, Wide" },
+    { "id": "sleep", "name": "Sleep", "category": "Offensive | Level 1", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Moderate, Wide" },
+    { "id": "hold-person", "name": "Hold Person", "category": "Offensive | Level 2", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Moderate, Wide" },
+    { "id": "scorching-ray", "name": "Scorching Ray", "category": "Offensive | Level 2", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Moderate, Wide" },
+    { "id": "slow", "name": "Slow", "category": "Offensive | Level 3", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Moderate, Wide" },
+    { "id": "bestow-curse", "name": "Bestow Curse", "category": "Offensive | Level 3", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Moderate, Wide" },
+    { "id": "confusion", "name": "Confusion", "category": "Offensive | Level 4", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Moderate, Wide" },
+    { "id": "phantasmal-killer", "name": "Phantasmal Killer", "category": "Offensive | Level 4", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Moderate, Wide" },
+    { "id": "cloudkill", "name": "Cloudkill", "category": "Offensive | Level 5", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Moderate, Wide" },
+    { "id": "conjure-elemental", "name": "Conjure Elemental", "category": "Offensive | Level 5", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Moderate, Wide" },
+
+    { "id": "friends", "name": "Friends", "category": "Offensive | Cantrip", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Wide" },
+    { "id": "minor-illusion", "name": "Minor Illusion", "category": "Offensive | Cantrip", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Wide" },
+    { "id": "poison-spray", "name": "Poison Spray", "category": "Offensive | Cantrip", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Wide" },
+    { "id": "color-spray", "name": "Color Spray", "category": "Offensive | Level 1", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Wide" },
+    { "id": "ray-of-sickness", "name": "Ray of Sickness", "category": "Offensive | Level 1", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Wide" },
+    { "id": "tashas-hideous-laughter", "name": "Tasha's Hideous Laughter", "category": "Offensive | Level 1", "price_gp": 0, "stock": 0, "rarity": "", "desc": "Available in: Full, Wide" }
+  ]
+}
+,
+{
+  "id": "priests-spells",
+  "name": "Priest’s Available Spell Slots",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    {
+      "id": "priest-hd-5",
+      "name": "Priest (5 Hit Dice)",
+      "category": "Spell Slot Table",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "",
+      "desc": "Spell Save DC 13 | Spell Attack +5 | Cantrips Known: 4 | Slots: 1st:4, 2nd:3, 3rd:2, 4th:0, 5th:0"
+    },
+    {
+      "id": "priest-hd-6",
+      "name": "Priest (6 Hit Dice)",
+      "category": "Spell Slot Table",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "",
+      "desc": "Spell Save DC 13 | Spell Attack +5 | Cantrips Known: 4 | Slots: 1st:4, 2nd:3, 3rd:3, 4th:0, 5th:0"
+    },
+    {
+      "id": "priest-hd-7",
+      "name": "Priest (7 Hit Dice)",
+      "category": "Spell Slot Table",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "",
+      "desc": "Spell Save DC 13 | Spell Attack +5 | Cantrips Known: 4 | Slots: 1st:4, 2nd:3, 3rd:3, 4th:1, 5th:0"
+    },
+    {
+      "id": "priest-hd-8",
+      "name": "Priest (8 Hit Dice)",
+      "category": "Spell Slot Table",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "",
+      "desc": "Spell Save DC 13 | Spell Attack +5 | Cantrips Known: 4 | Slots: 1st:4, 2nd:3, 3rd:3, 4th:2, 5th:0"
+    },
+    {
+      "id": "priest-hd-9",
+      "name": "Priest (9 Hit Dice)",
+      "category": "Spell Slot Table",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "",
+      "desc": "Spell Save DC 14 | Spell Attack +6 | Cantrips Known: 4 | Slots: 1st:4, 2nd:3, 3rd:3, 4th:3, 5th:1"
+    },
+    {
+      "id": "priest-hd-10",
+      "name": "Priest (10 Hit Dice)",
+      "category": "Spell Slot Table",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "",
+      "desc": "Spell Save DC 14 | Spell Attack +6 | Cantrips Known: 5 | Slots: 1st:4, 2nd:3, 3rd:3, 4th:3, 5th:2"
+    }
+  ]
+}
+,
+{
+  "id": "cleric-availability",
+  "name": "Cleric Availability",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    {
+      "id": "limited-clerics",
+      "name": "Limited Locale",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "",
+      "desc": "Available Spellcasters: 1 Acolyte. (1–15%) is a Commoner (either a pious merchant, or a charlatan posing as a healer) instead of an Acolyte; (80–100%) is a Priest instead of an Acolyte, with additional hit dice and caster level equal to 1d4–1. Notes: No expendable components available. Subtract costs of materials if provided."
+    },
+    {
+      "id": "rural-clerics",
+      "name": "Rural Locale",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "",
+      "desc": "Available Spellcasters: 1d4 Acolytes; 1 Priest with additional hit dice and caster level equal to 1d4–1. Notes: Expendable components available at a 25% chance. Subtract costs of materials if provided."
+    },
+    {
+      "id": "urban-clerics",
+      "name": "Urban Locale",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "",
+      "desc": "Available Spellcasters: 2d8+3 Acolytes; 1d2 Priest with additional hit dice and caster level equal to 1d6–1. Notes: Expendable components available at a 55% chance. Subtract costs of materials if provided."
+    },
+    {
+      "id": "premium-clerics",
+      "name": "Premium Locale",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "",
+      "desc": "Available Spellcasters: 3d10+2 Acolytes; 1d4 Priests with additional hit dice and caster level equal to 1d6–1. Notes: Expendable components available at a 75% chance. Subtract costs of materials if provided."
+    }
+  ]
+}
+,
+{
+  "id": "temple-supplies",
+  "name": "Temple Faith Supplies",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    { "id": "alms-box", "name": "Alms Box*", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "bell", "name": "Bell", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes" },
+    { "id": "blanket", "name": "Blanket", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 999, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "book-scripture", "name": "Book, Scripture", "category": "Adventuring Gear", "price_gp": 25, "stock": 1, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: Yes | Urban: Yes" },
+    { "id": "candle", "name": "Candle", "category": "Adventuring Gear", "price_gp": 0.01, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: Yes" },
+    { "id": "case-scroll", "name": "Case, Map or Scroll", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes" },
+    { "id": "censer", "name": "Censer*", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "chalk", "name": "Chalk (1 piece)", "category": "Adventuring Gear", "price_gp": 0.01, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: Yes" },
+    { "id": "flask", "name": "Flask", "category": "Adventuring Gear", "price_gp": 0.02, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: Yes | Urban: Yes" },
+    { "id": "healers-kit", "name": "Healer's Kit", "category": "Tools", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
+
+    { "id": "amulet", "name": "Amulet", "category": "Adventuring Gear", "price_gp": 5, "stock": 1, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "emblem", "name": "Emblem", "category": "Adventuring Gear", "price_gp": 5, "stock": 1, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "reliquary", "name": "Reliquary", "category": "Adventuring Gear", "price_gp": 5, "stock": 1, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "holy-water", "name": "Holy Water (flask)", "category": "Adventuring Gear", "price_gp": 25, "stock": 1, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "incense", "name": "Incense (1 block)*", "category": "Adventuring Gear", "price_gp": 0.01, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: Yes" },
+    { "id": "ink-bottle", "name": "Ink (1 ounce bottle)", "category": "Adventuring Gear", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: Yes" },
+    { "id": "ink-pen", "name": "Ink Pen", "category": "Adventuring Gear", "price_gp": 0.02, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: No | Urban: Yes" },
+    { "id": "lamp", "name": "Lamp", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 999, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "lantern-hooded", "name": "Lantern, Hooded", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: No | Urban: No" },
+    { "id": "oil", "name": "Oil (flask)", "category": "Adventuring Gear", "price_gp": 0.1, "stock": 1, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "paper", "name": "Paper (one sheet)", "category": "Adventuring Gear", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: No | Urban: No" },
+    { "id": "parchment", "name": "Parchment (one sheet)", "category": "Adventuring Gear", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: No | Urban: Yes" },
+    { "id": "perfume", "name": "Perfume (vial)", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: No" },
+    { "id": "potion-healing", "name": "Potion of Healing", "category": "Potion", "price_gp": 50, "stock": 999, "rarity": "Common", "desc": "Cheap: 38 gp | High: 75 gp | Rural: No | Urban: No" },
+
+    { "id": "rations", "name": "Rations (1 day)", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 999, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
+    { "id": "torch", "name": "Torch", "category": "Adventuring Gear", "price_gp": 0.01, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: Yes" },
+    { "id": "vial", "name": "Vial", "category": "Adventuring Gear", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
+    { "id": "waterskin", "name": "Waterskin", "category": "Adventuring Gear", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: Yes | Urban: Yes" },
+
+    { "id": "calligraphers-supplies", "name": "Calligrapher's Supplies*", "category": "Tools", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: Yes" },
+    { "id": "herbalism-kit", "name": "Herbalism Kit", "category": "Tools", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
+
+    { "id": "flute", "name": "Flute*", "category": "Musical Instrument", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: No | Urban: No" },
+    { "id": "lyre", "name": "Lyre", "category": "Musical Instrument", "price_gp": 30, "stock": 999, "rarity": "", "desc": "Cheap: 22 gp | High: 45 gp | Rural: No | Urban: No" },
+    { "id": "horn", "name": "Horn*", "category": "Musical Instrument", "price_gp": 3, "stock": 999, "rarity": "", "desc": "Cheap: 2 gp | High: 5 gp | Rural: No | Urban: No" },
+
+    { "id": "cure-wounds", "name": "Cure Wounds (lvl 1)", "category": "Spell Service", "price_gp": 10, "stock": 1, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes" },
+    { "id": "gentle-repose", "name": "Gentle Repose (lvl 2)", "category": "Spell Service", "price_gp": 50, "stock": 999, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes" },
+    { "id": "lesser-restoration", "name": "Lesser Restoration (lvl 2)", "category": "Spell Service", "price_gp": 50, "stock": 1, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes" },
+    { "id": "remove-curse", "name": "Remove Curse (lvl 3)", "category": "Spell Service", "price_gp": 100, "stock": 999, "rarity": "", "desc": "Cheap: 75 gp | High: 150 gp | Rural: Yes | Urban: Yes" },
+    { "id": "revivify", "name": "Revivify (lvl 3)", "category": "Spell Service", "price_gp": 400, "stock": 999, "rarity": "", "desc": "Cheap: 375 gp | High: 450 gp | Rural: Yes | Urban: Yes" },
+    { "id": "raise-dead", "name": "Raise Dead (lvl 5)", "category": "Spell Service", "price_gp": 1000, "stock": 999, "rarity": "", "desc": "Cheap: 875 gp | High: 1250 gp | Rural: Yes | Urban: Yes" }
+  ]
+}
+,
+{
+  "id": "jeweller-stonecutter",
+  "name": "Jeweller & Stonecutter",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    {
+      "id": "10gp-gemstones",
+      "name": "10 gp Gemstones",
+      "category": "Gemstone",
+      "price_gp": 10,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "50gp-gemstones",
+      "name": "50 gp Gemstones",
+      "category": "Gemstone",
+      "price_gp": 50,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "100gp-gemstones",
+      "name": "100 gp Gemstones",
+      "category": "Gemstone",
+      "price_gp": 100,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 75 gp | High: 150 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "500gp-gemstones",
+      "name": "500 gp Gemstones",
+      "category": "Gemstone",
+      "price_gp": 500,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 375 gp | High: 750 gp | Rural: No | Urban: Yes"
+    },
+    {
+      "id": "1000gp-gemstones",
+      "name": "1000 gp Gemstones",
+      "category": "Gemstone",
+      "price_gp": 1000,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 750 gp | High: 1500 gp | Rural: No | Urban: No"
+    },
+    {
+      "id": "5000gp-gemstones",
+      "name": "5000 gp Gemstones",
+      "category": "Gemstone",
+      "price_gp": 5000,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 3750 gp | High: 7500 gp | Rural: No | Urban: No"
+    },
+    {
+      "id": "amulet-exquisite",
+      "name": "Amulet / Necklace, Exquisite",
+      "category": "Jewelry",
+      "price_gp": 5,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "amulet-mundane",
+      "name": "Amulet / Necklace, Mundane",
+      "category": "Jewelry",
+      "price_gp": 0.5,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "crystal",
+      "name": "Crystal",
+      "category": "Arcane Focus",
+      "price_gp": 10,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 8 gp | High: 15 gp | Rural: No | Urban: Yes"
+    },
+    {
+      "id": "earrings-exquisite",
+      "name": "Earrings, Exquisite",
+      "category": "Jewelry",
+      "price_gp": 4,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 3 gp | High: 6 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "earrings-mundane",
+      "name": "Earrings, Mundane",
+      "category": "Jewelry",
+      "price_gp": 0.4,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 0.3 gp | High: 0.6 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "gem-appraisal",
+      "name": "Gemstone Appraisal (3 gems)",
+      "category": "Service",
+      "price_gp": 5,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "jewelers-tools",
+      "name": "Jeweler's Tools",
+      "category": "Tools",
+      "price_gp": 25,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 18 gp | High: 38 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "custom-jewelry",
+      "name": "Jewelry (Custom)",
+      "category": "Service",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "",
+      "desc": "Cost formula: Gem value + 50 gp (Cheap +38 gp | High +75 gp) | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "orb",
+      "name": "Orb",
+      "category": "Arcane Focus",
+      "price_gp": 20,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 15 gp | High: 30 gp | Rural: No | Urban: No"
+    },
+    {
+      "id": "resize-jewelry",
+      "name": "Resizing Jewelry",
+      "category": "Service",
+      "price_gp": 10,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 8 gp | High: 15 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "ring-exquisite",
+      "name": "Ring, Exquisite",
+      "category": "Jewelry",
+      "price_gp": 3,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 2 gp | High: 5 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "ring-mundane",
+      "name": "Ring, Mundane",
+      "category": "Jewelry",
+      "price_gp": 0.3,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 0.2 gp | High: 0.5 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "set-gem-under-100",
+      "name": "Set Gem (<100 gp value)",
+      "category": "Gemstone",
+      "price_gp": 45,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 34 gp | High: 68 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "set-gem-100-1000",
+      "name": "Set Gem (100–1,000 gp value)",
+      "category": "Gemstone",
+      "price_gp": 75,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 56 gp | High: 113 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "set-gem-1000-plus",
+      "name": "Set Gem (1,000+ gp value)",
+      "category": "Gemstone",
+      "price_gp": 150,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 113 gp | High: 225 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "signet-ring",
+      "name": "Signet Ring",
+      "category": "Jewelry",
+      "price_gp": 5,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "stonecutting",
+      "name": "Stonecutting",
+      "category": "Service",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "",
+      "desc": "Cost formula: Gem value × 0.25 | Rural: No | Urban: Yes"
+    }
+  ]
+}
+,
+{
+  "id": "gemstone-availability",
+  "name": "Gemstone Availability",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    {
+      "id": "poor-gemstock",
+      "name": "Poor Selection",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "",
+      "desc": "Chance: 1–40%. Available gemstones: >10× 10gp gemstones; 1× 50gp gemstone."
+    },
+    {
+      "id": "fair-gemstock",
+      "name": "Fair Selection",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "",
+      "desc": "Chance: 41–80%. Available gemstones: >20× 10gp gemstones; >10× 50gp gemstones; 2× 100gp gemstones."
+    },
+    {
+      "id": "moderate-gemstock",
+      "name": "Moderate Selection",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "",
+      "desc": "Chance: 81–90%. Available gemstones: 6× every basic 10gp gemstone; >20× 50gp gemstones; >10× 100gp gemstones; 3× 500gp gemstones; 1× gemstone valued under 500gp."
+    },
+    {
+      "id": "wide-gemstock",
+      "name": "Wide Selection",
+      "category": "Availability",
+      "price_gp": 0,
+      "stock": 0,
+      "rarity": "",
+      "desc": "Chance: 91–100%. Available gemstones: 12× every basic 10gp gemstone; 6× every basic 50gp gemstone; >20× 100gp gemstones; >10× 500gp gemstones; 4× gemstones valued under 500gp."
+    }
+  ]
+}
+,
+{
+  "id": "black-market",
+  "name": "Black Market",
+  "tagline": "",
+  "icon": "",
+  "items": [
+    {
+      "id": "acid-vial","name": "Acid (vial)","category": "Adventuring Gear","price_gp": 25,"stock": 1,"rarity": "","desc": "Cheap: 18 gp | High: 38 gp | Rural: Yes | Urban: Yes"},
+    {
+      "id": "antitoxin-vial",
+      "name": "Antitoxin (vial)",
+      "category": "Adventuring Gear",
+      "price_gp": 50,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "caltrops-20",
+      "name": "Caltrops (bag of 20)",
+      "category": "Adventuring Gear",
+      "price_gp": 1,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes"
+    },
+    {
+      "id": "clothes-costume",
+      "name": "Clothes, Costume",
+      "category": "Adventuring Gear",
+      "price_gp": 5,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: No"
+    },
+    {
+      "id": "manacles",
+      "name": "Manacles",
+      "category": "Adventuring Gear",
+      "price_gp": 2,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 1 gp | High: 3 gp | Rural: No | Urban: No"
+    },
+    {
+      "id": "oil-flask",
+      "name": "Oil (flask)",
+      "category": "Adventuring Gear",
+      "price_gp": 0.1,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "poison-basic-vial",
+      "name": "Poison, Basic (vial)",
+      "category": "Adventuring Gear",
+      "price_gp": 100,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 75 gp | High: 150 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "ram-portable",
+      "name": "Ram, Portable",
+      "category": "Adventuring Gear",
+      "price_gp": 4,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 3 gp | High: 6 gp | Rural: No | Urban: No"
+    },
+    {
+      "id": "iron-spikes-10",
+      "name": "Spikes, Iron (10)",
+      "category": "Adventuring Gear",
+      "price_gp": 1,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: No"
+    },
+    {
+      "id": "disguise-kit",
+      "name": "Disguise Kit",
+      "category": "Tools",
+      "price_gp": 25,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 18 gp | High: 38 gp | Rural: No | Urban: Yes"
+    },
+    {
+      "id": "forgery-kit",
+      "name": "Forgery Kit",
+      "category": "Tools",
+      "price_gp": 15,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 11 gp | High: 23 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "dice-set",
+      "name": "Dice Set",
+      "category": "Game",
+      "price_gp": 0.1,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "playing-card-set",
+      "name": "Playing Card Set",
+      "category": "Game",
+      "price_gp": 0.5,
+      "stock": 999,
+      "rarity": "",
+      "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "poisoners-kit",
+      "name": "Poisoner's Kit",
+      "category": "Tools",
+      "price_gp": 50,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes"
+    },
+    {
+      "id": "thieves-tools",
+      "name": "Thieves' Tools",
+      "category": "Tools",
+      "price_gp": 25,
+      "stock": 1,
+      "rarity": "",
+      "desc": "Cheap: 18 gp | High: 38 gp | Rural: Yes | Urban: Yes"
+    }
+  ]
+}
+
   ]
 }
