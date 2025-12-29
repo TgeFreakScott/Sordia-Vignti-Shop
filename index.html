@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sordia Vignti – Shop Terminal</title>
+  <style>
+    :root{
+      --bg:#0f1115; --panel:#151a22; --panel2:#111622; --border:#242836;
+      --text:#e8e8e8; --muted:rgba(232,232,232,.72); --accent:#7c8cff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
+    header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--border);padding:16px}
+    h1{margin:0;font-size:18px}
+    .sub{color:var(--muted);font-size:12px;margin-top:4px}
+    .wrap{max-width:1200px;margin:0 auto;padding:12px;display:grid;grid-template-columns:1.25fr .75fr;gap:12px}
+    @media(max-width:900px){.wrap{grid-template-columns:1fr}}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+    .card h2{margin:0;padding:12px;border-bottom:1px solid var(--border);font-size:13px;color:#cfd7ff}
+    .tabs{display:flex;gap:10px;flex-wrap:wrap;padding:12px}
+    .tab{
+      display:flex;align-items:center;gap:10px;
+      padding:10px 12px;border:1px solid var(--border);background:var(--panel2);
+      border-radius:14px;cursor:pointer;user-select:none;
+      transition:.12s transform ease,.12s border-color ease;
+    }
+    .tab:hover{transform:translateY(-1px);border-color:#334}
+    .tab.active{border-color:var(--accent);box-shadow:0 0 0 2px rgba(124,140,255,.15) inset}
+    .icon{
+      width:40px;height:40px;border-radius:12px;border:1px solid var(--border);
+      background:#0c0f16;display:grid;place-items:center;overflow:hidden;
+    }
+    .icon img{width:100%;height:100%;object-fit:cover}
+    .tab .name{font-weight:700;font-size:13px}
+    .tab .hint{font-size:12px;color:var(--muted)}
+
+    .grid{padding:12px;display:grid;gap:10px}
+    .item{
+      display:grid;grid-template-columns:1fr auto;gap:10px;
+      padding:10px;border:1px solid var(--border);border-radius:12px;background:var(--panel2)
+    }
+    .title{font-weight:800}
+    .meta{font-size:12px;color:var(--muted);margin-top:2px}
+    .price{font-weight:900;text-align:right}
+    .controls{display:flex;align-items:center;gap:8px;justify-content:flex-end;margin-top:8px}
+    button{
+      cursor:pointer;border:1px solid #2b3246;background:#101521;color:var(--text);
+      border-radius:12px;padding:10px 12px
+    }
+    button.small{padding:6px 10px;border-radius:10px}
+    .qty{min-width:30px;text-align:center;font-variant-numeric:tabular-nums}
+
+    .cart{padding:12px;display:grid;gap:10px}
+    .cartline{
+      display:grid;grid-template-columns:1fr auto;gap:8px;
+      padding:10px;border:1px solid var(--border);border-radius:12px;background:var(--panel2)
+    }
+    .row{display:flex;justify-content:space-between;gap:10px}
+    .total{font-size:18px;font-weight:1000}
+    .footerBtns{display:flex;gap:8px;flex-wrap:wrap}
+    .ok{border-color:#2f5a3b;background:#0f1e14}
+    .danger{border-color:#5a2630;background:#1e0f13}
+    .ghost{border-color:var(--border);background:transparent}
+    .empty{color:var(--muted);font-size:12px}
+    .pill{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid var(--border);font-size:11px;color:var(--muted);margin-left:6px}
+  </style>
+</head>
+<body>
+<header>
+  <h1>🛒 Sordia Vignti – Shop Terminal</h1>
+  <div class="sub">Select a shop, click items to add/remove, then copy checkout text to send the DM.</div>
+</header>
+
+<div class="wrap">
+  <div class="card">
+    <h2>Shops</h2>
+    <div class="tabs" id="tabs"></div>
+    <div class="grid" id="items"></div>
+  </div>
+
+  <div class="card">
+    <h2>Cart</h2>
+    <div class="cart" id="cart"></div>
+  </div>
+</div>
+
+<script>
+  // Loads inventory from inventory.json (keeps editing simple).
+  let DATA = null;
+
+  // Cart is keyed by "shopId:itemId"
+  const cart = new Map();
+  let activeShopId = null;
+
+  const tabsEl = document.getElementById("tabs");
+  const itemsEl = document.getElementById("items");
+  const cartEl = document.getElementById("cart");
+
+  const to2 = (n) => Math.round(n * 100) / 100;
+  const fmt = (n) => (to2(n)).toString();
+
+  function shopById(id){ return DATA.shops.find(s => s.id === id); }
+
+  function itemById(shopId,itemId){
+    const shop = shopById(shopId);
+    return shop.items.find(i => i.id === itemId);
+  }
+
+  function inCartQty(shopId,itemId){
+    return cart.get(`${shopId}:${itemId}`)?.qty ?? 0;
+  }
+
+  function add(shopId,itemId){
+    const item = itemById(shopId,itemId);
+    const key = `${shopId}:${itemId}`;
+    const cur = cart.get(key) || { shopId, itemId, qty: 0 };
+
+    const max = (item.stock ?? 999);
+    if (cur.qty >= max) return;
+
+    cur.qty += 1;
+    cart.set(key, cur);
+    render();
+  }
+
+  function remove(shopId,itemId){
+    const key = `${shopId}:${itemId}`;
+    const cur = cart.get(key);
+    if (!cur) return;
+    cur.qty -= 1;
+    if (cur.qty <= 0) cart.delete(key);
+    render();
+  }
+
+  function clearCart(){
+    cart.clear();
+    render();
+  }
+
+  function totalGp(){
+    let total = 0;
+    for(const entry of cart.values()){
+      const item = itemById(entry.shopId, entry.itemId);
+      total += (item.price_gp * entry.qty);
+    }
+    return total;
+  }
+
+  function checkoutText(){
+    const lines = [];
+    for(const entry of cart.values()){
+      const shop = shopById(entry.shopId);
+      const item = itemById(entry.shopId, entry.itemId);
+      lines.push(`BUY: ${item.name} | Qty: ${entry.qty} | Price: ${fmt(item.price_gp)} gp | Shop: ${shop.name}`);
+    }
+    lines.push(`TOTAL: ${fmt(totalGp())} gp`);
+    return lines.join("\n");
+  }
+
+  async function copyCheckout(){
+    const text = checkoutText();
+    try{
+      await navigator.clipboard.writeText(text);
+      alert("Checkout copied to clipboard.");
+    }catch{
+      prompt("Copy this:", text);
+    }
+  }
+
+  function renderTabs(){
+    tabsEl.innerHTML = "";
+    DATA.shops.forEach(shop => {
+      const tab = document.createElement("div");
+      tab.className = "tab" + (shop.id === activeShopId ? " active" : "");
+      tab.onclick = () => { activeShopId = shop.id; render(); };
+
+      const icon = document.createElement("div");
+      icon.className = "icon";
+      if (shop.icon){
+        const img = document.createElement("img");
+        img.src = shop.icon;
+        img.alt = shop.name;
+        icon.appendChild(img);
+      } else {
+        icon.textContent = "🏪";
+      }
+
+      const meta = document.createElement("div");
+      meta.innerHTML = `<div class="name">${shop.name}</div><div class="hint">${shop.tagline ?? ""}</div>`;
+
+      tab.appendChild(icon);
+      tab.appendChild(meta);
+      tabsEl.appendChild(tab);
+    });
+  }
+
+  function renderItems(){
+    const shop = shopById(activeShopId);
+    itemsEl.innerHTML = "";
+
+    shop.items.forEach(item => {
+      const row = document.createElement("div");
+      row.className = "item";
+
+      const left = document.createElement("div");
+      const stockLabel = (item.stock === 999 || item.stock == null)
+        ? "✅ In stock"
+        : (item.stock <= 0 ? "❌ Out of stock" : `⚠️ Limited (${item.stock})`);
+
+      left.innerHTML = `
+        <div class="title">${item.name}${item.rarity ? `<span class="pill">${item.rarity}</span>` : ""}</div>
+        <div class="meta">${item.desc ?? ""}</div>
+        <div class="meta">Stock: ${stockLabel}</div>
+      `;
+
+      const right = document.createElement("div");
+      right.innerHTML = `<div class="price">${fmt(item.price_gp)} gp</div>`;
+
+      const controls = document.createElement("div");
+      controls.className = "controls";
+
+      const minus = document.createElement("button");
+      minus.className = "small";
+      minus.textContent = "−";
+      minus.disabled = inCartQty(shop.id, item.id) === 0;
+      minus.onclick = () => remove(shop.id, item.id);
+
+      const qty = document.createElement("div");
+      qty.className = "qty";
+      qty.textContent = inCartQty(shop.id, item.id);
+
+      const plus = document.createElement("button");
+      plus.className = "small";
+      plus.textContent = "+";
+      const max = (item.stock ?? 999);
+      plus.disabled = (item.stock === 0) || (inCartQty(shop.id, item.id) >= max);
+      plus.onclick = () => add(shop.id, item.id);
+
+      controls.appendChild(minus);
+      controls.appendChild(qty);
+      controls.appendChild(plus);
+
+      right.appendChild(controls);
+
+      row.appendChild(left);
+      row.appendChild(right);
+      itemsEl.appendChild(row);
+    });
+  }
+
+  function renderCart(){
+    cartEl.innerHTML = "";
+
+    if(cart.size === 0){
+      cartEl.innerHTML = `<div class="empty">Your cart is empty.</div>`;
+      return;
+    }
+
+    for(const entry of cart.values()){
+      const shop = shopById(entry.shopId);
+      const item = itemById(entry.shopId, entry.itemId);
+
+      const line = document.createElement("div");
+      line.className = "cartline";
+      line.innerHTML = `
+        <div>
+          <strong>${item.name}</strong>
+          <div class="empty">${shop.name}</div>
+        </div>
+        <div style="text-align:right">
+          <div>${entry.qty} × ${fmt(item.price_gp)} gp</div>
+          <div class="empty">= ${fmt(item.price_gp * entry.qty)} gp</div>
+        </div>
+      `;
+      cartEl.appendChild(line);
+    }
+
+    const total = document.createElement("div");
+    total.innerHTML = `<div class="row"><span class="empty">Total</span><span class="total">${fmt(totalGp())} gp</span></div>`;
+    cartEl.appendChild(total);
+
+    const btns = document.createElement("div");
+    btns.className = "footerBtns";
+
+    const copyBtn = document.createElement("button");
+    copyBtn.className = "ok";
+    copyBtn.textContent = "Copy Checkout";
+    copyBtn.onclick = copyCheckout;
+
+    const clearBtn = document.createElement("button");
+    clearBtn.className = "danger";
+    clearBtn.textContent = "Clear Cart";
+    clearBtn.onclick = clearCart;
+
+    const viewBtn = document.createElement("button");
+    viewBtn.className = "ghost";
+    viewBtn.textContent = "View Checkout Text";
+    viewBtn.onclick = () => alert(checkoutText());
+
+    btns.appendChild(copyBtn);
+    btns.appendChild(viewBtn);
+    btns.appendChild(clearBtn);
+
+    cartEl.appendChild(btns);
+  }
+
+  function render(){
+    renderTabs();
+    renderItems();
+    renderCart();
+  }
+
+  async function init(){
+    const res = await fetch("./inventory.json", { cache: "no-store" });
+    DATA = await res.json();
+    activeShopId = DATA.shops[0]?.id ?? null;
+    render();
+  }
+
+  init().catch(err => {
+    document.body.innerHTML = `<div style="padding:16px;color:#fff">
+      <h2>Failed to load inventory.json</h2>
+      <pre>${String(err)}</pre>
+    </div>`;
+  });
+</script>
+</body>
+</html>

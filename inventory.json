@@ -1,0 +1,50 @@
+{
+  "shops": [
+    {
+      "id": "lucky-griffon",
+      "name": "🏪 Lucky Griffon Emporium",
+      "tagline": "General goods & adventuring kit",
+      "icon": "",
+      "items": [
+        { "id": "rope", "name": "Rope, hemp (50 ft)", "price_gp": 1, "stock": 999, "rarity": "Common", "desc": "Reliable. Smells faintly of tar." },
+        { "id": "torches", "name": "Torch bundle (x5)", "price_gp": 0.05, "stock": 999, "rarity": "Common", "desc": "Five torches. One always burns weirdly." },
+        { "id": "rations", "name": "Rations (1 day)", "price_gp": 0.5, "stock": 999, "rarity": "Common", "desc": "Dry, durable, slightly cursed (not really)." },
+        { "id": "healers-kit", "name": "Healer’s Kit", "price_gp": 5, "stock": 2, "rarity": "Common", "desc": "Bandages, salves, needles, and calm words." }
+      ]
+    },
+    {
+      "id": "zoltons",
+      "name": "⚔️ Zolton’s Forge",
+      "tagline": "Weapons, armour, fittings",
+      "icon": "",
+      "items": [
+        { "id": "longsword", "name": "Iron Longsword", "price_gp": 15, "stock": 999, "rarity": "Common", "desc": "Guild-stamped. Balanced. Honest steel." },
+        { "id": "pike", "name": "Mercenary Pike", "price_gp": 20, "stock": 999, "rarity": "Common", "desc": "Long reach. Short temper." },
+        { "id": "silveredshort", "name": "Silvered Shortsword", "price_gp": 110, "stock": 1, "rarity": "Uncommon", "desc": "For when things don’t stay dead." },
+        { "id": "balancedgrip", "name": "Weapon Attachment: Balanced Grip", "price_gp": 60, "stock": 999, "rarity": "Uncommon", "desc": "Steadies aim and swing alike." }
+      ]
+    },
+    {
+      "id": "blue-vial",
+      "name": "🧪 The Blue Vial",
+      "tagline": "Potions, reagents, alchemy",
+      "icon": "",
+      "items": [
+        { "id": "healpot", "name": "Potion of Minor Healing", "price_gp": 50, "stock": 3, "rarity": "Common", "desc": "Red. Warm. Works better than prayer." },
+        { "id": "antitoxin", "name": "Antitoxin", "price_gp": 50, "stock": 999, "rarity": "Common", "desc": "Tastes like regret. Saves lives." },
+        { "id": "alchfire", "name": "Alchemist’s Fire", "price_gp": 50, "stock": 2, "rarity": "Uncommon", "desc": "Do not open near eyebrows." }
+      ]
+    },
+    {
+      "id": "big-tony",
+      "name": "🕯️ Big Tony’s Backroom",
+      "tagline": "Black market (invitation only)",
+      "icon": "",
+      "items": [
+        { "id": "poison", "name": "Poison, Basic", "price_gp": 100, "stock": 1, "rarity": "Uncommon", "desc": "Small vial. Big consequences." },
+        { "id": "disguise", "name": "Disguise Kit", "price_gp": 25, "stock": 999, "rarity": "Common", "desc": "A new face for a new problem." },
+        { "id": "tools", "name": "Thieves’ Tools (Fine)", "price_gp": 40, "stock": 1, "rarity": "Uncommon", "desc": "Quiet picks. Quieter mistakes." }
+      ]
+    }
+  ]
+}
