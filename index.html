@@ -4,82 +4,278 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sordia Vignti – Shop Terminal</title>
-  <style>
-    :root{
-      --bg:#0f1115; --panel:#151a22; --panel2:#111622; --border:#242836;
-      --text:#e8e8e8; --muted:rgba(232,232,232,.72); --accent:#7c8cff;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}
-    header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--border);padding:16px}
-    h1{margin:0;font-size:18px}
-    .sub{color:var(--muted);font-size:12px;margin-top:4px}
-    .wrap{max-width:1200px;margin:0 auto;padding:12px;display:grid;grid-template-columns:1.25fr .75fr;gap:12px}
-    @media(max-width:900px){.wrap{grid-template-columns:1fr}}
-    .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;overflow:hidden}
-    .card h2{margin:0;padding:12px;border-bottom:1px solid var(--border);font-size:13px;color:#cfd7ff}
-    .tabs{display:flex;gap:10px;flex-wrap:wrap;padding:12px}
-    .tab{
-      display:flex;align-items:center;gap:10px;
-      padding:10px 12px;border:1px solid var(--border);background:var(--panel2);
-      border-radius:14px;cursor:pointer;user-select:none;
-      transition:.12s transform ease,.12s border-color ease;
-    }
-    .tab:hover{transform:translateY(-1px);border-color:#334}
-    .tab.active{border-color:var(--accent);box-shadow:0 0 0 2px rgba(124,140,255,.15) inset}
-    .icon{
-      width:40px;height:40px;border-radius:12px;border:1px solid var(--border);
-      background:#0c0f16;display:grid;place-items:center;overflow:hidden;
-    }
-    .icon img{width:100%;height:100%;object-fit:cover}
-    .tab .name{font-weight:700;font-size:13px}
-    .tab .hint{font-size:12px;color:var(--muted)}
+<style>
+  :root{
+    --bg:#0b0e14;
+    --panel:#0f1420;
+    --panel2:#0c111b;
+    --border:rgba(255,255,255,.08);
+    --border2:rgba(255,255,255,.12);
+    --text:#f2f4ff;
+    --muted:rgba(242,244,255,.68);
+    --muted2:rgba(242,244,255,.48);
+    --accent:#7c8cff;
+    --good:#41d07a;
+    --warn:#ffcc66;
+    --bad:#ff5d6c;
+    --shadow: 0 12px 40px rgba(0,0,0,.45);
+  }
 
-    .grid{padding:12px;display:grid;gap:10px}
-    .item{
-      display:grid;grid-template-columns:1fr auto;gap:10px;
-      padding:10px;border:1px solid var(--border);border-radius:12px;background:var(--panel2)
-    }
-    .title{font-weight:800}
-    .meta{font-size:12px;color:var(--muted);margin-top:2px}
-    .price{font-weight:900;text-align:right}
-    .controls{display:flex;align-items:center;gap:8px;justify-content:flex-end;margin-top:8px}
-    button{
-      cursor:pointer;border:1px solid #2b3246;background:#101521;color:var(--text);
-      border-radius:12px;padding:10px 12px
-    }
-    button.small{padding:6px 10px;border-radius:10px}
-    .qty{min-width:30px;text-align:center;font-variant-numeric:tabular-nums}
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    background:
+      radial-gradient(1200px 700px at 30% -10%, rgba(124,140,255,.12), transparent 60%),
+      radial-gradient(900px 600px at 90% 10%, rgba(65,208,122,.10), transparent 55%),
+      var(--bg);
+    color:var(--text);
+  }
 
-    .cart{padding:12px;display:grid;gap:10px}
-    .cartline{
-      display:grid;grid-template-columns:1fr auto;gap:8px;
-      padding:10px;border:1px solid var(--border);border-radius:12px;background:var(--panel2)
-    }
-    .row{display:flex;justify-content:space-between;gap:10px}
-    .total{font-size:18px;font-weight:1000}
-    .footerBtns{display:flex;gap:8px;flex-wrap:wrap}
-    .ok{border-color:#2f5a3b;background:#0f1e14}
-    .danger{border-color:#5a2630;background:#1e0f13}
-    .ghost{border-color:var(--border);background:transparent}
-    .empty{color:var(--muted);font-size:12px}
-    .pill{display:inline-block;padding:2px 8px;border-radius:999px;border:1px solid var(--border);font-size:11px;color:var(--muted);margin-left:6px}
-  </style>
+  header{
+    position:sticky; top:0; z-index:10;
+    backdrop-filter: blur(10px);
+    background: linear-gradient(to bottom, rgba(11,14,20,.92), rgba(11,14,20,.72));
+    border-bottom:1px solid var(--border);
+    padding:14px 16px;
+  }
+  h1{margin:0;font-size:16px;letter-spacing:.2px}
+  .sub{color:var(--muted);font-size:12px;margin-top:4px}
+
+  .wrap{
+    max-width:1280px;
+    margin:0 auto;
+    padding:14px;
+    display:grid;
+    grid-template-columns: 320px 1fr 360px;
+    gap:12px;
+    align-items:start;
+  }
+  @media(max-width:1100px){
+    .wrap{grid-template-columns: 1fr}
+  }
+
+  .card{
+    background: linear-gradient(180deg, rgba(15,20,32,.92), rgba(12,17,27,.92));
+    border:1px solid var(--border);
+    border-radius:16px;
+    box-shadow: var(--shadow);
+    overflow:hidden;
+  }
+
+  .card h2{
+    margin:0;
+    padding:12px 12px 10px;
+    font-size:12px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color: rgba(207,215,255,.9);
+    border-bottom:1px solid var(--border);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  /* Sidebar (shops) */
+  .shopsPanel{padding:10px}
+  .shopSearch{
+    width:100%;
+    border:1px solid var(--border);
+    background: rgba(8,11,18,.6);
+    color:var(--text);
+    border-radius:12px;
+    padding:10px 10px;
+    outline:none;
+    margin-bottom:10px;
+  }
+  .shopList{
+    display:grid;
+    gap:8px;
+    max-height: calc(100vh - 210px);
+    overflow:auto;
+    padding-right:4px;
+  }
+  .shopBtn{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    padding:10px 10px;
+    border:1px solid var(--border);
+    background: rgba(8,11,18,.55);
+    border-radius:14px;
+    cursor:pointer;
+    transition: .12s transform ease, .12s border-color ease, .12s background ease;
+  }
+  .shopBtn:hover{transform: translateY(-1px); border-color: var(--border2)}
+  .shopBtn.active{
+    border-color: rgba(124,140,255,.65);
+    background: rgba(124,140,255,.10);
+    box-shadow: 0 0 0 2px rgba(124,140,255,.12) inset;
+  }
+  .shopIcon{
+    width:34px;height:34px;
+    border-radius:12px;
+    border:1px solid var(--border);
+    background: rgba(0,0,0,.25);
+    display:grid; place-items:center;
+    font-size:16px;
+    flex:0 0 auto;
+  }
+  .shopName{font-weight:800;font-size:13px;line-height:1.2}
+  .shopHint{font-size:11px;color:var(--muted2);margin-top:2px}
+
+  /* Main items header controls */
+  .toolbar{
+    padding:10px 12px;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    border-bottom:1px solid var(--border);
+    background: rgba(8,11,18,.45);
+  }
+  .tool{
+    border:1px solid var(--border);
+    background: rgba(8,11,18,.6);
+    color:var(--text);
+    border-radius:12px;
+    padding:9px 10px;
+    outline:none;
+  }
+  .toolBtn{
+    border:1px solid var(--border);
+    background: rgba(8,11,18,.6);
+    color:var(--text);
+    border-radius:12px;
+    padding:9px 10px;
+    cursor:pointer;
+  }
+  .toolBtn.active{
+    border-color: rgba(124,140,255,.65);
+    background: rgba(124,140,255,.10);
+  }
+
+  /* Item list */
+  .grid{padding:10px 12px; display:grid; gap:8px;}
+  .itemRow{
+    display:grid;
+    grid-template-columns: 1fr auto;
+    gap:12px;
+    padding:10px 10px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    background: rgba(8,11,18,.55);
+  }
+  .title{
+    font-weight:900;
+    font-size:14px;
+    letter-spacing:.1px;
+    display:flex;
+    gap:8px;
+    align-items:center;
+    flex-wrap:wrap;
+  }
+  .meta{font-size:12px;color:var(--muted);margin-top:3px}
+  .meta.small{font-size:11px;color:var(--muted2);margin-top:6px}
+
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:2px 8px;
+    border-radius:999px;
+    border:1px solid var(--border);
+    font-size:11px;
+    color: var(--muted);
+    background: rgba(0,0,0,.18);
+  }
+  .badge.good{border-color: rgba(65,208,122,.35); color: rgba(65,208,122,.95)}
+  .badge.warn{border-color: rgba(255,204,102,.35); color: rgba(255,204,102,.95)}
+  .badge.bad{border-color: rgba(255,93,108,.35); color: rgba(255,93,108,.95)}
+
+  .rightCol{min-width:170px; text-align:right}
+  .price{
+    font-weight:1000;
+    font-size:14px;
+    letter-spacing:.2px;
+  }
+  .controls{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    justify-content:flex-end;
+    margin-top:8px;
+  }
+  button{
+    cursor:pointer;
+    border:1px solid var(--border);
+    background: rgba(10,14,22,.75);
+    color:var(--text);
+    border-radius:12px;
+    padding:10px 12px;
+    transition:.12s transform ease,.12s border-color ease;
+  }
+  button:hover{transform: translateY(-1px); border-color: var(--border2)}
+  button:disabled{opacity:.45; cursor:not-allowed; transform:none}
+  button.small{padding:6px 10px;border-radius:10px}
+  .qty{min-width:30px;text-align:center;font-variant-numeric:tabular-nums;color:var(--text)}
+
+  /* Cart */
+  .cart{padding:10px 12px; display:grid; gap:8px}
+  .sticky{
+    position: sticky;
+    top: 86px;
+  }
+  .cartline{
+    display:grid;
+    grid-template-columns: 1fr auto;
+    gap:10px;
+    padding:10px;
+    border:1px solid var(--border);
+    border-radius:14px;
+    background: rgba(8,11,18,.55);
+  }
+  .empty{color:var(--muted);font-size:12px}
+  .row{display:flex;justify-content:space-between;gap:10px}
+  .total{font-size:18px;font-weight:1000}
+  .footerBtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+  .ok{border-color: rgba(65,208,122,.35); background: rgba(65,208,122,.10)}
+  .danger{border-color: rgba(255,93,108,.35); background: rgba(255,93,108,.10)}
+  .ghost{border-color: var(--border); background: transparent}
+</style>
+
 </head>
 <body>
 <header>
   <h1>🛒 Sordia Vignti – Shop Terminal</h1>
   <div class="sub">Select a shop, click items to add/remove, then copy checkout text to send the DM.</div>
 </header>
-
 <div class="wrap">
-  <div class="card">
-    <h2>Shops</h2>
-    <div class="tabs" id="tabs"></div>
-    <div class="grid" id="items"></div>
-  </div>
 
-  <div class="card">
+<div class="card">
+  <h2>Shops</h2>
+  <div class="shopsPanel">
+    <input id="shopSearch" class="shopSearch" placeholder="Search shops…" />
+    <div class="shopList" id="tabs"></div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>
+    Items
+    <span id="shopTitle" class="empty"></span>
+  </h2>
+  <div class="toolbar">
+    <input id="itemSearch" class="tool" placeholder="Search items…" />
+    <select id="categoryFilter" class="tool">
+      <option value="">All categories</option>
+    </select>
+    <button id="sortBtn" class="toolBtn" title="Sort by price">Sort: Price ↑</button>
+  </div>
+  <div class="grid" id="items"></div>
+</div>
+
+
+  <div class="card sticky">
     <h2>Cart</h2>
     <div class="cart" id="cart"></div>
   </div>
@@ -92,6 +288,16 @@
   // Cart is keyed by "shopId:itemId"
   const cart = new Map();
   let activeShopId = null;
+  let shopSearchTerm = "";
+  let itemSearchTerm = "";
+  let categoryTerm = "";
+  let sortDir = 1; // 1 = asc, -1 = desc
+
+  const shopSearchEl = document.getElementById("shopSearch");
+  const itemSearchEl = document.getElementById("itemSearch");
+  const categoryEl = document.getElementById("categoryFilter");
+  const sortBtnEl = document.getElementById("sortBtn");
+  const shopTitleEl = document.getElementById("shopTitle");
 
   const tabsEl = document.getElementById("tabs");
   const itemsEl = document.getElementById("items");
@@ -116,6 +322,22 @@ function formatCoins(price_gp, stock = 999) {
   if (sp) parts.push(`${sp} sp`);
   if (cp) parts.push(`${cp} cp`);
   return parts.join(" ");
+}
+function rebuildCategories(){
+  const shop = shopById(activeShopId);
+  if (!shop) return;
+
+  const cats = Array.from(
+    new Set((shop.items || []).map(i => i.category).filter(Boolean))
+  ).sort((a,b) => a.localeCompare(b));
+
+  categoryEl.innerHTML =
+    `<option value="">All categories</option>` +
+    cats.map(c => `<option value="${c}">${c}</option>`).join("");
+
+  // reset filter when switching shops so you don’t "hide everything" by accident
+  categoryTerm = "";
+  categoryEl.value = "";
 }
 
 
@@ -187,86 +409,117 @@ function formatCoins(price_gp, stock = 999) {
     }
   }
 
-  function renderTabs(){
-    tabsEl.innerHTML = "";
-    DATA.shops.forEach(shop => {
-      const tab = document.createElement("div");
-      tab.className = "tab" + (shop.id === activeShopId ? " active" : "");
-      tab.onclick = () => { activeShopId = shop.id; render(); };
+function renderTabs(){
+  tabsEl.innerHTML = "";
 
-      const icon = document.createElement("div");
-      icon.className = "icon";
-      if (shop.icon){
-        const img = document.createElement("img");
-        img.src = shop.icon;
-        img.alt = shop.name;
-        icon.appendChild(img);
-      } else {
-        icon.textContent = "🏪";
-      }
+  const shops = DATA.shops.filter(s => {
+    if (!shopSearchTerm) return true;
+    return (s.name || "").toLowerCase().includes(shopSearchTerm) ||
+           (s.tagline || "").toLowerCase().includes(shopSearchTerm);
+  });
 
-      const meta = document.createElement("div");
-      meta.innerHTML = `<div class="name">${shop.name}</div><div class="hint">${shop.tagline ?? ""}</div>`;
+  shops.forEach(shop => {
+    const btn = document.createElement("div");
+    btn.className = "shopBtn" + (shop.id === activeShopId ? " active" : "");
+    btn.onclick = () => {
+      activeShopId = shop.id;
+      rebuildCategories();
+      render();
+    };
 
-      tab.appendChild(icon);
-      tab.appendChild(meta);
-      tabsEl.appendChild(tab);
+    const icon = document.createElement("div");
+    icon.className = "shopIcon";
+	icon.textContent = "🏪";
+
+    const meta = document.createElement("div");
+    meta.innerHTML = `<div class="shopName">${shop.name}</div><div class="shopHint">${shop.tagline ?? ""}</div>`;
+
+    btn.appendChild(icon);
+    btn.appendChild(meta);
+    tabsEl.appendChild(btn);
+  });
+
+  const active = shopById(activeShopId);
+  shopTitleEl.textContent = active ? `— ${active.name}` : "";
+}
+
+
+function renderItems(){
+  const shop = shopById(activeShopId);
+  itemsEl.innerHTML = "";
+
+  let items = shop.items.slice();
+
+  // filter by category
+  if (categoryTerm) items = items.filter(i => (i.category || "") === categoryTerm);
+
+  // filter by search
+  if (itemSearchTerm){
+    items = items.filter(i => {
+      const hay = `${i.name} ${i.desc ?? ""} ${i.category ?? ""}`.toLowerCase();
+      return hay.includes(itemSearchTerm);
     });
   }
 
-  function renderItems(){
-    const shop = shopById(activeShopId);
-    itemsEl.innerHTML = "";
+  // sort by price
+  items.sort((a,b) => (Number(a.price_gp) - Number(b.price_gp)) * sortDir);
 
-    shop.items.forEach(item => {
-      const row = document.createElement("div");
-      row.className = "item";
+  items.forEach(item => {
+    const row = document.createElement("div");
+    row.className = "itemRow";
 
-      const left = document.createElement("div");
-      const stockLabel = (item.stock === 999 || item.stock == null)
-        ? "✅ In stock"
-        : (item.stock <= 0 ? "❌ Out of stock" : `⚠️ Limited (${item.stock})`);
+    // stock badge
+    let stockBadge = `<span class="badge good">✅ In stock</span>`;
+    if (item.stock === 0) stockBadge = `<span class="badge bad">❌ Out of stock</span>`;
+    else if (item.stock != null && item.stock !== 999 && item.stock < 999) stockBadge = `<span class="badge warn">⚠️ Limited (${item.stock})</span>`;
 
-      left.innerHTML = `
-        <div class="title">${item.name}${item.rarity ? `<span class="pill">${item.rarity}</span>` : ""}</div>
-        <div class="meta">${item.desc ?? ""}</div>
-        <div class="meta">Stock: ${stockLabel}</div>
-      `;
+    // rarity badge
+    const rarityBadge = item.rarity ? `<span class="badge">${item.rarity}</span>` : "";
+    const catBadge = item.category ? `<span class="badge">${item.category}</span>` : "";
 
-      const right = document.createElement("div");
-      right.innerHTML = `<div class="price">${formatCoins(item.price_gp, item.stock)}</div>`;
+    const left = document.createElement("div");
+    left.innerHTML = `
+      <div class="title">${item.name} ${rarityBadge} ${catBadge}</div>
+      ${item.desc ? `<div class="meta">${item.desc}</div>` : ""}
+      <div class="meta small">${stockBadge}</div>
+    `;
 
-      const controls = document.createElement("div");
-      controls.className = "controls";
+    const right = document.createElement("div");
+    right.className = "rightCol";
+    right.innerHTML = `<div class="price">${formatCoins(item.price_gp, item.stock)}</div>`;
 
-      const minus = document.createElement("button");
-      minus.className = "small";
-      minus.textContent = "−";
-      minus.disabled = inCartQty(shop.id, item.id) === 0;
-      minus.onclick = () => remove(shop.id, item.id);
+    const controls = document.createElement("div");
+    controls.className = "controls";
 
-      const qty = document.createElement("div");
-      qty.className = "qty";
-      qty.textContent = inCartQty(shop.id, item.id);
+    const minus = document.createElement("button");
+    minus.className = "small";
+    minus.textContent = "−";
+    minus.disabled = inCartQty(shop.id, item.id) === 0;
+    minus.onclick = () => remove(shop.id, item.id);
 
-      const plus = document.createElement("button");
-      plus.className = "small";
-      plus.textContent = "+";
-      const max = (item.stock ?? 999);
-      plus.disabled = (item.stock === 0) || (inCartQty(shop.id, item.id) >= max);
-      plus.onclick = () => add(shop.id, item.id);
+    const qty = document.createElement("div");
+    qty.className = "qty";
+    qty.textContent = inCartQty(shop.id, item.id);
 
-      controls.appendChild(minus);
-      controls.appendChild(qty);
-      controls.appendChild(plus);
+    const plus = document.createElement("button");
+    plus.className = "small";
+    plus.textContent = "+";
+    const max = (item.stock ?? 999);
+    plus.disabled = (item.stock === 0) || (inCartQty(shop.id, item.id) >= max);
+    plus.onclick = () => add(shop.id, item.id);
 
-      right.appendChild(controls);
+    controls.appendChild(minus);
+    controls.appendChild(qty);
+    controls.appendChild(plus);
 
-      row.appendChild(left);
-      row.appendChild(right);
-      itemsEl.appendChild(row);
-    });
-  }
+    right.appendChild(controls);
+
+    row.appendChild(left);
+    row.appendChild(right);
+    itemsEl.appendChild(row);
+  });
+}
+
 
   function renderCart(){
     cartEl.innerHTML = "";
@@ -333,7 +586,17 @@ function formatCoins(price_gp, stock = 999) {
   async function init(){
     const res = await fetch("./inventory.json", { cache: "no-store" });
     DATA = await res.json();
+	shopSearchEl.addEventListener("input", (e) => { shopSearchTerm = e.target.value.toLowerCase(); renderTabs(); });
+	itemSearchEl.addEventListener("input", (e) => { itemSearchTerm = e.target.value.toLowerCase(); renderItems(); });
+	categoryEl.addEventListener("change", (e) => { categoryTerm = e.target.value; renderItems(); });
+	sortBtnEl.addEventListener("click", () => {
+	sortDir *= -1;
+	sortBtnEl.textContent = `Sort: Price ${sortDir === 1 ? "↑" : "↓"}`;
+	renderItems();
+	});
+
     activeShopId = DATA.shops[0]?.id ?? null;
+	rebuildCategories();
     render();
   }
 
