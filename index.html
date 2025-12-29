@@ -100,6 +100,25 @@
   const to2 = (n) => Math.round(n * 100) / 100;
   const fmt = (n) => (to2(n)).toString();
 
+function formatCoins(price_gp, stock = 999) {
+  // Availability / reference rows ("Varies")
+  if ((price_gp === 0 || price_gp === "0") && Number(stock) === 0) return "Varies";
+
+  const totalCp = Math.round(Number(price_gp) * 100); // 1 gp = 100 cp
+  if (totalCp === 0) return "0 gp";
+
+  const gp = Math.floor(totalCp / 100);
+  const sp = Math.floor((totalCp % 100) / 10);
+  const cp = totalCp % 10;
+
+  const parts = [];
+  if (gp) parts.push(`${gp} gp`);
+  if (sp) parts.push(`${sp} sp`);
+  if (cp) parts.push(`${cp} cp`);
+  return parts.join(" ");
+}
+
+
   function shopById(id){ return DATA.shops.find(s => s.id === id); }
 
   function itemById(shopId,itemId){
@@ -152,9 +171,9 @@
     for(const entry of cart.values()){
       const shop = shopById(entry.shopId);
       const item = itemById(entry.shopId, entry.itemId);
-      lines.push(`BUY: ${item.name} | Qty: ${entry.qty} | Price: ${fmt(item.price_gp)} gp | Shop: ${shop.name}`);
+      lines.push(`BUY: ${item.name} | Qty: ${entry.qty} | Price: ${formatCoins(item.price_gp, item.stock)} | Shop: ${shop.name}`);
     }
-    lines.push(`TOTAL: ${fmt(totalGp())} gp`);
+    lines.push(`TOTAL: ${formatCoins(totalGp())}`);
     return lines.join("\n");
   }
 
@@ -215,7 +234,7 @@
       `;
 
       const right = document.createElement("div");
-      right.innerHTML = `<div class="price">${fmt(item.price_gp)} gp</div>`;
+      right.innerHTML = `<div class="price">${formatCoins(item.price_gp, item.stock)}</div>`;
 
       const controls = document.createElement("div");
       controls.className = "controls";
@@ -269,15 +288,15 @@
           <div class="empty">${shop.name}</div>
         </div>
         <div style="text-align:right">
-          <div>${entry.qty} × ${fmt(item.price_gp)} gp</div>
-          <div class="empty">= ${fmt(item.price_gp * entry.qty)} gp</div>
+          <div>${entry.qty} × ${formatCoins(item.price_gp, item.stock)}</div>
+		  <div class="empty">= ${formatCoins(item.price_gp * entry.qty)}</div>
         </div>
       `;
       cartEl.appendChild(line);
     }
 
     const total = document.createElement("div");
-    total.innerHTML = `<div class="row"><span class="empty">Total</span><span class="total">${fmt(totalGp())} gp</span></div>`;
+    total.innerHTML = `<div class="row"><span class="empty">Total</span><span class="total">${formatCoins(totalGp())}</span></div>`;
     cartEl.appendChild(total);
 
     const btns = document.createElement("div");
