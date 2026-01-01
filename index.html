@@ -40,8 +40,27 @@
       border-bottom:1px solid var(--border);
       padding:14px 16px;
     }
+
+    .headRow{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
     h1{margin:0;font-size:16px;letter-spacing:.2px}
     .sub{color:var(--muted);font-size:12px;margin-top:4px}
+
+    .quickShop{
+      display:none;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .quickShop .tool{
+      min-width: 280px;
+    }
 
     .wrap{
       max-width:1280px;
@@ -54,6 +73,17 @@
     }
     @media(max-width:1100px){
       .wrap{grid-template-columns: 1fr}
+    }
+
+    /* When builder shop is active: hide left shops panel and give items more width */
+    body.builder-mode .wrap{
+      grid-template-columns: 1fr 360px;
+    }
+    body.builder-mode .shopsCard{
+      display:none;
+    }
+    body.builder-mode .quickShop{
+      display:flex;
     }
 
     .card{
@@ -75,6 +105,7 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
+      gap:10px;
     }
 
     /* Sidebar (shops) */
@@ -133,6 +164,7 @@
       flex-wrap:wrap;
       border-bottom:1px solid var(--border);
       background: rgba(8,11,18,.45);
+      align-items:center;
     }
     .tool{
       border:1px solid var(--border);
@@ -157,11 +189,10 @@
 
     /* Item list */
     .grid{padding:10px 12px; display:grid; gap:8px;}
-    /* IMPORTANT: scrolling belongs to the CONTAINER, not each row */
     #items{
       max-height: calc(100vh - 210px);
       overflow:auto;
-      padding-right:4px;
+      padding-right:6px;
     }
 
     .itemRow{
@@ -195,6 +226,7 @@
       font-size:11px;
       color: var(--muted);
       background: rgba(0,0,0,.18);
+      white-space:nowrap;
     }
     .badge.good{border-color: rgba(65,208,122,.35); color: rgba(65,208,122,.95)}
     .badge.warn{border-color: rgba(255,204,102,.35); color: rgba(255,204,102,.95)}
@@ -213,6 +245,7 @@
       justify-content:flex-end;
       margin-top:8px;
     }
+
     button{
       cursor:pointer;
       border:1px solid var(--border);
@@ -251,17 +284,148 @@
     .ok{border-color: rgba(65,208,122,.35); background: rgba(65,208,122,.10)}
     .danger{border-color: rgba(255,93,108,.35); background: rgba(255,93,108,.10)}
     .ghost{border-color: var(--border); background: transparent}
+
+    /* ===== Builder UI ===== */
+    .builderTop{
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      background: linear-gradient(180deg, rgba(12,17,27,.98), rgba(12,17,27,.86));
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:10px;
+      margin-bottom:10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,.35);
+    }
+    .builderTopGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+      align-items:start;
+    }
+    @media(max-width:900px){
+      .builderTopGrid{grid-template-columns: 1fr}
+    }
+    .builderTop .title{font-size:15px}
+    .builderControls{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:flex-end;
+    }
+
+    .section{
+      border:1px solid var(--border);
+      border-radius:14px;
+      overflow:hidden;
+      background: rgba(8,11,18,.45);
+      margin-bottom:10px;
+    }
+    .sectionHead{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:10px 12px;
+      cursor:pointer;
+      user-select:none;
+      background: rgba(8,11,18,.65);
+      border-bottom:1px solid var(--border);
+    }
+    .sectionHead:hover{background: rgba(8,11,18,.78)}
+    .sectionTitle{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-size:11px;
+      color: rgba(207,215,255,.9);
+    }
+    .caret{
+      opacity:.7;
+      font-size:12px;
+    }
+    .sectionBody{
+      padding:10px;
+      display:none;
+    }
+    .section.open .sectionBody{display:block;}
+
+    .modGrid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap:8px;
+    }
+    @media(max-width:900px){
+      .modGrid{grid-template-columns: 1fr;}
+    }
+
+    .modCard{
+      border:1px solid var(--border);
+      border-radius:14px;
+      background: rgba(8,11,18,.55);
+      padding:10px;
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap:10px;
+    }
+    .modCard.disabled{opacity:.45}
+    .modName{font-weight:900}
+    .modDesc{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.25}
+    .tagRow{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+    .miniBtn{
+      padding:7px 10px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background: rgba(10,14,22,.75);
+      color: var(--text);
+      cursor:pointer;
+    }
+    .miniBtn:hover{border-color:var(--border2)}
+    .miniBtn:disabled{opacity:.5; cursor:not-allowed}
+    .miniBtn.on{
+      border-color: rgba(124,140,255,.65);
+      background: rgba(124,140,255,.12);
+    }
+
+    .warnBox{
+      border:1px solid rgba(255,204,102,.35);
+      background: rgba(255,204,102,.06);
+      border-radius:14px;
+      padding:10px;
+      margin-top:10px;
+    }
+    .okBox{
+      border:1px solid rgba(65,208,122,.35);
+      background: rgba(65,208,122,.06);
+      border-radius:14px;
+      padding:10px;
+      margin-top:10px;
+    }
   </style>
 </head>
 
 <body>
 <header>
-  <h1>🛒 Sordia Vignti – Shop Terminal</h1>
-  <div class="sub">Select a shop, click items to add/remove, then copy checkout text to send the DM.</div>
+  <div class="headRow">
+    <div>
+      <h1>🛒 Sordia Vignti – Shop Terminal</h1>
+      <div class="sub">Select a shop, add items, then copy checkout text to send the DM.</div>
+    </div>
+
+    <!-- Appears ONLY in builder-mode so the left sidebar doesn't steal space -->
+    <div class="quickShop">
+      <select id="shopDropdown" class="tool" title="Select shop"></select>
+      <span class="empty" id="quickShopHint"></span>
+    </div>
+  </div>
 </header>
 
 <div class="wrap">
-  <div class="card">
+  <div class="card shopsCard">
     <h2>Shops</h2>
     <div class="shopsPanel">
       <input id="shopSearch" class="shopSearch" placeholder="Search shops…" />
@@ -271,6 +435,8 @@
 
   <div class="card">
     <h2>Items <span id="shopTitle" class="empty"></span></h2>
+
+    <!-- Normal shop toolbar (hidden automatically for builder shop) -->
     <div class="toolbar" id="toolbar">
       <input id="itemSearch" class="tool" placeholder="Search items…" />
       <select id="categoryFilter" class="tool">
@@ -278,6 +444,7 @@
       </select>
       <button id="sortBtn" class="toolBtn" title="Sort by price">Sort: Price ↑</button>
     </div>
+
     <div class="grid" id="items"></div>
   </div>
 
@@ -291,13 +458,13 @@
   // ======= LOAD DATA =======
   let DATA = null;
 
-  // Cart is keyed by "shopId:itemId"
+  // Normal cart (non-builder)
   const cart = new Map();
   let activeShopId = null;
   let shopSearchTerm = "";
   let itemSearchTerm = "";
   let categoryTerm = "";
-  let sortDir = 1; // 1 = asc, -1 = desc
+  let sortDir = 1;
 
   const shopSearchEl = document.getElementById("shopSearch");
   const itemSearchEl = document.getElementById("itemSearch");
@@ -305,24 +472,23 @@
   const sortBtnEl = document.getElementById("sortBtn");
   const shopTitleEl = document.getElementById("shopTitle");
   const toolbarEl = document.getElementById("toolbar");
-
   const tabsEl = document.getElementById("tabs");
   const itemsEl = document.getElementById("items");
   const cartEl = document.getElementById("cart");
 
+  // Builder-mode shop dropdown
+  const shopDropdownEl = document.getElementById("shopDropdown");
+  const quickShopHintEl = document.getElementById("quickShopHint");
+
   const to2 = (n) => Math.round(n * 100) / 100;
 
   function formatCoins(price_gp, stock = 999) {
-    // Availability / reference rows ("Varies")
     if ((price_gp === 0 || price_gp === "0") && Number(stock) === 0) return "Varies";
-
-    const totalCp = Math.round(Number(price_gp) * 100); // 1 gp = 100 cp
+    const totalCp = Math.round(Number(price_gp) * 100);
     if (totalCp === 0) return "0 gp";
-
     const gp = Math.floor(totalCp / 100);
     const sp = Math.floor((totalCp % 100) / 10);
     const cp = totalCp % 10;
-
     const parts = [];
     if (gp) parts.push(`${gp} gp`);
     if (sp) parts.push(`${sp} sp`);
@@ -345,10 +511,8 @@
     const item = itemById(shopId,itemId);
     const key = `${shopId}:${itemId}`;
     const cur = cart.get(key) || { shopId, itemId, qty: 0 };
-
     const max = (item.stock ?? 999);
     if (cur.qty >= max) return;
-
     cur.qty += 1;
     cart.set(key, cur);
     render();
@@ -453,10 +617,21 @@
     shopTitleEl.textContent = active ? `— ${active.name}` : "";
   }
 
+  function renderShopDropdown(){
+    // Used ONLY in builder-mode, but safe to keep updated always.
+    shopDropdownEl.innerHTML = DATA.shops.map(s => {
+      const sel = (s.id === activeShopId) ? "selected" : "";
+      return `<option value="${s.id}" ${sel}>${s.name}</option>`;
+    }).join("");
+
+    const active = shopById(activeShopId);
+    quickShopHintEl.textContent = active?.tagline ? `— ${active.tagline}` : "";
+  }
+
   // ======= BUILDER SHOP (GUNSMITH) =======
   const gunBuild = {
     baseId: null,
-    mods: new Map() // key: modId -> { catId, mod }
+    mods: new Map() // modId -> { catId, mod }
   };
 
   function gp(n){ return Number(n || 0); }
@@ -509,7 +684,7 @@
     if (critCount > 1) issues.push("Reminder: Only one crit-triggered mod effect may activate per turn (choose one).");
     if (controlCount > 1) issues.push("Reminder: Target can suffer only one movement/reaction-denying effect per round from mods.");
 
-    // Hard rules (also enforced on add)
+    // Hard rules
     const counts = builderCounts();
     if (counts.extraAttack > b.rules.maxExtraAttackMods) issues.push("Rule broken: Only one mod may grant additional attacks.");
     if (counts.aoe > b.rules.maxAoeMods) issues.push("Rule broken: Only one AoE mod may be installed.");
@@ -527,16 +702,20 @@
     } else {
       lines.push(`BASE: (none selected)`);
     }
-
     lines.push(`MODS (${gunBuild.mods.size}/${builderSlotLimit(shop)} slots):`);
     for (const entry of gunBuild.mods.values()){
       lines.push(`- ${entry.mod.name} [${entry.catId}] — ${formatCoins(entry.mod.price_gp)} — ${entry.mod.desc}`);
     }
-
     lines.push(`TOTAL: ${formatCoins(builderTotalGp(shop))}`);
     lines.push(`INSTALL NOTE: Installing/removing a mod takes 1 hour and appropriate tools.`);
     return lines.join("\n");
   }
+
+  window.__builderToggleSection = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.classList.toggle("open");
+  };
 
   window.__builderAdd = (catId, modId) => {
     const shop = shopById(activeShopId);
@@ -548,8 +727,7 @@
       return;
     }
 
-    // no duplicates
-    if (gunBuild.mods.has(modId)) return;
+    if (gunBuild.mods.has(modId)) return; // no duplicates
 
     // one-per-category if required
     if (cat.limitOneInstalled){
@@ -564,14 +742,12 @@
       return;
     }
 
-    // HARD RULE: only one extra-attack mod
+    // hard rules
     const counts = builderCounts();
     if ((mod.tags || []).includes("extra_attack") && counts.extraAttack >= shop.builder.rules.maxExtraAttackMods){
       alert("Rule: Only one mod may grant additional attacks.");
       return;
     }
-
-    // HARD RULE: only one AoE mod
     if ((mod.tags || []).includes("aoe") && counts.aoe >= shop.builder.rules.maxAoeMods){
       alert("Rule: Only one AoE (cone/line/area) mod may be installed.");
       return;
@@ -606,51 +782,53 @@
   function renderBuilder(shop){
     const b = shop.builder;
 
+    // Base dropdown
     const baseOptions = b.baseModels.map(m => {
       const selected = (m.id === gunBuild.baseId) ? "selected" : "";
       return `<option value="${m.id}" ${selected}>${m.name} — ${m.slots} slots — ${m.price_gp} gp</option>`;
     }).join("");
 
+    const used = builderSlotsUsed();
+    const limit = builderSlotLimit(shop);
+    const total = builderTotalGp(shop);
+
     const issues = builderWarnings(shop);
     const issuesHtml = issues.length
-      ? `<div class="cartline" style="border-color: rgba(255,204,102,.35); background: rgba(255,204,102,.06)">
-           <strong>Build Notes</strong>
-           <div class="empty" style="margin-top:6px">${issues.map(x=>`• ${x}`).join("<br>")}</div>
-         </div>`
-      : `<div class="cartline" style="border-color: rgba(65,208,122,.35); background: rgba(65,208,122,.06)">
-           <strong>Build OK</strong>
-           <div class="empty" style="margin-top:6px">Slot limits and hard restrictions satisfied.</div>
-         </div>`;
+      ? `<div class="warnBox"><div class="title" style="font-size:13px">Build Notes</div><div class="empty" style="margin-top:6px">${issues.map(x=>`• ${x}`).join("<br>")}</div></div>`
+      : `<div class="okBox"><div class="title" style="font-size:13px">Build OK</div><div class="empty" style="margin-top:6px">Slot limits and hard restrictions satisfied.</div></div>`;
 
-    const modBlocks = b.modCategories.map(cat => {
+    // Sections
+    const sectionsHtml = b.modCategories.map((cat, idx) => {
+      const sectionId = `sec_${cat.id}`;
+      const openByDefault = idx === 0 ? "open" : "";
       const selectedInCat = Array.from(gunBuild.mods.values()).some(x => x.catId === cat.id);
 
-      const rows = cat.mods.map(mod => {
+      const modCards = cat.mods.map(mod => {
         const isSelected = gunBuild.mods.has(mod.id);
 
-        const wouldBreakSlots = (!isSelected && gunBuild.baseId && builderSlotsUsed() >= builderSlotLimit(shop));
-        const wouldBreakCat = (!isSelected && cat.limitOneInstalled && selectedInCat);
-
-        // hard-rule hints (extra attack / aoe)
         const counts = builderCounts();
+        const wouldBreakSlots = (!isSelected && gunBuild.baseId && used >= limit);
+        const wouldBreakCat = (!isSelected && cat.limitOneInstalled && selectedInCat);
         const wouldBreakExtraAttack = (!isSelected && (mod.tags||[]).includes("extra_attack") && counts.extraAttack >= b.rules.maxExtraAttackMods);
         const wouldBreakAoe = (!isSelected && (mod.tags||[]).includes("aoe") && counts.aoe >= b.rules.maxAoeMods);
 
         const disabled = (!gunBuild.baseId) || wouldBreakSlots || wouldBreakCat || wouldBreakExtraAttack || wouldBreakAoe;
 
+        const tagBadges = (mod.tags || []).map(t => `<span class="badge">${t}</span>`).join("");
+
         return `
-          <div class="itemRow" style="opacity:${disabled && !isSelected ? 0.5 : 1}">
+          <div class="modCard ${disabled && !isSelected ? "disabled" : ""}">
             <div>
-              <div class="title">${mod.name} <span class="badge">${cat.name}</span></div>
-              <div class="meta">${mod.desc}</div>
-              ${(mod.tags && mod.tags.length) ? `<div class="meta small">${mod.tags.map(t=>`<span class="badge">${t}</span>`).join(" ")}</div>` : ""}
+              <div class="modName">${mod.name}</div>
+              <div class="modDesc">${mod.desc}</div>
+              ${tagBadges ? `<div class="tagRow">${tagBadges}</div>` : ""}
             </div>
-            <div class="rightCol">
+
+            <div style="text-align:right; min-width:150px">
               <div class="price">${formatCoins(mod.price_gp)}</div>
-              <div class="controls">
-                <button class="small" ${isSelected ? "" : "disabled"} onclick="__builderRemove('${mod.id}')">−</button>
-                <div class="qty">${isSelected ? "1" : "0"}</div>
-                <button class="small" ${disabled ? "disabled" : ""} onclick="__builderAdd('${cat.id}','${mod.id}')">+</button>
+              <div style="margin-top:8px; display:flex; gap:8px; justify-content:flex-end; align-items:center;">
+                <button class="miniBtn ${isSelected ? "on" : ""}" ${isSelected ? "" : "disabled"} onclick="__builderRemove('${mod.id}')">Remove</button>
+                <button class="miniBtn ${isSelected ? "on" : ""}" ${disabled ? "disabled" : ""} onclick="__builderAdd('${cat.id}','${mod.id}')">${isSelected ? "Selected" : "Add"}</button>
               </div>
             </div>
           </div>
@@ -658,51 +836,53 @@
       }).join("");
 
       return `
-        <div style="margin-top:10px">
-          <div class="empty" style="margin:6px 2px 8px; letter-spacing:.12em; text-transform:uppercase; font-size:11px;">
-            ${cat.name} ${cat.limitOneInstalled ? "· (max 1)" : ""}
+        <div class="section ${openByDefault}" id="${sectionId}">
+          <div class="sectionHead" onclick="__builderToggleSection('${sectionId}')">
+            <div class="sectionTitle">${cat.name} ${cat.limitOneInstalled ? "· (MAX 1)" : ""}</div>
+            <div class="caret">▾</div>
           </div>
-          ${rows}
+          <div class="sectionBody">
+            <div class="modGrid">${modCards}</div>
+          </div>
         </div>
       `;
     }).join("");
 
     itemsEl.innerHTML = `
-      <div class="itemRow">
-        <div>
-          <div class="title">Gunsmith Builder <span class="badge">Build it, don’t replace it</span></div>
-          <div class="meta">Choose a base gun, then install mods (1 slot each). No swapping in combat. 1 hour to install/remove.</div>
+      <div class="builderTop">
+        <div class="builderTopGrid">
+          <div>
+            <div class="title">🔧 Gunsmith Builder <span class="badge">Slots define power</span></div>
+            <div class="meta">Choose a base gun, then add mods (1 slot each). No swapping in combat. 1 hour to install/remove.</div>
+          </div>
+
+          <div class="builderControls">
+            <select id="baseSelect" class="tool" style="min-width: 320px">
+              <option value="">Select base gun model…</option>
+              ${baseOptions}
+            </select>
+            <button class="toolBtn ok" onclick="__builderCopy()">Copy Build Checkout</button>
+            <button class="toolBtn danger" onclick="__builderReset()">Reset</button>
+          </div>
         </div>
-        <div class="rightCol">
-          <select id="baseSelect" class="tool" style="min-width:260px">
-            <option value="">Select base model…</option>
-            ${baseOptions}
-          </select>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:space-between; margin-top:10px">
+          <div class="empty">Slots: <strong>${used}/${limit}</strong></div>
+          <div class="empty">Total: <strong>${formatCoins(total)}</strong></div>
         </div>
+
+        ${issuesHtml}
       </div>
 
-      ${issuesHtml}
-
-      <div class="itemRow">
-        <div>
-          <div class="title">Current Build</div>
-          <div class="meta small">Slots: <strong>${builderSlotsUsed()}/${builderSlotLimit(shop)}</strong> · Total: <strong>${formatCoins(builderTotalGp(shop))}</strong></div>
-        </div>
-        <div class="rightCol" style="display:flex; gap:8px; justify-content:flex-end; flex-wrap:wrap;">
-          <button class="toolBtn ok" onclick="__builderCopy()">Copy Build Checkout</button>
-          <button class="toolBtn danger" onclick="__builderReset()">Reset</button>
-        </div>
-      </div>
-
-      ${modBlocks}
+      ${sectionsHtml}
     `;
 
     document.getElementById("baseSelect").addEventListener("change", (e) => {
       gunBuild.baseId = e.target.value || null;
 
       // If slots shrink, auto-remove extras (last added)
-      const limit = builderSlotLimit(shop);
-      while (gunBuild.mods.size > limit){
+      const lim = builderSlotLimit(shop);
+      while (gunBuild.mods.size > lim){
         const lastKey = Array.from(gunBuild.mods.keys()).pop();
         gunBuild.mods.delete(lastKey);
       }
@@ -714,7 +894,6 @@
   function renderItems(){
     const shop = shopById(activeShopId);
     itemsEl.innerHTML = "";
-
     if (!shop) return;
 
     if (shop.kind === "builder"){
@@ -724,10 +903,8 @@
 
     let items = (shop.items || []).slice();
 
-    // filter by category
     if (categoryTerm) items = items.filter(i => (i.category || "") === categoryTerm);
 
-    // filter by search
     if (itemSearchTerm){
       items = items.filter(i => {
         const hay = `${i.name} ${i.desc ?? ""} ${i.category ?? ""}`.toLowerCase();
@@ -735,19 +912,16 @@
       });
     }
 
-    // sort by price
     items.sort((a,b) => (Number(a.price_gp) - Number(b.price_gp)) * sortDir);
 
     items.forEach(item => {
       const row = document.createElement("div");
       row.className = "itemRow";
 
-      // stock badge
       let stockBadge = `<span class="badge good">✅ In stock</span>`;
       if (item.stock === 0) stockBadge = `<span class="badge bad">❌ Out of stock</span>`;
       else if (item.stock != null && item.stock !== 999 && item.stock < 999) stockBadge = `<span class="badge warn">⚠️ Limited (${item.stock})</span>`;
 
-      // rarity badge
       const rarityBadge = item.rarity ? `<span class="badge">${item.rarity}</span>` : "";
       const catBadge = item.category ? `<span class="badge">${item.category}</span>` : "";
 
@@ -798,21 +972,16 @@
   function renderCart(){
     const activeShop = shopById(activeShopId);
 
-    // Builder shop uses a build panel instead of normal cart
     if (activeShop?.kind === "builder"){
       cartEl.innerHTML = `
         <div class="cartline">
-          <strong>${activeShop.name}</strong>
-          <div class="empty" style="margin-top:6px">This shop uses a build configurator instead of the standard cart.</div>
-        </div>
-
-        <div class="cartline">
           <div>
-            <strong>Build Total</strong>
-            <div class="empty">Slots: ${builderSlotsUsed()}/${builderSlotLimit(activeShop)}</div>
+            <strong>${activeShop.name}</strong>
+            <div class="empty">Build guns & attachments (slot-based)</div>
           </div>
           <div style="text-align:right">
             <div class="total">${formatCoins(builderTotalGp(activeShop))}</div>
+            <div class="empty">Slots: ${builderSlotsUsed()}/${builderSlotLimit(activeShop)}</div>
           </div>
         </div>
 
@@ -820,13 +989,18 @@
           <button class="ok" onclick="__builderCopy()">Copy Build Checkout</button>
           <button class="danger" onclick="__builderReset()">Reset Build</button>
         </div>
+
+        <div class="cartline">
+          <div class="empty">
+            Tip: Pick a base first. Then open a section (Barrel/Frame/etc) and click <strong>Add</strong>.
+            Category headings keep the list tidy.
+          </div>
+        </div>
       `;
       return;
     }
 
-    // Normal cart
     cartEl.innerHTML = "";
-
     if(cart.size === 0){
       cartEl.innerHTML = `<div class="empty">Your cart is empty.</div>`;
       return;
@@ -883,11 +1057,17 @@
   // ======= MAIN RENDER =======
   function render(){
     const shop = shopById(activeShopId);
+    const isBuilder = shop?.kind === "builder";
 
-    // Hide normal toolbar for builder shop
-    toolbarEl.style.display = (shop?.kind === "builder") ? "none" : "flex";
+    // Toggle builder mode layout + controls
+    document.body.classList.toggle("builder-mode", !!isBuilder);
 
+    // Normal toolbar hidden for builder
+    toolbarEl.style.display = isBuilder ? "none" : "flex";
+
+    // Update shop title + lists
     renderTabs();
+    renderShopDropdown();
     renderItems();
     renderCart();
   }
@@ -918,8 +1098,19 @@
       renderItems();
     });
 
+    shopDropdownEl.addEventListener("change", (e) => {
+      activeShopId = e.target.value;
+      rebuildCategories();
+      render();
+    });
+
     activeShopId = DATA.shops[0]?.id ?? null;
     rebuildCategories();
+
+    // Set header shop title once now
+    const active = shopById(activeShopId);
+    shopTitleEl.textContent = active ? `— ${active.name}` : "";
+
     render();
   }
 

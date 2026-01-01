@@ -12,7 +12,7 @@
       { "id": "base-uncommon", "name": "Base Gun (Uncommon)", "rarity": "Uncommon", "slots": 2, "price_gp": 750, "desc": "Early customisation." },
       { "id": "base-rare", "name": "Base Gun (Rare)", "rarity": "Rare", "slots": 3, "price_gp": 1500, "desc": "Strong, specialised builds." },
       { "id": "base-very-rare", "name": "Base Gun (Very Rare)", "rarity": "Very Rare", "slots": 4, "price_gp": 4000, "desc": "High-end, multi-role weapons." },
-      { "id": "base-legendary", "name": "Base Gun (Legendary)", "rarity": "Legendary", "slots": 5, "price_gp": 10000, "desc": "Signature, story-defining weapon." }
+      { "id": "base-legendary", "name": "Base Gun (Legendary)", "rarity": "Legendary", "slots": 7, "price_gp": 10000, "desc": "Signature, story-defining weapon." }
     ],
     "modCategories": [
       {
@@ -96,7 +96,7 @@
       {
         "id": "utility",
         "name": "Utility",
-        "limitOneInstalled": false,
+        "limitOneInstalled": true,
         "mods": [
           { "id": "bayonet-spike", "name": "Bayonet Spike", "price_gp": 200, "tags": [], "desc": "Bonus-action melee attack (1d6)" },
           { "id": "grapnel-launcher", "name": "Grapnel Launcher", "price_gp": 700, "tags": [], "desc": "Fire rope to climb or pull; 3 uses per long rest" },
