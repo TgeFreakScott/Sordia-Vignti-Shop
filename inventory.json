@@ -1,57 +1,122 @@
 {
   "shops": [
-{
-  "id": "general-store",
-  "name": "General Store",
-  "tagline": "",
-  "icon": "",
-  "items": [
-    { "id": "abacus", "name": "Abacus", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: No | Urban: Yes" },
-    { "id": "barrel", "name": "Barrel", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
-    { "id": "blanket", "name": "Blanket", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 1, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
-    { "id": "bottle-glass", "name": "Bottle, glass", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
-    { "id": "bucket", "name": "Bucket", "category": "Adventuring Gear", "price_gp": 0.05, "stock": 999, "rarity": "", "desc": "Cheap: 0.03 gp | High: 0.08 gp | Rural: Yes | Urban: Yes" },
-    { "id": "candle", "name": "Candle", "category": "Adventuring Gear", "price_gp": 0.01, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: Yes" },
-    { "id": "chest", "name": "Chest", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
-    { "id": "clothes-common", "name": "Clothes, Common", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 999, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
-    { "id": "clothes-fine", "name": "Clothes, Fine", "category": "Adventuring Gear", "price_gp": 15, "stock": 999, "rarity": "", "desc": "Cheap: 11 gp | High: 23 gp | Rural: No | Urban: No" },
-    { "id": "flask-tankard", "name": "Flask or Tankard", "category": "Adventuring Gear", "price_gp": 0.02, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: Yes | Urban: Yes" },
-    { "id": "hammer", "name": "Hammer", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
-    { "id": "ink-bottle", "name": "Ink (1 ounce bottle)", "category": "Adventuring Gear", "price_gp": 10, "stock": 1, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes" },
-    { "id": "ink-pen", "name": "Ink Pen", "category": "Adventuring Gear", "price_gp": 0.02, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: Yes | Urban: Yes" },
-    { "id": "jug-pitcher", "name": "Jug or Pitcher", "category": "Adventuring Gear", "price_gp": 0.02, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: Yes | Urban: Yes" },
-    { "id": "ladder-10ft", "name": "Ladder (10-foot)", "category": "Adventuring Gear", "price_gp": 0.1, "stock": 999, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
-    { "id": "lantern-hooded", "name": "Lantern, Hooded", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
-    { "id": "lock", "name": "Lock", "category": "Adventuring Gear", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: Yes" },
-    { "id": "mess-kit", "name": "Mess Kit", "category": "Adventuring Gear", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: Yes | Urban: Yes" },
-    { "id": "mirror-steel", "name": "Mirror, Steel", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: Yes | Urban: Yes" },
-    { "id": "paper-sheet", "name": "Paper (one sheet)", "category": "Adventuring Gear", "price_gp": 0.2, "stock": 999, "rarity": "", "desc": "Cheap: 0.1 gp | High: 0.3 gp | Rural: No | Urban: Yes" },
-    { "id": "parchment-sheet", "name": "Parchment (one sheet)", "category": "Adventuring Gear", "price_gp": 0.1, "stock": 1, "rarity": "", "desc": "Cheap: 0.07 gp | High: 0.2 gp | Rural: Yes | Urban: Yes" },
-    { "id": "miners-pick", "name": "Pick, Miner's", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
-    { "id": "iron-pot", "name": "Pot, Iron", "category": "Adventuring Gear", "price_gp": 2, "stock": 1, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
-    { "id": "pouch", "name": "Pouch", "category": "Adventuring Gear", "price_gp": 0.5, "stock": 999, "rarity": "", "desc": "Cheap: 0.3 gp | High: 0.8 gp | Rural: Yes | Urban: Yes" },
-    { "id": "rope-hempen-50ft", "name": "Rope, Hempen (50 feet)", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
-    { "id": "rope-silk-50ft", "name": "Rope, Silk (50 feet)", "category": "Adventuring Gear", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: No" },
-    { "id": "sack", "name": "Sack", "category": "Adventuring Gear", "price_gp": 0.01, "stock": 1, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.02 gp | Rural: Yes | Urban: Yes" },
-    { "id": "merchants-scale", "name": "Scale, Merchant's", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
-    { "id": "shovel", "name": "Shovel", "category": "Adventuring Gear", "price_gp": 2, "stock": 999, "rarity": "", "desc": "Cheap: 1 gp | High: 3 gp | Rural: Yes | Urban: Yes" },
-    { "id": "signet-ring", "name": "Signet Ring", "category": "Adventuring Gear", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
-    { "id": "soap", "name": "Soap", "category": "Adventuring Gear", "price_gp": 0.02, "stock": 999, "rarity": "", "desc": "Cheap: 0.01 gp | High: 0.03 gp | Rural: No | Urban: Yes" },
-    { "id": "vial", "name": "Vial", "category": "Adventuring Gear", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: No | Urban: Yes" },
 
-    { "id": "carpenters-tools", "name": "Carpenter's Tools", "category": "Tools", "price_gp": 15, "stock": 1, "rarity": "", "desc": "Cheap: 11 gp | High: 23 gp | Rural: Yes | Urban: Yes" },
-    { "id": "cobblers-tools", "name": "Cobbler's Tools", "category": "Tools", "price_gp": 25, "stock": 999, "rarity": "", "desc": "Cheap: 18 gp | High: 38 gp | Rural: Yes | Urban: Yes" },
-    { "id": "cooks-utensils", "name": "Cook's Utensils", "category": "Tools", "price_gp": 50, "stock": 1, "rarity": "", "desc": "Cheap: 38 gp | High: 75 gp | Rural: Yes | Urban: Yes" },
-    { "id": "glassblowers-tools", "name": "Glassblower's Tools", "category": "Tools", "price_gp": 30, "stock": 999, "rarity": "", "desc": "Cheap: 22 gp | High: 45 gp | Rural: No | Urban: No" },
-    { "id": "leatherworkers-tools", "name": "Leatherworker's Tools", "category": "Tools", "price_gp": 5, "stock": 999, "rarity": "", "desc": "Cheap: 3 gp | High: 8 gp | Rural: No | Urban: Yes" },
-    { "id": "masons-tools", "name": "Mason's Tools", "category": "Tools", "price_gp": 10, "stock": 1, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes" },
-    { "id": "potters-tools", "name": "Potter's Tools", "category": "Tools", "price_gp": 10, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: Yes | Urban: Yes" },
-    { "id": "smiths-tools", "name": "Smith's Tools", "category": "Tools", "price_gp": 20, "stock": 999, "rarity": "", "desc": "Cheap: 7 gp | High: 15 gp | Rural: No | Urban: No" },
-    { "id": "weavers-tools", "name": "Weaver's Tools", "category": "Tools", "price_gp": 1, "stock": 999, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" },
-    { "id": "woodcarvers-tools", "name": "Woodcarver's Tools", "category": "Tools", "price_gp": 1, "stock": 1, "rarity": "", "desc": "Cheap: 0.7 gp | High: 2 gp | Rural: Yes | Urban: Yes" }
-  ]
-}
-,
+{
+  "id": "gunsmith-workshop",
+  "name": "🔧 Gunsmith Workshop",
+  "tagline": "Build guns & attachments (slot-based)",
+  "kind": "builder",
+  "builder": {
+    "baseModels": [
+      { "id": "base-common", "name": "Base Gun (Common)", "rarity": "Common", "slots": 1, "price_gp": 200, "desc": "Simple weapon with one enhancement." },
+      { "id": "base-uncommon", "name": "Base Gun (Uncommon)", "rarity": "Uncommon", "slots": 2, "price_gp": 750, "desc": "Early customisation." },
+      { "id": "base-rare", "name": "Base Gun (Rare)", "rarity": "Rare", "slots": 3, "price_gp": 1500, "desc": "Strong, specialised builds." },
+      { "id": "base-very-rare", "name": "Base Gun (Very Rare)", "rarity": "Very Rare", "slots": 4, "price_gp": 4000, "desc": "High-end, multi-role weapons." },
+      { "id": "base-legendary", "name": "Base Gun (Legendary)", "rarity": "Legendary", "slots": 5, "price_gp": 10000, "desc": "Signature, story-defining weapon." }
+    ],
+    "modCategories": [
+      {
+        "id": "barrel",
+        "name": "Barrel / Muzzle",
+        "limitOneInstalled": true,
+        "mods": [
+          { "id": "longbite-barrel", "name": "Longbite Barrel", "price_gp": 400, "tags": ["range"], "desc": "+100 ft range; +1 to attacks at long range; −2 to hit within 20 ft" },
+          { "id": "stormcoil-barrel", "name": "Stormcoil Barrel", "price_gp": 800, "tags": ["crit"], "desc": "Lightning damage; on crit, arcs to nearby target (Dex save)" },
+          { "id": "hexfire-coil-barrel", "name": "Hexfire Coil Barrel", "price_gp": 750, "tags": ["crit"], "desc": "Fire damage; on crit, target ignites (1d6 fire/turn, Dex save ends)" },
+          { "id": "scattershock-muzzle", "name": "Scattershock Muzzle", "price_gp": 500, "tags": ["aoe"], "desc": "15-ft cone attack (Dex save for half)" },
+          { "id": "astral-piercer-barrel", "name": "Astral Piercer Barrel", "price_gp": 1200, "tags": ["crit"], "desc": "Ignores cover; on crit, banish target (Cha save)" },
+          { "id": "blunderbore-muzzle", "name": "Blunderbore Muzzle", "price_gp": 300, "tags": ["aoe","control"], "desc": "15-ft cone; half damage; targets pushed 5 ft" },
+          { "id": "frostbite-barrel", "name": "Frostbite Barrel", "price_gp": 700, "tags": ["control"], "desc": "Cold damage; hit reduces speed by 10 ft until end of next turn" },
+          { "id": "silencer-coil", "name": "Silencer Coil", "price_gp": 600, "tags": ["stealth"], "desc": "Attacks do not reveal your position on hit" },
+          { "id": "phasewave-muzzle", "name": "Phasewave Muzzle", "price_gp": 500, "tags": ["control"], "desc": "Push target 10 ft on hit (Str save negates)" }
+        ]
+      },
+      {
+        "id": "frame",
+        "name": "Frame / Receiver",
+        "limitOneInstalled": true,
+        "mods": [
+          { "id": "repeater-frame", "name": "Repeater Frame", "price_gp": 700, "tags": ["extra_attack"], "desc": "Fire twice per action; second hit deals flat damage only and cannot trigger Sneak Attack, runes, or magazine effects" },
+          { "id": "mortis-core-receiver", "name": "Mortis Core Receiver", "price_gp": 1200, "tags": [], "desc": "2d12 necrotic damage; regain 5 HP on kill" },
+          { "id": "stormrider-frame", "name": "Stormrider Frame", "price_gp": 950, "tags": ["aoe"], "desc": "30-ft lightning line (Dex save); 1/short rest" },
+          { "id": "heavybolter-assembly", "name": "Heavybolter Assembly", "price_gp": 700, "tags": [], "desc": "2d10 damage; bracing grants advantage; −10 ft movement" },
+          { "id": "sniper-frame", "name": "Sniper Frame", "price_gp": 600, "tags": ["range"], "desc": "2d12 damage; +1d10 damage at long range" },
+          { "id": "overclock-frame", "name": "Overclock Frame", "price_gp": 650, "tags": [], "desc": "+1 damage die; weapon jams on a natural 1" },
+          { "id": "sentinel-frame", "name": "Sentinel Frame", "price_gp": 800, "tags": ["control"], "desc": "You may make opportunity attacks with this weapon in melee" },
+          { "id": "arc-capacitor-core", "name": "Arc Capacitor Core", "price_gp": 750, "tags": [], "desc": "First hit after reloading deals +1d10 damage" }
+        ]
+      },
+      {
+        "id": "stock",
+        "name": "Stock / Grip",
+        "limitOneInstalled": true,
+        "mods": [
+          { "id": "gyro-stabiliser-stock", "name": "Gyroscopic Stabiliser Stock", "price_gp": 400, "tags": [], "desc": "Reroll one damage die per attack; advantage while prone" },
+          { "id": "witchwood-handgrip", "name": "Witchwood Handgrip", "price_gp": 800, "tags": [], "desc": "On hit, applies Hunter’s Mark (no concentration); bonus damage applies only to this weapon’s damage dice" },
+          { "id": "clockwork-folding-stock", "name": "Clockwork Folding Stock", "price_gp": 250, "tags": [], "desc": "Advantage on Sleight of Hand to conceal weapon; surprise attacks deal +1d6 once per combat" },
+          { "id": "tinkers-counterweight-grip", "name": "Tinker’s Counterweight Grip", "price_gp": 300, "tags": [], "desc": "Ignore disadvantage for ranged attacks in melee; +2 bonus vs disarm attempts" }
+        ]
+      },
+      {
+        "id": "magazine",
+        "name": "Magazine / Power Core",
+        "limitOneInstalled": true,
+        "mods": [
+          { "id": "alkahest-core", "name": "Alkahest Core", "price_gp": 900, "tags": ["control"], "desc": "Acid damage; lowers target AC by 1 on hit (max −3)" },
+          { "id": "elemental-glyph-chamber", "name": "Elemental Glyph Chamber", "price_gp": 850, "tags": [], "desc": "On hit, roll 1d4 for bonus elemental effect" },
+          { "id": "void-echo-feeder", "name": "Void Echo Feeder", "price_gp": 1500, "tags": [], "desc": "Roll two attack dice and use the higher result" },
+          { "id": "hellsteel-drum", "name": "Hellsteel Drum", "price_gp": 650, "tags": [], "desc": "Ignore fire resistance; on nat 1, weapon burns for 1d8 fire damage" },
+          { "id": "shattercharge-feed", "name": "Shattercharge Feed", "price_gp": 1100, "tags": ["control"], "desc": "On crit, Con save or stunned for 1 round; 1/long rest" },
+          { "id": "bloodstone-magazine", "name": "Bloodstone Magazine", "price_gp": 900, "tags": [], "desc": "Gain temp HP equal to damage dealt (1/turn)" },
+          { "id": "nullfield-core", "name": "Nullfield Core", "price_gp": 1200, "tags": ["control"], "desc": "Suppresses magical effects on hit for 1 round; 1/short rest" }
+        ]
+      },
+      {
+        "id": "scope",
+        "name": "Scope",
+        "limitOneInstalled": true,
+        "mods": [
+          { "id": "tactical-lens-array", "name": "Tactical Lens Array", "price_gp": 400, "tags": [], "desc": "+5 passive Perception; advantage on Initiative; advantage on Perception checks while aiming" },
+          { "id": "voidglass-scope", "name": "Voidglass Scope", "price_gp": 1200, "tags": [], "desc": "See invisible and ethereal creatures within 60 ft" },
+          { "id": "snipeglass-prism", "name": "Snipeglass Prism", "price_gp": 700, "tags": [], "desc": "Advantage on attacks if you remain stationary this turn" }
+        ]
+      },
+      {
+        "id": "rune",
+        "name": "Rune",
+        "limitOneInstalled": true,
+        "mods": [
+          { "id": "runestone-of-echoes", "name": "Runestone of Echoes", "price_gp": 1000, "tags": ["crit"], "desc": "On miss, half damage rebounds to nearby creature" },
+          { "id": "sigil-of-time-dilation", "name": "Sigil of Time Dilation", "price_gp": 1800, "tags": ["extra_attack"], "desc": "One surprise shot before initiative; 1/long rest" },
+          { "id": "phantom-round-circuitry", "name": "Phantom Round Circuitry", "price_gp": 1400, "tags": [], "desc": "Shoot through up to 1-ft-thick walls; cannot crit" },
+          { "id": "cursebrand-etching", "name": "Cursebrand Etching", "price_gp": 1800, "tags": ["control"], "desc": "Target loses opportunity attacks for 1 minute; 1/long rest" },
+          { "id": "rune-of-returning", "name": "Rune of Returning", "price_gp": 800, "tags": [], "desc": "Teleport weapon to your hand; 1/short rest" }
+        ]
+      },
+      {
+        "id": "utility",
+        "name": "Utility",
+        "limitOneInstalled": false,
+        "mods": [
+          { "id": "bayonet-spike", "name": "Bayonet Spike", "price_gp": 200, "tags": [], "desc": "Bonus-action melee attack (1d6)" },
+          { "id": "grapnel-launcher", "name": "Grapnel Launcher", "price_gp": 700, "tags": [], "desc": "Fire rope to climb or pull; 3 uses per long rest" },
+          { "id": "quick-release-sling", "name": "Quick-Release Sling", "price_gp": 300, "tags": [], "desc": "Draw or stow weapon as a free action" },
+          { "id": "smoke-discharge-valve", "name": "Smoke Discharge Valve", "price_gp": 600, "tags": ["control"], "desc": "10-ft heavily obscured smoke cloud; 1/long rest" },
+          { "id": "flashburst-chamber", "name": "Flashburst Chamber", "price_gp": 450, "tags": ["control"], "desc": "15-ft blind burst (Con save DC 13); 1/short rest" },
+          { "id": "auto-brace-bipod", "name": "Auto-Brace Bipod", "price_gp": 400, "tags": [], "desc": "Set up to gain +2 AC vs ranged attacks" },
+          { "id": "shock-net-launcher", "name": "Shock Net Launcher", "price_gp": 650, "tags": ["control"], "desc": "Restrain target (Dex save); 1/short rest" },
+          { "id": "flare-beacon", "name": "Flare Beacon", "price_gp": 350, "tags": ["control"], "desc": "Illuminate area and reveal invisibility; 1/long rest" }
+        ]
+      }
+    ],
+    "rules": {
+      "maxExtraAttackMods": 1,
+      "maxAoeMods": 1,
+      "maxControlModsPerRound": 1,
+      "maxCritModsPerTurn": 1
+    }
+  }
+},
 {
   "id": "adventuring-supplies",
   "name": "Adventuring Supplies",

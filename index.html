@@ -4,276 +4,282 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sordia Vignti – Shop Terminal</title>
-<style>
-  :root{
-    --bg:#0b0e14;
-    --panel:#0f1420;
-    --panel2:#0c111b;
-    --border:rgba(255,255,255,.08);
-    --border2:rgba(255,255,255,.12);
-    --text:#f2f4ff;
-    --muted:rgba(242,244,255,.68);
-    --muted2:rgba(242,244,255,.48);
-    --accent:#7c8cff;
-    --good:#41d07a;
-    --warn:#ffcc66;
-    --bad:#ff5d6c;
-    --shadow: 0 12px 40px rgba(0,0,0,.45);
-  }
 
-  *{box-sizing:border-box}
-  body{
-    margin:0;
-    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-    background:
-      radial-gradient(1200px 700px at 30% -10%, rgba(124,140,255,.12), transparent 60%),
-      radial-gradient(900px 600px at 90% 10%, rgba(65,208,122,.10), transparent 55%),
-      var(--bg);
-    color:var(--text);
-  }
+  <style>
+    :root{
+      --bg:#0b0e14;
+      --panel:#0f1420;
+      --panel2:#0c111b;
+      --border:rgba(255,255,255,.08);
+      --border2:rgba(255,255,255,.12);
+      --text:#f2f4ff;
+      --muted:rgba(242,244,255,.68);
+      --muted2:rgba(242,244,255,.48);
+      --accent:#7c8cff;
+      --good:#41d07a;
+      --warn:#ffcc66;
+      --bad:#ff5d6c;
+      --shadow: 0 12px 40px rgba(0,0,0,.45);
+    }
 
-  header{
-    position:sticky; top:0; z-index:10;
-    backdrop-filter: blur(10px);
-    background: linear-gradient(to bottom, rgba(11,14,20,.92), rgba(11,14,20,.72));
-    border-bottom:1px solid var(--border);
-    padding:14px 16px;
-  }
-  h1{margin:0;font-size:16px;letter-spacing:.2px}
-  .sub{color:var(--muted);font-size:12px;margin-top:4px}
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background:
+        radial-gradient(1200px 700px at 30% -10%, rgba(124,140,255,.12), transparent 60%),
+        radial-gradient(900px 600px at 90% 10%, rgba(65,208,122,.10), transparent 55%),
+        var(--bg);
+      color:var(--text);
+    }
 
-  .wrap{
-    max-width:1280px;
-    margin:0 auto;
-    padding:14px;
-    display:grid;
-    grid-template-columns: 320px 1fr 360px;
-    gap:12px;
-    align-items:start;
-  }
-  @media(max-width:1100px){
-    .wrap{grid-template-columns: 1fr}
-  }
+    header{
+      position:sticky; top:0; z-index:10;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(11,14,20,.92), rgba(11,14,20,.72));
+      border-bottom:1px solid var(--border);
+      padding:14px 16px;
+    }
+    h1{margin:0;font-size:16px;letter-spacing:.2px}
+    .sub{color:var(--muted);font-size:12px;margin-top:4px}
 
-  .card{
-    background: linear-gradient(180deg, rgba(15,20,32,.92), rgba(12,17,27,.92));
-    border:1px solid var(--border);
-    border-radius:16px;
-    box-shadow: var(--shadow);
-    overflow:hidden;
-  }
+    .wrap{
+      max-width:1280px;
+      margin:0 auto;
+      padding:14px;
+      display:grid;
+      grid-template-columns: 320px 1fr 360px;
+      gap:12px;
+      align-items:start;
+    }
+    @media(max-width:1100px){
+      .wrap{grid-template-columns: 1fr}
+    }
 
-  .card h2{
-    margin:0;
-    padding:12px 12px 10px;
-    font-size:12px;
-    letter-spacing:.16em;
-    text-transform:uppercase;
-    color: rgba(207,215,255,.9);
-    border-bottom:1px solid var(--border);
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-  }
+    .card{
+      background: linear-gradient(180deg, rgba(15,20,32,.92), rgba(12,17,27,.92));
+      border:1px solid var(--border);
+      border-radius:16px;
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
 
-  /* Sidebar (shops) */
-  .shopsPanel{padding:10px}
-  .shopSearch{
-    width:100%;
-    border:1px solid var(--border);
-    background: rgba(8,11,18,.6);
-    color:var(--text);
-    border-radius:12px;
-    padding:10px 10px;
-    outline:none;
-    margin-bottom:10px;
-  }
-  .shopList{
-    display:grid;
-    gap:8px;
-    max-height: calc(100vh - 210px);
-    overflow:auto;
-    padding-right:4px;
-  }
-  .shopBtn{
-    display:flex;
-    gap:10px;
-    align-items:center;
-    padding:10px 10px;
-    border:1px solid var(--border);
-    background: rgba(8,11,18,.55);
-    border-radius:14px;
-    cursor:pointer;
-    transition: .12s transform ease, .12s border-color ease, .12s background ease;
-  }
-  .shopBtn:hover{transform: translateY(-1px); border-color: var(--border2)}
-  .shopBtn.active{
-    border-color: rgba(124,140,255,.65);
-    background: rgba(124,140,255,.10);
-    box-shadow: 0 0 0 2px rgba(124,140,255,.12) inset;
-  }
-  .shopIcon{
-    width:34px;height:34px;
-    border-radius:12px;
-    border:1px solid var(--border);
-    background: rgba(0,0,0,.25);
-    display:grid; place-items:center;
-    font-size:16px;
-    flex:0 0 auto;
-  }
-  .shopName{font-weight:800;font-size:13px;line-height:1.2}
-  .shopHint{font-size:11px;color:var(--muted2);margin-top:2px}
+    .card h2{
+      margin:0;
+      padding:12px 12px 10px;
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color: rgba(207,215,255,.9);
+      border-bottom:1px solid var(--border);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
 
-  /* Main items header controls */
-  .toolbar{
-    padding:10px 12px;
-    display:flex;
-    gap:10px;
-    flex-wrap:wrap;
-    border-bottom:1px solid var(--border);
-    background: rgba(8,11,18,.45);
-  }
-  .tool{
-    border:1px solid var(--border);
-    background: rgba(8,11,18,.6);
-    color:var(--text);
-    border-radius:12px;
-    padding:9px 10px;
-    outline:none;
-  }
-  .toolBtn{
-    border:1px solid var(--border);
-    background: rgba(8,11,18,.6);
-    color:var(--text);
-    border-radius:12px;
-    padding:9px 10px;
-    cursor:pointer;
-  }
-  .toolBtn.active{
-    border-color: rgba(124,140,255,.65);
-    background: rgba(124,140,255,.10);
-  }
+    /* Sidebar (shops) */
+    .shopsPanel{padding:10px}
+    .shopSearch{
+      width:100%;
+      border:1px solid var(--border);
+      background: rgba(8,11,18,.6);
+      color:var(--text);
+      border-radius:12px;
+      padding:10px 10px;
+      outline:none;
+      margin-bottom:10px;
+    }
+    .shopList{
+      display:grid;
+      gap:8px;
+      max-height: calc(100vh - 210px);
+      overflow:auto;
+      padding-right:4px;
+    }
+    .shopBtn{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      padding:10px 10px;
+      border:1px solid var(--border);
+      background: rgba(8,11,18,.55);
+      border-radius:14px;
+      cursor:pointer;
+      transition: .12s transform ease, .12s border-color ease, .12s background ease;
+    }
+    .shopBtn:hover{transform: translateY(-1px); border-color: var(--border2)}
+    .shopBtn.active{
+      border-color: rgba(124,140,255,.65);
+      background: rgba(124,140,255,.10);
+      box-shadow: 0 0 0 2px rgba(124,140,255,.12) inset;
+    }
+    .shopIcon{
+      width:34px;height:34px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.25);
+      display:grid; place-items:center;
+      font-size:16px;
+      flex:0 0 auto;
+    }
+    .shopName{font-weight:800;font-size:13px;line-height:1.2}
+    .shopHint{font-size:11px;color:var(--muted2);margin-top:2px}
 
-  /* Item list */
-  .grid{padding:10px 12px; display:grid; gap:8px;}
-  .itemRow{
-    display:grid;
-    grid-template-columns: 1fr auto;
-    gap:12px;
-    padding:10px 10px;
-    border:1px solid var(--border);
-    border-radius:14px;
-    background: rgba(8,11,18,.55);
-  }
-  .title{
-    font-weight:900;
-    font-size:14px;
-    letter-spacing:.1px;
-    display:flex;
-    gap:8px;
-    align-items:center;
-    flex-wrap:wrap;
-  }
-  .meta{font-size:12px;color:var(--muted);margin-top:3px}
-  .meta.small{font-size:11px;color:var(--muted2);margin-top:6px}
+    /* Main items header controls */
+    .toolbar{
+      padding:10px 12px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      border-bottom:1px solid var(--border);
+      background: rgba(8,11,18,.45);
+    }
+    .tool{
+      border:1px solid var(--border);
+      background: rgba(8,11,18,.6);
+      color:var(--text);
+      border-radius:12px;
+      padding:9px 10px;
+      outline:none;
+    }
+    .toolBtn{
+      border:1px solid var(--border);
+      background: rgba(8,11,18,.6);
+      color:var(--text);
+      border-radius:12px;
+      padding:9px 10px;
+      cursor:pointer;
+    }
+    .toolBtn.active{
+      border-color: rgba(124,140,255,.65);
+      background: rgba(124,140,255,.10);
+    }
 
-  .badge{
-    display:inline-flex;
-    align-items:center;
-    gap:6px;
-    padding:2px 8px;
-    border-radius:999px;
-    border:1px solid var(--border);
-    font-size:11px;
-    color: var(--muted);
-    background: rgba(0,0,0,.18);
-  }
-  .badge.good{border-color: rgba(65,208,122,.35); color: rgba(65,208,122,.95)}
-  .badge.warn{border-color: rgba(255,204,102,.35); color: rgba(255,204,102,.95)}
-  .badge.bad{border-color: rgba(255,93,108,.35); color: rgba(255,93,108,.95)}
+    /* Item list */
+    .grid{padding:10px 12px; display:grid; gap:8px;}
+    /* IMPORTANT: scrolling belongs to the CONTAINER, not each row */
+    #items{
+      max-height: calc(100vh - 210px);
+      overflow:auto;
+      padding-right:4px;
+    }
 
-  .rightCol{min-width:170px; text-align:right}
-  .price{
-    font-weight:1000;
-    font-size:14px;
-    letter-spacing:.2px;
-  }
-  .controls{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    justify-content:flex-end;
-    margin-top:8px;
-  }
-  button{
-    cursor:pointer;
-    border:1px solid var(--border);
-    background: rgba(10,14,22,.75);
-    color:var(--text);
-    border-radius:12px;
-    padding:10px 12px;
-    transition:.12s transform ease,.12s border-color ease;
-  }
-  button:hover{transform: translateY(-1px); border-color: var(--border2)}
-  button:disabled{opacity:.45; cursor:not-allowed; transform:none}
-  button.small{padding:6px 10px;border-radius:10px}
-  .qty{min-width:30px;text-align:center;font-variant-numeric:tabular-nums;color:var(--text)}
+    .itemRow{
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap:12px;
+      padding:10px 10px;
+      border:1px solid var(--border);
+      border-radius:14px;
+      background: rgba(8,11,18,.55);
+    }
+    .title{
+      font-weight:900;
+      font-size:14px;
+      letter-spacing:.1px;
+      display:flex;
+      gap:8px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .meta{font-size:12px;color:var(--muted);margin-top:3px}
+    .meta.small{font-size:11px;color:var(--muted2);margin-top:6px}
 
-  /* Cart */
-  .cart{padding:10px 12px; display:grid; gap:8px}
-  .sticky{
-    position: sticky;
-    top: 86px;
-  }
-  .cartline{
-    display:grid;
-    grid-template-columns: 1fr auto;
-    gap:10px;
-    padding:10px;
-    border:1px solid var(--border);
-    border-radius:14px;
-    background: rgba(8,11,18,.55);
-  }
-  .empty{color:var(--muted);font-size:12px}
-  .row{display:flex;justify-content:space-between;gap:10px}
-  .total{font-size:18px;font-weight:1000}
-  .footerBtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
-  .ok{border-color: rgba(65,208,122,.35); background: rgba(65,208,122,.10)}
-  .danger{border-color: rgba(255,93,108,.35); background: rgba(255,93,108,.10)}
-  .ghost{border-color: var(--border); background: transparent}
-</style>
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:2px 8px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      font-size:11px;
+      color: var(--muted);
+      background: rgba(0,0,0,.18);
+    }
+    .badge.good{border-color: rgba(65,208,122,.35); color: rgba(65,208,122,.95)}
+    .badge.warn{border-color: rgba(255,204,102,.35); color: rgba(255,204,102,.95)}
+    .badge.bad{border-color: rgba(255,93,108,.35); color: rgba(255,93,108,.95)}
 
+    .rightCol{min-width:170px; text-align:right}
+    .price{
+      font-weight:1000;
+      font-size:14px;
+      letter-spacing:.2px;
+    }
+    .controls{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      justify-content:flex-end;
+      margin-top:8px;
+    }
+    button{
+      cursor:pointer;
+      border:1px solid var(--border);
+      background: rgba(10,14,22,.75);
+      color:var(--text);
+      border-radius:12px;
+      padding:10px 12px;
+      transition:.12s transform ease,.12s border-color ease;
+    }
+    button:hover{transform: translateY(-1px); border-color: var(--border2)}
+    button:disabled{opacity:.45; cursor:not-allowed; transform:none}
+    button.small{padding:6px 10px;border-radius:10px}
+    .qty{min-width:30px;text-align:center;font-variant-numeric:tabular-nums;color:var(--text)}
+
+    /* Cart */
+    .cart{padding:10px 12px; display:grid; gap:8px}
+    .sticky{
+      position: sticky;
+      top: 86px;
+      max-height: calc(100vh - 120px);
+      overflow:auto;
+    }
+    .cartline{
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap:10px;
+      padding:10px;
+      border:1px solid var(--border);
+      border-radius:14px;
+      background: rgba(8,11,18,.55);
+    }
+    .empty{color:var(--muted);font-size:12px}
+    .row{display:flex;justify-content:space-between;gap:10px}
+    .total{font-size:18px;font-weight:1000}
+    .footerBtns{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+    .ok{border-color: rgba(65,208,122,.35); background: rgba(65,208,122,.10)}
+    .danger{border-color: rgba(255,93,108,.35); background: rgba(255,93,108,.10)}
+    .ghost{border-color: var(--border); background: transparent}
+  </style>
 </head>
+
 <body>
 <header>
   <h1>🛒 Sordia Vignti – Shop Terminal</h1>
   <div class="sub">Select a shop, click items to add/remove, then copy checkout text to send the DM.</div>
 </header>
+
 <div class="wrap">
-
-<div class="card">
-  <h2>Shops</h2>
-  <div class="shopsPanel">
-    <input id="shopSearch" class="shopSearch" placeholder="Search shops…" />
-    <div class="shopList" id="tabs"></div>
+  <div class="card">
+    <h2>Shops</h2>
+    <div class="shopsPanel">
+      <input id="shopSearch" class="shopSearch" placeholder="Search shops…" />
+      <div class="shopList" id="tabs"></div>
+    </div>
   </div>
-</div>
 
-<div class="card">
-  <h2>
-    Items
-    <span id="shopTitle" class="empty"></span>
-  </h2>
-  <div class="toolbar">
-    <input id="itemSearch" class="tool" placeholder="Search items…" />
-    <select id="categoryFilter" class="tool">
-      <option value="">All categories</option>
-    </select>
-    <button id="sortBtn" class="toolBtn" title="Sort by price">Sort: Price ↑</button>
+  <div class="card">
+    <h2>Items <span id="shopTitle" class="empty"></span></h2>
+    <div class="toolbar" id="toolbar">
+      <input id="itemSearch" class="tool" placeholder="Search items…" />
+      <select id="categoryFilter" class="tool">
+        <option value="">All categories</option>
+      </select>
+      <button id="sortBtn" class="toolBtn" title="Sort by price">Sort: Price ↑</button>
+    </div>
+    <div class="grid" id="items"></div>
   </div>
-  <div class="grid" id="items"></div>
-</div>
-
 
   <div class="card sticky">
     <h2>Cart</h2>
@@ -282,7 +288,7 @@
 </div>
 
 <script>
-  // Loads inventory from inventory.json (keeps editing simple).
+  // ======= LOAD DATA =======
   let DATA = null;
 
   // Cart is keyed by "shopId:itemId"
@@ -298,48 +304,31 @@
   const categoryEl = document.getElementById("categoryFilter");
   const sortBtnEl = document.getElementById("sortBtn");
   const shopTitleEl = document.getElementById("shopTitle");
+  const toolbarEl = document.getElementById("toolbar");
 
   const tabsEl = document.getElementById("tabs");
   const itemsEl = document.getElementById("items");
   const cartEl = document.getElementById("cart");
 
   const to2 = (n) => Math.round(n * 100) / 100;
-  const fmt = (n) => (to2(n)).toString();
 
-function formatCoins(price_gp, stock = 999) {
-  // Availability / reference rows ("Varies")
-  if ((price_gp === 0 || price_gp === "0") && Number(stock) === 0) return "Varies";
+  function formatCoins(price_gp, stock = 999) {
+    // Availability / reference rows ("Varies")
+    if ((price_gp === 0 || price_gp === "0") && Number(stock) === 0) return "Varies";
 
-  const totalCp = Math.round(Number(price_gp) * 100); // 1 gp = 100 cp
-  if (totalCp === 0) return "0 gp";
+    const totalCp = Math.round(Number(price_gp) * 100); // 1 gp = 100 cp
+    if (totalCp === 0) return "0 gp";
 
-  const gp = Math.floor(totalCp / 100);
-  const sp = Math.floor((totalCp % 100) / 10);
-  const cp = totalCp % 10;
+    const gp = Math.floor(totalCp / 100);
+    const sp = Math.floor((totalCp % 100) / 10);
+    const cp = totalCp % 10;
 
-  const parts = [];
-  if (gp) parts.push(`${gp} gp`);
-  if (sp) parts.push(`${sp} sp`);
-  if (cp) parts.push(`${cp} cp`);
-  return parts.join(" ");
-}
-function rebuildCategories(){
-  const shop = shopById(activeShopId);
-  if (!shop) return;
-
-  const cats = Array.from(
-    new Set((shop.items || []).map(i => i.category).filter(Boolean))
-  ).sort((a,b) => a.localeCompare(b));
-
-  categoryEl.innerHTML =
-    `<option value="">All categories</option>` +
-    cats.map(c => `<option value="${c}">${c}</option>`).join("");
-
-  // reset filter when switching shops so you don’t "hide everything" by accident
-  categoryTerm = "";
-  categoryEl.value = "";
-}
-
+    const parts = [];
+    if (gp) parts.push(`${gp} gp`);
+    if (sp) parts.push(`${sp} sp`);
+    if (cp) parts.push(`${cp} cp`);
+    return parts.join(" ");
+  }
 
   function shopById(id){ return DATA.shops.find(s => s.id === id); }
 
@@ -383,9 +372,9 @@ function rebuildCategories(){
     let total = 0;
     for(const entry of cart.values()){
       const item = itemById(entry.shopId, entry.itemId);
-      total += (item.price_gp * entry.qty);
+      total += (Number(item.price_gp) * entry.qty);
     }
-    return total;
+    return to2(total);
   }
 
   function checkoutText(){
@@ -409,119 +398,433 @@ function rebuildCategories(){
     }
   }
 
-function renderTabs(){
-  tabsEl.innerHTML = "";
+  function rebuildCategories(){
+    const shop = shopById(activeShopId);
+    if (!shop || shop.kind === "builder") {
+      categoryEl.innerHTML = `<option value="">All categories</option>`;
+      categoryTerm = "";
+      categoryEl.value = "";
+      return;
+    }
 
-  const shops = DATA.shops.filter(s => {
-    if (!shopSearchTerm) return true;
-    return (s.name || "").toLowerCase().includes(shopSearchTerm) ||
-           (s.tagline || "").toLowerCase().includes(shopSearchTerm);
-  });
+    const cats = Array.from(
+      new Set((shop.items || []).map(i => i.category).filter(Boolean))
+    ).sort((a,b) => a.localeCompare(b));
 
-  shops.forEach(shop => {
-    const btn = document.createElement("div");
-    btn.className = "shopBtn" + (shop.id === activeShopId ? " active" : "");
-    btn.onclick = () => {
-      activeShopId = shop.id;
-      rebuildCategories();
+    categoryEl.innerHTML =
+      `<option value="">All categories</option>` +
+      cats.map(c => `<option value="${c}">${c}</option>`).join("");
+
+    categoryTerm = "";
+    categoryEl.value = "";
+  }
+
+  function renderTabs(){
+    tabsEl.innerHTML = "";
+
+    const shops = DATA.shops.filter(s => {
+      if (!shopSearchTerm) return true;
+      return (s.name || "").toLowerCase().includes(shopSearchTerm) ||
+             (s.tagline || "").toLowerCase().includes(shopSearchTerm);
+    });
+
+    shops.forEach(shop => {
+      const btn = document.createElement("div");
+      btn.className = "shopBtn" + (shop.id === activeShopId ? " active" : "");
+      btn.onclick = () => {
+        activeShopId = shop.id;
+        rebuildCategories();
+        render();
+      };
+
+      const icon = document.createElement("div");
+      icon.className = "shopIcon";
+      icon.textContent = shop.icon_emoji || "🏪";
+
+      const meta = document.createElement("div");
+      meta.innerHTML = `<div class="shopName">${shop.name}</div><div class="shopHint">${shop.tagline ?? ""}</div>`;
+
+      btn.appendChild(icon);
+      btn.appendChild(meta);
+      tabsEl.appendChild(btn);
+    });
+
+    const active = shopById(activeShopId);
+    shopTitleEl.textContent = active ? `— ${active.name}` : "";
+  }
+
+  // ======= BUILDER SHOP (GUNSMITH) =======
+  const gunBuild = {
+    baseId: null,
+    mods: new Map() // key: modId -> { catId, mod }
+  };
+
+  function gp(n){ return Number(n || 0); }
+
+  function builderSlotLimit(shop){
+    const base = shop.builder.baseModels.find(x => x.id === gunBuild.baseId);
+    return base ? Number(base.slots) : 0;
+  }
+
+  function builderSlotsUsed(){ return gunBuild.mods.size; }
+
+  function builderTotalGp(shop){
+    const b = shop.builder;
+    let total = 0;
+    const base = b.baseModels.find(x => x.id === gunBuild.baseId);
+    if (base) total += gp(base.price_gp);
+    for (const entry of gunBuild.mods.values()) total += gp(entry.mod.price_gp);
+    return to2(total);
+  }
+
+  function builderCounts(){
+    let extraAttack = 0, aoe = 0;
+    for (const entry of gunBuild.mods.values()){
+      const tags = entry.mod.tags || [];
+      if (tags.includes("extra_attack")) extraAttack++;
+      if (tags.includes("aoe")) aoe++;
+    }
+    return { extraAttack, aoe };
+  }
+
+  function builderWarnings(shop){
+    const b = shop.builder;
+    const issues = [];
+
+    const base = b.baseModels.find(x => x.id === gunBuild.baseId);
+    if (!base) issues.push("Select a base gun model.");
+
+    const slotsUsed = builderSlotsUsed();
+    const slotLimit = builderSlotLimit(shop);
+    if (base && slotsUsed > slotLimit) issues.push(`Too many mods: ${slotsUsed}/${slotLimit} slots.`);
+
+    // Soft reminders
+    let controlCount = 0;
+    let critCount = 0;
+    for (const entry of gunBuild.mods.values()){
+      const tags = entry.mod.tags || [];
+      if (tags.includes("control")) controlCount++;
+      if (tags.includes("crit")) critCount++;
+    }
+    if (critCount > 1) issues.push("Reminder: Only one crit-triggered mod effect may activate per turn (choose one).");
+    if (controlCount > 1) issues.push("Reminder: Target can suffer only one movement/reaction-denying effect per round from mods.");
+
+    // Hard rules (also enforced on add)
+    const counts = builderCounts();
+    if (counts.extraAttack > b.rules.maxExtraAttackMods) issues.push("Rule broken: Only one mod may grant additional attacks.");
+    if (counts.aoe > b.rules.maxAoeMods) issues.push("Rule broken: Only one AoE mod may be installed.");
+
+    return issues;
+  }
+
+  function builderCheckoutText(shop){
+    const b = shop.builder;
+    const base = b.baseModels.find(x => x.id === gunBuild.baseId);
+    const lines = [];
+    lines.push(`SHOP: ${shop.name}`);
+    if (base){
+      lines.push(`BASE: ${base.name} (${base.rarity}) — Slots: ${base.slots} — Price: ${formatCoins(base.price_gp)}`);
+    } else {
+      lines.push(`BASE: (none selected)`);
+    }
+
+    lines.push(`MODS (${gunBuild.mods.size}/${builderSlotLimit(shop)} slots):`);
+    for (const entry of gunBuild.mods.values()){
+      lines.push(`- ${entry.mod.name} [${entry.catId}] — ${formatCoins(entry.mod.price_gp)} — ${entry.mod.desc}`);
+    }
+
+    lines.push(`TOTAL: ${formatCoins(builderTotalGp(shop))}`);
+    lines.push(`INSTALL NOTE: Installing/removing a mod takes 1 hour and appropriate tools.`);
+    return lines.join("\n");
+  }
+
+  window.__builderAdd = (catId, modId) => {
+    const shop = shopById(activeShopId);
+    const cat = shop.builder.modCategories.find(c => c.id === catId);
+    const mod = cat.mods.find(m => m.id === modId);
+
+    if (!gunBuild.baseId){
+      alert("Select a base gun model first.");
+      return;
+    }
+
+    // no duplicates
+    if (gunBuild.mods.has(modId)) return;
+
+    // one-per-category if required
+    if (cat.limitOneInstalled){
+      for (const [k,v] of gunBuild.mods.entries()){
+        if (v.catId === catId) gunBuild.mods.delete(k);
+      }
+    }
+
+    // slot limit
+    if (gunBuild.mods.size >= builderSlotLimit(shop)){
+      alert("No slots available for another mod.");
+      return;
+    }
+
+    // HARD RULE: only one extra-attack mod
+    const counts = builderCounts();
+    if ((mod.tags || []).includes("extra_attack") && counts.extraAttack >= shop.builder.rules.maxExtraAttackMods){
+      alert("Rule: Only one mod may grant additional attacks.");
+      return;
+    }
+
+    // HARD RULE: only one AoE mod
+    if ((mod.tags || []).includes("aoe") && counts.aoe >= shop.builder.rules.maxAoeMods){
+      alert("Rule: Only one AoE (cone/line/area) mod may be installed.");
+      return;
+    }
+
+    gunBuild.mods.set(modId, { catId, mod });
+    render();
+  };
+
+  window.__builderRemove = (modId) => {
+    gunBuild.mods.delete(modId);
+    render();
+  };
+
+  window.__builderCopy = async () => {
+    const shop = shopById(activeShopId);
+    const text = builderCheckoutText(shop);
+    try{
+      await navigator.clipboard.writeText(text);
+      alert("Build checkout copied.");
+    }catch{
+      prompt("Copy this:", text);
+    }
+  };
+
+  window.__builderReset = () => {
+    gunBuild.baseId = null;
+    gunBuild.mods.clear();
+    render();
+  };
+
+  function renderBuilder(shop){
+    const b = shop.builder;
+
+    const baseOptions = b.baseModels.map(m => {
+      const selected = (m.id === gunBuild.baseId) ? "selected" : "";
+      return `<option value="${m.id}" ${selected}>${m.name} — ${m.slots} slots — ${m.price_gp} gp</option>`;
+    }).join("");
+
+    const issues = builderWarnings(shop);
+    const issuesHtml = issues.length
+      ? `<div class="cartline" style="border-color: rgba(255,204,102,.35); background: rgba(255,204,102,.06)">
+           <strong>Build Notes</strong>
+           <div class="empty" style="margin-top:6px">${issues.map(x=>`• ${x}`).join("<br>")}</div>
+         </div>`
+      : `<div class="cartline" style="border-color: rgba(65,208,122,.35); background: rgba(65,208,122,.06)">
+           <strong>Build OK</strong>
+           <div class="empty" style="margin-top:6px">Slot limits and hard restrictions satisfied.</div>
+         </div>`;
+
+    const modBlocks = b.modCategories.map(cat => {
+      const selectedInCat = Array.from(gunBuild.mods.values()).some(x => x.catId === cat.id);
+
+      const rows = cat.mods.map(mod => {
+        const isSelected = gunBuild.mods.has(mod.id);
+
+        const wouldBreakSlots = (!isSelected && gunBuild.baseId && builderSlotsUsed() >= builderSlotLimit(shop));
+        const wouldBreakCat = (!isSelected && cat.limitOneInstalled && selectedInCat);
+
+        // hard-rule hints (extra attack / aoe)
+        const counts = builderCounts();
+        const wouldBreakExtraAttack = (!isSelected && (mod.tags||[]).includes("extra_attack") && counts.extraAttack >= b.rules.maxExtraAttackMods);
+        const wouldBreakAoe = (!isSelected && (mod.tags||[]).includes("aoe") && counts.aoe >= b.rules.maxAoeMods);
+
+        const disabled = (!gunBuild.baseId) || wouldBreakSlots || wouldBreakCat || wouldBreakExtraAttack || wouldBreakAoe;
+
+        return `
+          <div class="itemRow" style="opacity:${disabled && !isSelected ? 0.5 : 1}">
+            <div>
+              <div class="title">${mod.name} <span class="badge">${cat.name}</span></div>
+              <div class="meta">${mod.desc}</div>
+              ${(mod.tags && mod.tags.length) ? `<div class="meta small">${mod.tags.map(t=>`<span class="badge">${t}</span>`).join(" ")}</div>` : ""}
+            </div>
+            <div class="rightCol">
+              <div class="price">${formatCoins(mod.price_gp)}</div>
+              <div class="controls">
+                <button class="small" ${isSelected ? "" : "disabled"} onclick="__builderRemove('${mod.id}')">−</button>
+                <div class="qty">${isSelected ? "1" : "0"}</div>
+                <button class="small" ${disabled ? "disabled" : ""} onclick="__builderAdd('${cat.id}','${mod.id}')">+</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      return `
+        <div style="margin-top:10px">
+          <div class="empty" style="margin:6px 2px 8px; letter-spacing:.12em; text-transform:uppercase; font-size:11px;">
+            ${cat.name} ${cat.limitOneInstalled ? "· (max 1)" : ""}
+          </div>
+          ${rows}
+        </div>
+      `;
+    }).join("");
+
+    itemsEl.innerHTML = `
+      <div class="itemRow">
+        <div>
+          <div class="title">Gunsmith Builder <span class="badge">Build it, don’t replace it</span></div>
+          <div class="meta">Choose a base gun, then install mods (1 slot each). No swapping in combat. 1 hour to install/remove.</div>
+        </div>
+        <div class="rightCol">
+          <select id="baseSelect" class="tool" style="min-width:260px">
+            <option value="">Select base model…</option>
+            ${baseOptions}
+          </select>
+        </div>
+      </div>
+
+      ${issuesHtml}
+
+      <div class="itemRow">
+        <div>
+          <div class="title">Current Build</div>
+          <div class="meta small">Slots: <strong>${builderSlotsUsed()}/${builderSlotLimit(shop)}</strong> · Total: <strong>${formatCoins(builderTotalGp(shop))}</strong></div>
+        </div>
+        <div class="rightCol" style="display:flex; gap:8px; justify-content:flex-end; flex-wrap:wrap;">
+          <button class="toolBtn ok" onclick="__builderCopy()">Copy Build Checkout</button>
+          <button class="toolBtn danger" onclick="__builderReset()">Reset</button>
+        </div>
+      </div>
+
+      ${modBlocks}
+    `;
+
+    document.getElementById("baseSelect").addEventListener("change", (e) => {
+      gunBuild.baseId = e.target.value || null;
+
+      // If slots shrink, auto-remove extras (last added)
+      const limit = builderSlotLimit(shop);
+      while (gunBuild.mods.size > limit){
+        const lastKey = Array.from(gunBuild.mods.keys()).pop();
+        gunBuild.mods.delete(lastKey);
+      }
       render();
-    };
-
-    const icon = document.createElement("div");
-    icon.className = "shopIcon";
-	icon.textContent = "🏪";
-
-    const meta = document.createElement("div");
-    meta.innerHTML = `<div class="shopName">${shop.name}</div><div class="shopHint">${shop.tagline ?? ""}</div>`;
-
-    btn.appendChild(icon);
-    btn.appendChild(meta);
-    tabsEl.appendChild(btn);
-  });
-
-  const active = shopById(activeShopId);
-  shopTitleEl.textContent = active ? `— ${active.name}` : "";
-}
-
-
-function renderItems(){
-  const shop = shopById(activeShopId);
-  itemsEl.innerHTML = "";
-
-  let items = shop.items.slice();
-
-  // filter by category
-  if (categoryTerm) items = items.filter(i => (i.category || "") === categoryTerm);
-
-  // filter by search
-  if (itemSearchTerm){
-    items = items.filter(i => {
-      const hay = `${i.name} ${i.desc ?? ""} ${i.category ?? ""}`.toLowerCase();
-      return hay.includes(itemSearchTerm);
     });
   }
 
-  // sort by price
-  items.sort((a,b) => (Number(a.price_gp) - Number(b.price_gp)) * sortDir);
+  // ======= ITEMS RENDER =======
+  function renderItems(){
+    const shop = shopById(activeShopId);
+    itemsEl.innerHTML = "";
 
-  items.forEach(item => {
-    const row = document.createElement("div");
-    row.className = "itemRow";
+    if (!shop) return;
 
-    // stock badge
-    let stockBadge = `<span class="badge good">✅ In stock</span>`;
-    if (item.stock === 0) stockBadge = `<span class="badge bad">❌ Out of stock</span>`;
-    else if (item.stock != null && item.stock !== 999 && item.stock < 999) stockBadge = `<span class="badge warn">⚠️ Limited (${item.stock})</span>`;
+    if (shop.kind === "builder"){
+      renderBuilder(shop);
+      return;
+    }
 
-    // rarity badge
-    const rarityBadge = item.rarity ? `<span class="badge">${item.rarity}</span>` : "";
-    const catBadge = item.category ? `<span class="badge">${item.category}</span>` : "";
+    let items = (shop.items || []).slice();
 
-    const left = document.createElement("div");
-    left.innerHTML = `
-      <div class="title">${item.name} ${rarityBadge} ${catBadge}</div>
-      ${item.desc ? `<div class="meta">${item.desc}</div>` : ""}
-      <div class="meta small">${stockBadge}</div>
-    `;
+    // filter by category
+    if (categoryTerm) items = items.filter(i => (i.category || "") === categoryTerm);
 
-    const right = document.createElement("div");
-    right.className = "rightCol";
-    right.innerHTML = `<div class="price">${formatCoins(item.price_gp, item.stock)}</div>`;
+    // filter by search
+    if (itemSearchTerm){
+      items = items.filter(i => {
+        const hay = `${i.name} ${i.desc ?? ""} ${i.category ?? ""}`.toLowerCase();
+        return hay.includes(itemSearchTerm);
+      });
+    }
 
-    const controls = document.createElement("div");
-    controls.className = "controls";
+    // sort by price
+    items.sort((a,b) => (Number(a.price_gp) - Number(b.price_gp)) * sortDir);
 
-    const minus = document.createElement("button");
-    minus.className = "small";
-    minus.textContent = "−";
-    minus.disabled = inCartQty(shop.id, item.id) === 0;
-    minus.onclick = () => remove(shop.id, item.id);
+    items.forEach(item => {
+      const row = document.createElement("div");
+      row.className = "itemRow";
 
-    const qty = document.createElement("div");
-    qty.className = "qty";
-    qty.textContent = inCartQty(shop.id, item.id);
+      // stock badge
+      let stockBadge = `<span class="badge good">✅ In stock</span>`;
+      if (item.stock === 0) stockBadge = `<span class="badge bad">❌ Out of stock</span>`;
+      else if (item.stock != null && item.stock !== 999 && item.stock < 999) stockBadge = `<span class="badge warn">⚠️ Limited (${item.stock})</span>`;
 
-    const plus = document.createElement("button");
-    plus.className = "small";
-    plus.textContent = "+";
-    const max = (item.stock ?? 999);
-    plus.disabled = (item.stock === 0) || (inCartQty(shop.id, item.id) >= max);
-    plus.onclick = () => add(shop.id, item.id);
+      // rarity badge
+      const rarityBadge = item.rarity ? `<span class="badge">${item.rarity}</span>` : "";
+      const catBadge = item.category ? `<span class="badge">${item.category}</span>` : "";
 
-    controls.appendChild(minus);
-    controls.appendChild(qty);
-    controls.appendChild(plus);
+      const left = document.createElement("div");
+      left.innerHTML = `
+        <div class="title">${item.name} ${rarityBadge} ${catBadge}</div>
+        ${item.desc ? `<div class="meta">${item.desc}</div>` : ""}
+        <div class="meta small">${stockBadge}</div>
+      `;
 
-    right.appendChild(controls);
+      const right = document.createElement("div");
+      right.className = "rightCol";
+      right.innerHTML = `<div class="price">${formatCoins(item.price_gp, item.stock)}</div>`;
 
-    row.appendChild(left);
-    row.appendChild(right);
-    itemsEl.appendChild(row);
-  });
-}
+      const controls = document.createElement("div");
+      controls.className = "controls";
 
+      const minus = document.createElement("button");
+      minus.className = "small";
+      minus.textContent = "−";
+      minus.disabled = inCartQty(shop.id, item.id) === 0;
+      minus.onclick = () => remove(shop.id, item.id);
 
+      const qty = document.createElement("div");
+      qty.className = "qty";
+      qty.textContent = inCartQty(shop.id, item.id);
+
+      const plus = document.createElement("button");
+      plus.className = "small";
+      plus.textContent = "+";
+      const max = (item.stock ?? 999);
+      plus.disabled = (item.stock === 0) || (inCartQty(shop.id, item.id) >= max);
+      plus.onclick = () => add(shop.id, item.id);
+
+      controls.appendChild(minus);
+      controls.appendChild(qty);
+      controls.appendChild(plus);
+
+      right.appendChild(controls);
+
+      row.appendChild(left);
+      row.appendChild(right);
+      itemsEl.appendChild(row);
+    });
+  }
+
+  // ======= CART RENDER =======
   function renderCart(){
+    const activeShop = shopById(activeShopId);
+
+    // Builder shop uses a build panel instead of normal cart
+    if (activeShop?.kind === "builder"){
+      cartEl.innerHTML = `
+        <div class="cartline">
+          <strong>${activeShop.name}</strong>
+          <div class="empty" style="margin-top:6px">This shop uses a build configurator instead of the standard cart.</div>
+        </div>
+
+        <div class="cartline">
+          <div>
+            <strong>Build Total</strong>
+            <div class="empty">Slots: ${builderSlotsUsed()}/${builderSlotLimit(activeShop)}</div>
+          </div>
+          <div style="text-align:right">
+            <div class="total">${formatCoins(builderTotalGp(activeShop))}</div>
+          </div>
+        </div>
+
+        <div class="footerBtns">
+          <button class="ok" onclick="__builderCopy()">Copy Build Checkout</button>
+          <button class="danger" onclick="__builderReset()">Reset Build</button>
+        </div>
+      `;
+      return;
+    }
+
+    // Normal cart
     cartEl.innerHTML = "";
 
     if(cart.size === 0){
@@ -542,7 +845,7 @@ function renderItems(){
         </div>
         <div style="text-align:right">
           <div>${entry.qty} × ${formatCoins(item.price_gp, item.stock)}</div>
-		  <div class="empty">= ${formatCoins(item.price_gp * entry.qty)}</div>
+          <div class="empty">= ${formatCoins(Number(item.price_gp) * entry.qty)}</div>
         </div>
       `;
       cartEl.appendChild(line);
@@ -577,26 +880,46 @@ function renderItems(){
     cartEl.appendChild(btns);
   }
 
+  // ======= MAIN RENDER =======
   function render(){
+    const shop = shopById(activeShopId);
+
+    // Hide normal toolbar for builder shop
+    toolbarEl.style.display = (shop?.kind === "builder") ? "none" : "flex";
+
     renderTabs();
     renderItems();
     renderCart();
   }
 
+  // ======= INIT =======
   async function init(){
     const res = await fetch("./inventory.json", { cache: "no-store" });
     DATA = await res.json();
-	shopSearchEl.addEventListener("input", (e) => { shopSearchTerm = e.target.value.toLowerCase(); renderTabs(); });
-	itemSearchEl.addEventListener("input", (e) => { itemSearchTerm = e.target.value.toLowerCase(); renderItems(); });
-	categoryEl.addEventListener("change", (e) => { categoryTerm = e.target.value; renderItems(); });
-	sortBtnEl.addEventListener("click", () => {
-	sortDir *= -1;
-	sortBtnEl.textContent = `Sort: Price ${sortDir === 1 ? "↑" : "↓"}`;
-	renderItems();
-	});
+
+    shopSearchEl.addEventListener("input", (e) => {
+      shopSearchTerm = e.target.value.toLowerCase();
+      renderTabs();
+    });
+
+    itemSearchEl.addEventListener("input", (e) => {
+      itemSearchTerm = e.target.value.toLowerCase();
+      renderItems();
+    });
+
+    categoryEl.addEventListener("change", (e) => {
+      categoryTerm = e.target.value;
+      renderItems();
+    });
+
+    sortBtnEl.addEventListener("click", () => {
+      sortDir *= -1;
+      sortBtnEl.textContent = `Sort: Price ${sortDir === 1 ? "↑" : "↓"}`;
+      renderItems();
+    });
 
     activeShopId = DATA.shops[0]?.id ?? null;
-	rebuildCategories();
+    rebuildCategories();
     render();
   }
 
