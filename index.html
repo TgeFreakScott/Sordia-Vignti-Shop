@@ -405,6 +405,64 @@
       padding:10px;
       margin-top:10px;
     }
+	/* ===== Build Summary (bottom) ===== */
+.summaryBox{
+  border:1px solid var(--border);
+  border-radius:16px;
+  background: linear-gradient(180deg, rgba(8,11,18,.55), rgba(8,11,18,.35));
+  padding:12px;
+  margin-top:14px;
+}
+.summaryTitle{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  font-weight:1000;
+  font-size:14px;
+}
+.summaryCols{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:10px;
+  margin-top:10px;
+}
+@media(max-width:900px){
+  .summaryCols{grid-template-columns:1fr}
+}
+.summaryCard{
+  border:1px solid var(--border);
+  border-radius:14px;
+  background: rgba(0,0,0,.14);
+  padding:10px;
+}
+.summaryCard h3{
+  margin:0 0 8px 0;
+  font-size:11px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color: rgba(207,215,255,.9);
+}
+.summaryLine{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  font-size:12px;
+  color: var(--muted);
+  padding:4px 0;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.summaryLine:last-child{border-bottom:none}
+.summaryStrong{color:var(--text);font-weight:900}
+.preBlock{
+  white-space:pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size:12px;
+  color: rgba(242,244,255,.78);
+  line-height:1.35;
+}
+
   </style>
 </head>
 
@@ -692,24 +750,56 @@
     return issues;
   }
 
-  function builderCheckoutText(shop){
-    const b = shop.builder;
-    const base = b.baseModels.find(x => x.id === gunBuild.baseId);
-    const lines = [];
-    lines.push(`SHOP: ${shop.name}`);
-    if (base){
-      lines.push(`BASE: ${base.name} (${base.rarity}) — Slots: ${base.slots} — Price: ${formatCoins(base.price_gp)}`);
-    } else {
-      lines.push(`BASE: (none selected)`);
-    }
-    lines.push(`MODS (${gunBuild.mods.size}/${builderSlotLimit(shop)} slots):`);
-    for (const entry of gunBuild.mods.values()){
-      lines.push(`- ${entry.mod.name} [${entry.catId}] — ${formatCoins(entry.mod.price_gp)} — ${entry.mod.desc}`);
-    }
-    lines.push(`TOTAL: ${formatCoins(builderTotalGp(shop))}`);
-    lines.push(`INSTALL NOTE: Installing/removing a mod takes 1 hour and appropriate tools.`);
-    return lines.join("\n");
+function builderCheckoutText(shop){
+  const b = shop.builder;
+  const base = b.baseModels.find(x => x.id === gunBuild.baseId);
+
+  const byCat = {};
+  for (const entry of gunBuild.mods.values()){
+    (byCat[entry.catId] ||= []).push(entry.mod);
   }
+
+  const catLabel = (catId) => {
+    const c = b.modCategories.find(x => x.id === catId);
+    return c ? c.name : catId;
+  };
+
+  const lines = [];
+  lines.push(`SHOP: ${shop.name}`);
+  lines.push(``);
+
+  if (base){
+    lines.push(`GUN: ${base.name} (${base.rarity})`);
+    lines.push(`SLOTS: ${gunBuild.mods.size}/${base.slots}`);
+    lines.push(`BASE PRICE: ${formatCoins(base.price_gp)}`);
+  } else {
+    lines.push(`GUN: (no base selected)`);
+    lines.push(`SLOTS: ${gunBuild.mods.size}/0`);
+    lines.push(`BASE PRICE: 0 gp`);
+  }
+
+  lines.push(``);
+
+  // Print mods in category order for readability
+  lines.push(`MODS:`);
+  for (const cat of b.modCategories){
+    const mods = byCat[cat.id] || [];
+    if (!mods.length) continue;
+    lines.push(`- ${cat.name}:`);
+    for (const m of mods){
+      lines.push(`  • ${m.name} — ${formatCoins(m.price_gp)} — ${m.desc}`);
+    }
+  }
+
+  if (gunBuild.mods.size === 0) lines.push(`(none)`);
+
+  lines.push(``);
+  lines.push(`TOTAL: ${formatCoins(builderTotalGp(shop))}`);
+  lines.push(`INSTALL: Installing/removing a mod takes 1 hour and appropriate tools.`);
+  lines.push(`RULES: Max 1 extra-attack mod; Max 1 AoE mod; Choose only 1 crit effect per turn; Only 1 control effect per round.`);
+
+  return lines.join("\n");
+}
 
   window.__builderToggleSection = (id) => {
     const el = document.getElementById(id);
@@ -778,6 +868,81 @@
     gunBuild.mods.clear();
     render();
   };
+
+function builderSummaryHtml(shop){
+  const b = shop.builder;
+  const base = b.baseModels.find(x => x.id === gunBuild.baseId);
+
+  // group selected mods by category
+  const picked = {};
+  for (const entry of gunBuild.mods.values()){
+    (picked[entry.catId] ||= []).push(entry.mod);
+  }
+
+  // order in the same order as categories list
+  const selectedLines = [];
+  for (const cat of b.modCategories){
+    const mods = picked[cat.id] || [];
+    if (!mods.length) continue;
+    for (const m of mods){
+      selectedLines.push(`${cat.name}: ${m.name}`);
+    }
+  }
+
+  const summaryName = base ? `${base.name}` : `(Select a base model)`;
+  const slotsText = base ? `${gunBuild.mods.size}/${base.slots}` : `${gunBuild.mods.size}/0`;
+  const totalText = formatCoins(builderTotalGp(shop));
+
+  const blocks = [];
+  blocks.push(`GUN: ${summaryName}`);
+  if (base) blocks.push(`RARITY: ${base.rarity}`);
+  blocks.push(`SLOTS: ${slotsText}`);
+  blocks.push(``);
+
+  if (selectedLines.length){
+    blocks.push(`ATTACHMENTS:`);
+    for (const s of selectedLines) blocks.push(`- ${s}`);
+  } else {
+    blocks.push(`ATTACHMENTS: (none)`);
+  }
+
+  blocks.push(``);
+  blocks.push(`TOTAL: ${totalText}`);
+  blocks.push(`INSTALL: 1 hour to install/remove (no swapping in combat).`);
+  blocks.push(`RULES: Max 1 extra-attack mod · Max 1 AoE mod · Only 1 crit effect per turn · Only 1 control effect per round`);
+
+  return `
+    <div class="summaryBox">
+      <div class="summaryTitle">
+        <span>Weapon Summary</span>
+        <span class="badge">${totalText}</span>
+      </div>
+
+      <div class="summaryCols">
+        <div class="summaryCard">
+          <h3>At a glance</h3>
+          <div class="summaryLine"><span>Base</span><span class="summaryStrong">${base ? `${base.name}` : "—"}</span></div>
+          <div class="summaryLine"><span>Rarity</span><span class="summaryStrong">${base ? base.rarity : "—"}</span></div>
+          <div class="summaryLine"><span>Slots used</span><span class="summaryStrong">${slotsText}</span></div>
+          <div class="summaryLine"><span>Total</span><span class="summaryStrong">${totalText}</span></div>
+        </div>
+
+        <div class="summaryCard">
+          <h3>DM checkout text</h3>
+          <div class="preBlock">${escapeHtml(builderCheckoutText(shop))}</div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function escapeHtml(str){
+  return String(str)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
+}
+
 
   function renderBuilder(shop){
     const b = shop.builder;
@@ -875,6 +1040,7 @@
       </div>
 
       ${sectionsHtml}
+	  ${builderSummaryHtml(shop)}
     `;
 
     document.getElementById("baseSelect").addEventListener("change", (e) => {
