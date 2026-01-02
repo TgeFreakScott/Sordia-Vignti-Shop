@@ -123,7 +123,7 @@
     .shopList{
       display:grid;
       gap:8px;
-      max-height: calc(100vh - 210px);
+      //max-height: calc(100vh - 210px);
       overflow:auto;
       padding-right:4px;
     }
@@ -190,7 +190,7 @@
     /* Item list */
     .grid{padding:10px 12px; display:grid; gap:8px;}
     #items{
-      max-height: calc(100vh - 210px);
+      //max-height: calc(100vh - 210px);
       overflow:auto;
       padding-right:6px;
     }
@@ -461,6 +461,74 @@
   font-size:12px;
   color: rgba(242,244,255,.78);
   line-height:1.35;
+}
+/* =========================
+   MOBILE FIX (OVERRIDES)
+   ========================= */
+
+/* Make the layout stack properly on mobile */
+@media (max-width: 1100px) {
+  .wrap{
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* Turn off sticky behaviour on mobile */
+  .sticky{
+    position: static !important;
+    top: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Remove height traps that cause blank panels */
+  .shopList{
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Your ITEMS container needs to be allowed to grow + scroll naturally */
+  .grid{
+    padding: 10px 12px !important;
+  }
+
+  /* IMPORTANT: this was wrong in your code —
+     you put max-height/overflow on each itemRow.
+     On mobile it causes madness. */
+  .itemRow{
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Make the items panel scrollable if content is long */
+  #items{
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  /* Slightly tighter buttons on mobile */
+  button{
+    padding: 10px 10px !important;
+  }
+  button.small{
+    padding: 6px 10px !important;
+  }
+
+  /* Inputs full width */
+  .tool, .toolBtn, .shopSearch{
+    width: 100% !important;
+  }
+
+  .toolbar{
+    display:grid !important;
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Even smaller phones */
+@media (max-width: 480px) {
+  .rightCol{min-width: 140px !important;}
+  .controls{gap:6px !important;}
 }
 
   </style>
